@@ -1,0 +1,640 @@
+2019-10-19T11:35:56+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:35:57+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:35:58+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:00+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:14+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:15+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:16+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:18+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:19+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:28+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:42+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:43+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:44+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:46+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:58+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:36:59+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:00+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:04+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:05+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:06+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:08+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:11+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:12+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:13+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:14+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:37:15+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:38:45+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:03+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:04+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:06+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:07+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:21+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:22+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:23+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:39:25+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:00+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:01+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:02+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:04+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:09+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:10+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:10+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:12+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:26+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:44+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:44+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:46+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:46+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:47+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:40:48+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:11+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:12+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:13+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:14+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:15+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:23+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:24+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:25+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:26+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:28+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:35+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:35+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:36+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:37+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:51+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:52+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:53+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:41:54+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:42:27+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:42:28+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:42:29+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T11:42:30+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:28:44+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:29:44+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:30:45+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:31:45+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:32:08+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:32:09+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:32:10+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+
+2019-10-19T19:32:11+00:00 CRITICAL Uncaught WC_Data_Exception: Invalid billing email address in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php:762
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(962): WC_Data->error('customer_invali...', 'Invalid billing...')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php(113): WC_Customer->set_billing_email('craig@localhost')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-data-store.php(156): WC_Customer_Data_Store_Session->read(Object(WC_Customer))
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-wc-customer.php(116): WC_Data_Store->read(Object(WC_Customer))
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/class-woocommerce.php(480
+

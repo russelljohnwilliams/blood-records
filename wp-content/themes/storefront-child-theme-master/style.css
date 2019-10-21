@@ -1,0 +1,135 @@
+/*
+Theme Name:   	Storefront Child Theme
+Theme URI:    	https://github.com/stuartduff/storefront-child-theme
+Author:       	Stuart Duff
+Author URI:     http://stuartduff.com
+Template:     	storefront
+Description:  	This is a blank child theme for WooThemes StoreFront theme
+Version:      	1.0.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+Images License: GNU General Public License v2 or later
+*/
+/*
+ * Add your own custom css below this text.
+ */
+/*
+ @font-face {
+   font-family: Roboto;
+   src: url(http://localhost/wordpress/wp-content/themes/storefront-child-theme-master/fonts/Renogare-Regular.wotf);
+   font-weight: normal;*/
+
+
+   @font-face {
+    font-family: 'Renogare Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Renogare Regular'), url('fonts/renogare-cufonfonts-webfont/Renogare-Regular.woff') format('woff');
+  }
+
+  body{
+   background-color: #2B2B2B;
+ }
+
+
+ /*- - - - - -  header - - - - - -*/
+
+ .site-branding{
+   font-family:'Renogare Regular';
+   width: 30%;
+   float: left;
+ }
+
+ .site-header{
+   background-color: rgb(240, 2445, 50);
+   border: 0;
+ }
+
+ .site-title{
+  
+ }
+
+ #menu-master-menu{
+  text-align: right;
+  float: right;
+  width: 40%;
+ }
+
+
+ /*- - cart - -*/
+
+ .site-header-cart .cart-contents .count{
+  padding-right: 20px;
+}
+
+/*- - - - - -  footer - - - - - -*/
+
+.site-footer{
+ background: none;
+ color: white;
+ font-family:'Renogare Regular';
+ font-size: 1rem;
+ border-top: 1px solid grey;
+ margin-left: 0;
+}
+
+.site-footer a:not(.button){
+ color: white;
+}
+
+.widget_nav_menu ul li{
+ display: inline-block;
+
+}
+
+.widget_nav_menu ul li a:link {
+  text-decoration: none;
+}
+
+.widget_nav_menu ul li::before{
+ display: none;
+}
+
+.site-info, .footer-widgets{
+ padding-top: 0;
+}
+
+#menu-footer{
+ text-align: right;
+}
+
+
+.footer-widgets{
+ float: right;
+ width: 50vw;
+}
+
+
+/*- - - - - -  media queries - - - - - -*/
+
+@media (min-width: 768px){
+  .col-full {
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    /* padding: 0 2.617924em; */
+    box-sizing: content-box;
+  }
+
+  ul.menu li.current-menu-item > a {
+   color: white;
+ }
+}
+
+
+

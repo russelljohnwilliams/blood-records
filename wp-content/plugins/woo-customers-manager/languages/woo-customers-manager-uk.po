@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Customers Manager\n"
+"POT-Creation-Date: 2017-11-01 15:13+0200\n"
+"PO-Revision-Date: 2017-11-01 15:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: build/src/Admin/Admin.php:201 build/views/admin/user-profile.php:5
+#: src/Admin/Admin.php:201 views/admin/user-profile.php:5
+msgid "Registered"
+msgstr "Зареєстрований"
+
+#: build/src/Admin/Admin.php:202 build/views/admin/user-orders.php:6
+#: src/Admin/Admin.php:202 views/admin/user-orders.php:6
+msgid "Money spent"
+msgstr "Витрачені гроші"
+
+#: build/src/ExtendedUsersPlugin.php:65 src/ExtendedUsersPlugin.php:65
+#, php-format
+msgid "The %s plugin requires %s plugin to be active!"
+msgstr "Для роботи плагіна %s потрібен плагін %s"
+
+#: build/views/admin/filter.php:8 views/admin/filter.php:8
+msgid "Filter by date"
+msgstr "Фільтрувати по даті"
+
+#: build/views/admin/filter.php:16 views/admin/filter.php:16
+msgid "Registered from"
+msgstr "Зареєстрован з"
+
+#: build/views/admin/filter.php:23 views/admin/filter.php:23
+msgid "Registered to"
+msgstr "Зареєстрован по"
+
+#: build/views/admin/filter.php:30 views/admin/filter.php:30
+msgid "Filter by price"
+msgstr "Фільтрувати по ціні"
+
+#: build/views/admin/filter.php:39 views/admin/filter.php:39
+msgid "Money spent from"
+msgstr "Витрачені гроші від"
+
+#: build/views/admin/filter.php:48 views/admin/filter.php:48
+msgid "Money spent to"
+msgstr "Витрачені гроші до"
+
+#: build/views/admin/filter.php:56 views/admin/filter.php:56
+msgid "Filter"
+msgstr "Фільтрувати"
+
+#: build/views/admin/filter.php:57 views/admin/filter.php:57
+msgid "Reset filter"
+msgstr "Скинути фільтр"
+
+#: build/views/admin/user-orders.php:1 views/admin/user-orders.php:1
+msgid "Orders"
+msgstr "Замовлення"
+
+#: build/views/admin/user-orders.php:18 build/views/admin/user-orders.php:19
+#: views/admin/user-orders.php:18 views/admin/user-orders.php:19
+msgid "Status"
+msgstr "Статус"
+
+#: build/views/admin/user-orders.php:22 views/admin/user-orders.php:22
+msgid "Order"
+msgstr "Замовлення"
+
+#: build/views/admin/user-orders.php:23 views/admin/user-orders.php:23
+msgid "Items"
+msgstr "Позиції"
+
+#: build/views/admin/user-orders.php:24 views/admin/user-orders.php:24
+msgid "Date"
+msgstr "Дата"
+
+#: build/views/admin/user-orders.php:25 views/admin/user-orders.php:25
+msgid "Total"
+msgstr "Загалом"
+
+#: build/views/admin/user-orders.php:45 views/admin/user-orders.php:45
+msgid "No orders"
+msgstr "Немає замовлень"
+
+#: build/views/admin/user-profile.php:1 views/admin/user-profile.php:1
+msgid "Additional information"
+msgstr "Додаткова інформація"
+
+#: custom-strings.php:7
+msgid "WooCommerce Customers Manager"
+msgstr "WooCommerce Customers Manager"
+
+#: custom-strings.php:8
+msgid "https://premmerce.com/"
+msgstr "https://premmerce.com/"
+
+#: custom-strings.php:9
+msgid "premmerce"
+msgstr "premmerce"
+
+#: custom-strings.php:10
+msgid ""
+"This plugin extends the standard user list and the edit user page in "
+"WordPress and adds the customer data from WooCommerce."
+msgstr ""
+"Цей плагін розширює стандартний список користувачів та сторінку  редагування "
+"користувача в WordPress та додає дані клієнта від WooCommerce."
+
+#: custom-strings.php:11
+msgid "https://premmerce.com/woocommerce-customers-manager/"
+msgstr "https://premmerce.com/woocommerce-customers-manager/"
+
+#~ msgid "This plugin requires %s plugin to be active!"
+#~ msgstr "Для цього плагіна необхідний плагін %s!"
+
+#~ msgid "Reset"
+#~ msgstr "Скинути фільтр"
+
+#~ msgid "Order #"
+#~ msgstr "Замовлення №"
+
+#~ msgid "Role Section..."
+#~ msgstr "Вибір ролі"
+
+#~ msgid "User ID"
+#~ msgstr "ID користувача"

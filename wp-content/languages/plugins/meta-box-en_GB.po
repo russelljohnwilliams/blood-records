@@ -1,0 +1,611 @@
+# Translation of Plugins - Meta Box &#8211; WordPress Custom Fields Framework - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Meta Box &#8211; WordPress Custom Fields Framework - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-12 19:51:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Meta Box &#8211; WordPress Custom Fields Framework - Stable (latest release)\n"
+
+#. Translators: %s - Plugin name.
+#: inc/about/sections/welcome.php:13
+msgid "Welcome to %s"
+msgstr "Welcome to %s"
+
+#: inc/about/sections/extensions.php:187
+msgid "Select and show custom fields created by the Meta Box plugin in the Beaver Themer field connection."
+msgstr "Select and show custom fields created by the Meta Box plugin in the Beaver Themer field connection."
+
+#: inc/about/sections/extensions.php:103
+msgid "Create register, login and edit user profile forms in the frontend. Embed everywhere with shortcodes."
+msgstr "Create register, login and edit user profile forms in the front end. Embed everywhere with shortcodes."
+
+#: inc/about/sections/extensions.php:11
+msgid "Extend custom fields in WordPress well beyond what others would ever consider ordinary! Save over 70% with our extensions bundles."
+msgstr "Extend custom fields in WordPress well beyond what others would ever consider ordinary! Save over 70% with our extensions bundles."
+
+#: inc/about/about.php:79
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: inc/about/sections/upgrade.php:20
+msgid "Get Meta Box PRO now"
+msgstr "Get Meta Box PRO now"
+
+#: inc/about/sections/upgrade.php:18
+msgid "And much more!"
+msgstr "And much more!"
+
+#: inc/about/sections/upgrade.php:17
+msgid "Save custom fields in custom tables."
+msgstr "Save custom fields in custom tables."
+
+#: inc/about/sections/upgrade.php:16
+msgid "Create frontend submission forms."
+msgstr "Create front-end submission forms."
+
+#: inc/about/sections/upgrade.php:15
+msgid "Create custom settings pages."
+msgstr "Create custom settings pages."
+
+#: inc/about/sections/upgrade.php:14
+msgid "Add custom fields to taxonomies or user profile."
+msgstr "Add custom fields to taxonomies or user profile."
+
+#: inc/about/sections/upgrade.php:13
+msgid "Create custom fields with drag-n-drop interface - no coding knowledge required!"
+msgstr "Create custom fields with drag-n-drop interface - no coding knowledge required!"
+
+#: inc/about/sections/upgrade.php:11
+msgid "Please upgrade to the PRO plan to unlock more awesome features."
+msgstr "Please upgrade to the PRO plan to unlock more awesome features."
+
+#: inc/about/sections/upgrade.php:10
+msgid "Upgrade to Meta Box PRO"
+msgstr "Upgrade to Meta Box PRO"
+
+#: inc/about/sections/newsletter.php:13
+msgid "Want to learn how to use Meta Box to its full potential? Sign up to get valuable tips and resources. We will never spam you."
+msgstr "Want to learn how to use Meta Box to its full potential? Sign up to get valuable tips and resources. We will never spam you."
+
+#: inc/about/sections/newsletter.php:11
+msgid "Meta Box Newsletter"
+msgstr "Meta Box Newsletter"
+
+#: inc/about/sections/extensions.php:343
+msgid "Create and manage custom taxonomies with an easy-to-use interface in WordPress."
+msgstr "Create and manage custom taxonomies with an easy-to-use interface in WordPress."
+
+#: inc/about/sections/extensions.php:331
+msgid "Show or hide meta boxes whenever and for whomever you choose."
+msgstr "Show or hide meta boxes whenever and for whomever you choose."
+
+#: inc/about/sections/extensions.php:319
+msgid "Display fields more beautiful by putting them into 12-columns grid."
+msgstr "Display fields more beautiful by putting them into a 12-columns grid."
+
+#: inc/about/sections/extensions.php:307
+msgid "Toggle meta boxes by page template, post format or taxonomy using JS."
+msgstr "Toggle meta boxes by page template, post format or taxonomy using JS."
+
+#: inc/about/sections/extensions.php:295
+msgid "Display help information for fields using beautiful tooltips."
+msgstr "Display help information for fields using beautiful tooltips."
+
+#: inc/about/sections/extensions.php:283
+msgid "Define custom meta boxes and custom fields easier with templates."
+msgstr "Define custom meta boxes and custom fields easier with templates."
+
+#: inc/about/sections/extensions.php:271
+msgid "Automatically updates all Meta Box extensions within the WordPress Admin area."
+msgstr "Automatically updates all Meta Box extensions within the WordPress Admin area."
+
+#: inc/about/sections/extensions.php:259
+msgid "Limit the number of characters or words entered for text and textarea fields."
+msgstr "Limit the number of characters or words entered for text and textarea fields."
+
+#: inc/about/sections/extensions.php:247
+msgid "Add content of custom fields to Yoast SEO Content Analysis to have better/correct SEO score."
+msgstr "Add content of custom fields to Yoast SEO Content Analysis to have better/correct SEO score."
+
+#: inc/about/sections/extensions.php:235
+msgid "Display custom fields in table columns in admin screens for All Posts (types)."
+msgstr "Display custom fields in table columns in admin screens for All Posts (types)."
+
+#: inc/about/sections/extensions.php:223
+msgid "Automatically and instantly populate location data with the power of Google Maps Geolocation API."
+msgstr "Automatically and instantly populate location data with the power of Google Maps Geolocation API."
+
+#: inc/about/sections/extensions.php:211
+msgid "Track changes of custom fields with WordPress revision. Save, compare, restore the changes easily."
+msgstr "Track changes of custom fields with WordPress revision. Save, compare, restore the changes easily."
+
+#: inc/about/sections/extensions.php:199
+msgid "Add custom fields to comments in WordPress. Support all field types and options."
+msgstr "Add custom fields to comments in WordPress. Support all field types and options."
+
+#: inc/about/sections/extensions.php:175
+msgid "Integrates Meta Box and FacetWP, makes custom fields searchable and filterable in the frontend."
+msgstr "Integrates Meta Box and FacetWP, makes custom fields searchable and filterable in the front end."
+
+#: inc/about/sections/extensions.php:35 inc/about/sections/extensions.php:155
+#: inc/about/sections/extensions.php:167 inc/about/sections/extensions.php:179
+#: inc/about/sections/extensions.php:191 inc/about/sections/extensions.php:203
+#: inc/about/sections/extensions.php:251 inc/about/sections/extensions.php:263
+#: inc/about/sections/extensions.php:275 inc/about/sections/extensions.php:347
+msgid "Free Download"
+msgstr "Free Download"
+
+#. Translators: %1$s - link to review form.
+#: inc/about/about.php:157
+msgid "Please rate <strong>Meta Box</strong> <a href=\"%1$s\" target=\"_blank\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href=\"%1$s\" target=\"_blank\">WordPress.org</a> to help us spread the word. Thank you from the Meta Box team!"
+msgstr "Please rate <strong>Meta Box</strong> <a href=\"%1$s\" target=\"_blank\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href=\"%1$s\" target=\"_blank\">WordPress.org</a> to help us spread the word. Thank you from the Meta Box team!"
+
+#: inc/about/sections/welcome.php:16
+msgid "Meta Box is a free Gutenberg and GDPR-compatible WordPress custom fields plugin and framework that makes quick work of customizing a website with—you guessed it—meta boxes and custom fields in WordPress. Follow the instruction below to get started!"
+msgstr "Meta Box is a free Gutenberg and GDPR-compatible WordPress custom fields plugin and framework that makes quick work of customising a website with—you guessed it—meta boxes and custom fields in WordPress. Follow the instruction below to get started!"
+
+#: inc/about/sections/tabs.php:13 inc/about/sections/welcome.php:21
+msgid "Support"
+msgstr "Support"
+
+#: inc/about/sections/support.php:22
+msgid "Go to support forum"
+msgstr "Go to support forum"
+
+#: inc/about/sections/support.php:21
+msgid "For users that have bought premium extensions, the support is provided in the Meta Box Support forum. Any question will be answered with technical details within 24 hours."
+msgstr "For users that have bought premium extensions, the support is provided in the Meta Box Support forum. Any question will be answered with technical details within 24 hours."
+
+#: inc/about/sections/support.php:20
+msgid "Premium Support"
+msgstr "Premium Support"
+
+#: inc/about/sections/support.php:16
+msgid "Go to WordPress.org"
+msgstr "Go to WordPress.org"
+
+#: inc/about/sections/support.php:15
+msgid "Go to Github"
+msgstr "Go to Github"
+
+#: inc/about/sections/support.php:14
+msgid "If you have any question about how to use the plugin, please open a new topic on WordPress.org support forum or open a new issue on Github (preferable). We will try to answer as soon as we can."
+msgstr "If you have any question about how to use the plugin, please open a new topic on WordPress.org support forum or open a new issue on Github (preferable). We will try to answer as soon as we can."
+
+#: inc/about/sections/support.php:13
+msgid "Free Support"
+msgstr "Free Support"
+
+#: inc/about/sections/newsletter.php:15
+msgid "Subscribe"
+msgstr "Subscribe"
+
+#: inc/about/sections/extensions.php:163
+msgid "A lightweight WordPress plugin for creating many-to-many relationships between posts, terms and users."
+msgstr "A lightweight WordPress plugin for creating many-to-many relationships between posts, terms and users."
+
+#: inc/about/sections/extensions.php:151
+msgid "Pull all meta value from posts, terms into the WP REST API responses."
+msgstr "Pull all meta value from posts, terms into the WP REST API responses."
+
+#: inc/about/sections/extensions.php:139
+msgid "Save custom fields data to custom table instead of the default meta tables. Reduce database size and increase performance."
+msgstr "Save custom fields data to custom table instead of the default meta tables. Reduce database size and increase performance."
+
+#: inc/about/sections/extensions.php:127
+msgid "Add as many custom fields as you want and organize them into tabs."
+msgstr "Add as many custom fields as you want and organise them into tabs."
+
+#: inc/about/sections/extensions.php:115
+msgid "Create frontend forms for users to submit custom content. Embed everywhere with shortcode."
+msgstr "Create front-end forms for users to submit custom content. Embed everywhere with shortcode."
+
+#: inc/about/sections/extensions.php:91
+msgid "Add custom fields to user profile (user meta) quickly with simple syntax."
+msgstr "Add custom fields to user profile (user meta) quickly with simple syntax."
+
+#: inc/about/sections/extensions.php:79
+msgid "Easily add custom fields to categories, tags or any custom taxonomy."
+msgstr "Easily add custom fields to categories, tags or any custom taxonomy."
+
+#: inc/about/sections/extensions.php:67
+msgid "Control the visibility of meta boxes and fields or even HTML elements with ease."
+msgstr "Control the visibility of meta boxes and fields or even HTML elements with ease."
+
+#: inc/about/sections/extensions.php:55
+msgid "Create a powerful settings page for your theme, plugin or website."
+msgstr "Create a powerful settings page for your theme, plugin or website."
+
+#: inc/about/sections/extensions.php:43
+msgid "Create repeatable groups of custom fields for better appearance and structure."
+msgstr "Create repeatable groups of custom fields for better appearance and structure."
+
+#: inc/about/sections/extensions.php:31
+msgid "Create and manage custom post types easily in WordPress with an easy-to-use interface."
+msgstr "Create and manage custom post types easily in WordPress with an easy-to-use interface."
+
+#: inc/about/sections/extensions.php:19
+msgid "Drag and drop your custom fields into place without a single line of code."
+msgstr "Drag and drop your custom fields into place without a single line of code."
+
+#: inc/about/sections/extensions.php:11
+msgid "View Bundles"
+msgstr "View Bundles"
+
+#: inc/fields/switch.php:91
+msgid "Off"
+msgstr "Off"
+
+#: inc/fields/switch.php:90
+msgid "On"
+msgstr "On"
+
+#: inc/fields/background.php:124
+msgid "Contain"
+msgstr "Contain"
+
+#: inc/fields/background.php:123
+msgid "Cover"
+msgstr "Cover"
+
+#: inc/fields/background.php:120
+msgid "-- Background Size --"
+msgstr "-- Background Size --"
+
+#: inc/fields/background.php:109
+msgid "Scroll"
+msgstr "Scroll"
+
+#: inc/fields/background.php:108
+msgid "Fixed"
+msgstr "Fixed"
+
+#: inc/fields/background.php:106
+msgid "-- Background Attachment --"
+msgstr "-- Background Attachment --"
+
+#: inc/fields/background.php:96
+msgid "Bottom Right"
+msgstr "Bottom Right"
+
+#: inc/fields/background.php:95
+msgid "Bottom Center"
+msgstr "Bottom Centre"
+
+#: inc/fields/background.php:94
+msgid "Bottom Left"
+msgstr "Bottom Left"
+
+#: inc/fields/background.php:93
+msgid "Center Right"
+msgstr "Centre Right"
+
+#: inc/fields/background.php:92
+msgid "Center Center"
+msgstr "Centre Centre"
+
+#: inc/fields/background.php:91
+msgid "Center Left"
+msgstr "Centre Left"
+
+#: inc/fields/background.php:90
+msgid "Top Right"
+msgstr "Top Right"
+
+#: inc/fields/background.php:89
+msgid "Top Center"
+msgstr "Top Centre"
+
+#: inc/fields/background.php:88
+msgid "Top Left"
+msgstr "Top Left"
+
+#: inc/fields/background.php:86
+msgid "-- Background Position --"
+msgstr "-- Background Position --"
+
+#: inc/fields/background.php:76 inc/fields/background.php:110
+#: inc/fields/background.php:122
+msgid "Inherit"
+msgstr "Inherit"
+
+#: inc/fields/background.php:75
+msgid "Repeat Vertically"
+msgstr "Repeat Vertically"
+
+#: inc/fields/background.php:74
+msgid "Repeat Horizontally"
+msgstr "Repeat Horizontally"
+
+#: inc/fields/background.php:73
+msgid "Repeat All"
+msgstr "Repeat All"
+
+#: inc/fields/background.php:72
+msgid "No Repeat"
+msgstr "No Repeat"
+
+#: inc/fields/background.php:70
+msgid "-- Background Repeat --"
+msgstr "-- Background Repeat --"
+
+#: inc/fields/background.php:58
+msgid "Background Image"
+msgstr "Background Image"
+
+#: inc/fields/sidebar.php:30
+msgid "Select a sidebar"
+msgstr "Select a sidebar"
+
+#: inc/about/sections/tabs.php:10
+msgid "Getting Started"
+msgstr "Getting Started"
+
+#: inc/about/sections/getting-started.php:33
+msgid "More Extensions"
+msgstr "More Extensions"
+
+#: inc/about/sections/getting-started.php:31
+msgid "MB Term Meta"
+msgstr "MB Term Meta"
+
+#: inc/about/sections/getting-started.php:30
+msgid "MB Settings Page"
+msgstr "MB Settings Page"
+
+#: inc/about/sections/getting-started.php:29
+msgid "Meta Box Conditional Logic"
+msgstr "Meta Box Conditional Logic"
+
+#: inc/about/sections/getting-started.php:28
+msgid "Meta Box Group"
+msgstr "Meta Box Group"
+
+#: inc/about/sections/getting-started.php:26
+msgid "Wanna see more features that transform your WordPress website into a powerful CMS? Check out some extensions below:"
+msgstr "Want to see more features that transform your WordPress website into a powerful CMS? Check out some extensions below:"
+
+#: inc/about/sections/extensions.php:23 inc/about/sections/extensions.php:47
+#: inc/about/sections/extensions.php:59 inc/about/sections/extensions.php:71
+#: inc/about/sections/extensions.php:83 inc/about/sections/extensions.php:95
+#: inc/about/sections/extensions.php:107 inc/about/sections/extensions.php:119
+#: inc/about/sections/extensions.php:131 inc/about/sections/extensions.php:143
+#: inc/about/sections/extensions.php:215 inc/about/sections/extensions.php:227
+#: inc/about/sections/extensions.php:239 inc/about/sections/extensions.php:287
+#: inc/about/sections/extensions.php:299 inc/about/sections/extensions.php:311
+#: inc/about/sections/extensions.php:323 inc/about/sections/extensions.php:335
+#: inc/about/sections/getting-started.php:23
+msgid "Learn More"
+msgstr "Learn More"
+
+#: inc/about/sections/getting-started.php:22
+msgid "Meta Box doesn't have any admin page for configuration or settings. Instead of that, it provides a very powerful API to speed up the process of creating meta boxes and custom fields. It might take you a little time at first, but then you'll love the way it work because it helps you do and customize almost everything."
+msgstr "Meta Box doesn't have any admin page for configuration or settings. Instead of that, it provides a very powerful API to speed up the process of creating meta boxes and custom fields. It might take you a little time at first, but then you'll love the way it works because it helps you do and customise almost everything."
+
+#: inc/about/sections/getting-started.php:21
+msgid "Understand The Basics"
+msgstr "Understand The Basics"
+
+#: inc/about/sections/getting-started.php:17
+msgid "Go to Online Generator"
+msgstr "Go to Online Generator"
+
+#: inc/about/sections/getting-started.php:15
+msgid "online generator"
+msgstr "online generator"
+
+#: inc/about/sections/getting-started.php:13
+msgid "The fastest way to getting started with Meta Box is use our online generator to generate meta boxes with custom fields. It provides a friendly UI for you to create meta boxes and custom fields just by drag and drop fields."
+msgstr "The fastest way to getting started with Meta Box is to use our online generator to generate meta boxes with custom fields. It provides a friendly UI for you to create meta boxes and custom fields just by drag and drop fields."
+
+#: inc/about/sections/getting-started.php:12
+msgid "Getting Started With Online Generator"
+msgstr "Getting Started With Online Generator"
+
+#: inc/about/about.php:78
+msgid "Welcome to Meta Box"
+msgstr "Welcome to Meta Box"
+
+#: inc/about/about.php:50
+msgid "About"
+msgstr "About"
+
+#. Author of the plugin/theme
+msgid "MetaBox.io"
+msgstr "MetaBox.io"
+
+#: inc/fields/input-list.php:90
+msgid "Select All / None"
+msgstr "Select All / None"
+
+#. Description of the plugin/theme
+msgid "Create custom meta boxes and custom fields in WordPress."
+msgstr "Create custom meta boxes and custom fields in WordPress."
+
+#: inc/fields/media.php:34
+msgctxt "media"
+msgid "or"
+msgstr "or"
+
+#: inc/fields/select-advanced.php:45
+msgid "Select an item"
+msgstr "Select an item"
+
+#: inc/fields/media.php:35
+msgctxt "media"
+msgid "Drop files here to upload"
+msgstr "Drop files here to upload"
+
+#: inc/fields/media.php:33
+msgctxt "media"
+msgid "Select Files"
+msgstr "Select Files"
+
+#: inc/fields/taxonomy.php:43
+msgid "Select a term"
+msgstr "Select a term"
+
+#: inc/fields/media.php:30
+msgctxt "media"
+msgid "No Title"
+msgstr "No Title"
+
+#: inc/fields/media.php:26
+msgctxt "media"
+msgid " files"
+msgstr " files"
+
+#: inc/fields/media.php:25
+msgctxt "media"
+msgid " file"
+msgstr " file"
+
+#: inc/fields/media.php:29
+msgctxt "media"
+msgid "View"
+msgstr "View"
+
+#: inc/fields/media.php:28
+msgctxt "media"
+msgid "Edit"
+msgstr "Edit"
+
+#: inc/fields/media.php:27
+msgctxt "media"
+msgid "Remove"
+msgstr "Remove"
+
+#: inc/fields/media.php:24
+msgctxt "media"
+msgid "+ Add Media"
+msgstr "+ Add Media"
+
+#: inc/field.php:395
+msgid "+ Add more"
+msgstr "+ Add more"
+
+#. #-#-#-#-#  meta-box-code.pot (Meta Box 4.14.11)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  meta-box-code.pot (Meta Box 4.14.11)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://metabox.io"
+msgstr "https://metabox.io"
+
+#. #-#-#-#-#  meta-box-code.pot (Meta Box 4.14.11)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: inc/about/about.php:62 inc/about/about.php:63
+msgid "Meta Box"
+msgstr "Meta Box"
+
+#: inc/validation.php:47
+msgid "Please correct the errors highlighted below and try again."
+msgstr "Please correct the errors highlighted below and try again."
+
+#: inc/fields/user.php:22
+msgid "Select an user"
+msgstr "Select a user"
+
+#: inc/fields/select.php:88
+msgid "None"
+msgstr "None"
+
+#: inc/fields/select.php:88
+msgid "All"
+msgstr "All"
+
+#. Translators: %s is the taxonomy singular label.
+#: inc/fields/post.php:38 inc/fields/taxonomy.php:49
+msgid "Select a %s"
+msgstr "Select a %s"
+
+#: inc/fields/post.php:32
+msgid "Select a post"
+msgstr "Select a post"
+
+#: inc/fields/oembed.php:64
+msgid "Embed HTML not available."
+msgstr "Embed HTML not available."
+
+#: inc/fields/map.php:74
+msgid "Find Address"
+msgstr "Find Address"
+
+#: inc/fields/key-value.php:133
+msgid "Value"
+msgstr "Value"
+
+#: inc/fields/key-value.php:132
+msgid "Key"
+msgstr "Key"
+
+#: inc/fields/file.php:66
+msgctxt "file upload"
+msgid "+ Add new file"
+msgstr "+ Add new file"
+
+#: inc/fields/file.php:53
+msgid "Error: Cannot delete file"
+msgstr "Error: Cannot delete file"
+
+#. Translators: %d is the number of files in plural form.
+#: inc/fields/file.php:23
+msgid "You may only upload maximum %d files"
+msgstr "You may only upload maximum %d files"
+
+#. Translators: %d is the number of files in singular form.
+#: inc/fields/file.php:21
+msgid "You may only upload maximum %d file"
+msgstr "You may only upload maximum %d file"
+
+#: inc/fields/file-input.php:41
+msgid "Remove"
+msgstr "Remove"
+
+#: inc/fields/file-input.php:39 inc/fields/select.php:88
+msgid "Select"
+msgstr "Select"
+
+#: inc/fields/file-input.php:20
+msgid "Select File"
+msgstr "Select File"
+
+#: inc/fields/file.php:122
+msgctxt "file upload"
+msgid "Edit"
+msgstr "Edit"
+
+#: inc/fields/file.php:121
+msgctxt "file upload"
+msgid "Delete"
+msgstr "Delete"
+
+#: inc/fields/checkbox.php:53
+msgid "No"
+msgstr "No"
+
+#: inc/fields/checkbox.php:53
+msgid "Yes"
+msgstr "Yes"
+
+#: inc/fields/button.php:32
+msgid "Click me"
+msgstr "Click me"
+
+#: inc/fields/autocomplete.php:20 inc/fields/autocomplete.php:81
+#: inc/fields/autocomplete.php:93
+msgid "Delete"
+msgstr "Delete"
+
+#: inc/about/sections/getting-started.php:25 inc/about/sections/tabs.php:12
+#: inc/about/sections/welcome.php:20 inc/core.php:39
+msgid "Extensions"
+msgstr "Extensions"
+
+#: inc/about/sections/welcome.php:19 inc/core.php:38
+msgid "Documentation"
+msgstr "Documentation"
