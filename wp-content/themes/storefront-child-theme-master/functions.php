@@ -26,6 +26,16 @@ function sf_child_theme_dequeue_style() {
  */
 
 
+
+/**
+ * Remove breadcrumbs for Storefront theme
+ */
+add_action( 'init', 'wc_remove_storefront_breadcrumbs');
+
+function wc_remove_storefront_breadcrumbs() {
+  remove_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
+}
+
 function storefront_credit() {
     ?>
     <div class="site-info">
@@ -38,4 +48,10 @@ function storefront_header_container() {
   echo '<div class="col-full site-branding-and-search-wrapper">';
 }
 
+add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 );
+function woo_show_excerpt_shop_page() {
+  global $product;
+  echo $product->get_description();
+  echo $product->post->post_excerpt;
+}
 

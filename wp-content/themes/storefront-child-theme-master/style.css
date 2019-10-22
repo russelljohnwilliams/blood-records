@@ -1,15 +1,15 @@
 /*
-Theme Name:   	Storefront Child Theme
-Theme URI:    	https://github.com/stuartduff/storefront-child-theme
-Author:       	Stuart Duff
+Theme Name:     Storefront Child Theme
+Theme URI:      https://github.com/stuartduff/storefront-child-theme
+Author:         Stuart Duff
 Author URI:     http://stuartduff.com
-Template:     	storefront
-Description:  	This is a blank child theme for WooThemes StoreFront theme
-Version:      	1.0.0
-License:      	GNU General Public License v2 or later
-License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  	storefront
-Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
+Template:       storefront
+Description:    This is a blank child theme for WooThemes StoreFront theme
+Version:        1.0.0
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:    storefront
+Tags:           black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
@@ -42,14 +42,21 @@ Images License: GNU General Public License v2 or later
 
  /*- - - - - -  header - - - - - -*/
 
- .site-branding{
-   font-family:'Renogare Regular';
-   width: 30%;
-   float: left;
-   margin-bottom: 1em;
- }
 
- .site-branding .site-title{
+ .site-header, .site-branding-and-nav-wrapper, .site-branding-and-search-wrapper, .storefront-primary-navigation, .main-navigation{
+  height: 55px;
+}
+
+
+.site-branding{
+ font-family:'Renogare Regular';
+ width: 30%;
+ float: left;
+ margin-bottom: 1em;
+ padding: 15px 0;
+}
+
+.site-branding .site-title{
   font-size: 1.4em;
   letter-spacing: 0px;
 }
@@ -60,7 +67,7 @@ Images License: GNU General Public License v2 or later
  margin: 0;
 }
 
-.home.page:not(.page-template-template-homepage) .site-header{
+.site-header{
   margin: 0;
   padding: 0; 
 }
@@ -89,29 +96,47 @@ Images License: GNU General Public License v2 or later
   display: inline-block;
 }
 
+.col-full {
+ max-width: 95vw;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 0;
+ box-sizing: content-box;
+ max-height: 75px;
+}
+
+.main-navigation ul li a:hover, .main-navigation ul li:hover > a, .site-title a:hover, .site-header ul.menu li.current-menu-item > a {
+  color: black;
+  
+}
+
 /*- - cart - -*/
 
 .site-header-cart .cart-contents {
   padding: 18px 0;
   width: 1px;
+
 }
 
 .site-header-cart .cart-contents .count{
   padding: 0 20px;
+
 }
 
-.site-header-cart .cart-contents span {
+.site-header-cart .cart-contents span{
   display: none;
 }
 
 .woocommerce-active .site-header .site-header-cart{
-  padding: 2px 10px;
+  padding: 0 10px;
   width: 1px;
+  top: -4px;
 }
 
 .site-header-cart .widget_shopping_cart{
   position: absolute;
-  left: -55px;
+  left: -100px;
+  top: 30px;
   border-radius: 5px;
   -webkit-box-shadow: 8px 12px 10px -10px rgba(0,0,0,0.75);
   -moz-box-shadow: 8px 12px 10px -10px rgba(0,0,0,0.75);
@@ -120,7 +145,6 @@ Images License: GNU General Public License v2 or later
   color: white;
   background-color: black;
   width: 125px;
-
 }
 
 .woocommerce-active .site-header .main-navigation {
@@ -128,14 +152,15 @@ Images License: GNU General Public License v2 or later
 }
 
 .site-header-cart:hover .widget_shopping_cart{
-  left: -55px;
+  left: -110px;
+  top: 40px;
   opacity: 0.8;
   transition: 0.5s;
 }
 
 
 .main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a {
-  padding: 1.618em 1em;
+  padding: 17px 1em;
   font-family:'Renogare Regular';
   font-size: 0.8rem;
 }
@@ -148,6 +173,40 @@ Images License: GNU General Public License v2 or later
   /* padding: 0 10px; */
 }
 
+
+
+
+/*- - - - - -  campaigns - - - - - -*/
+
+
+.pre-text{
+  color: white;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  border-bottom: 1px solid white;
+}
+
+
+.columns-1  li a{
+  overflow: hidden;
+  height: 90vh;
+
+}
+
+.columns-1{
+  overflow: hidden;
+  height: 100vh;
+  margin-bottom: 50px;
+
+}
+
+ul.products li.product img{
+  width: 100%;
+  top: -50%;
+  position: relative;
+}
+
+
 /*- - - - - -  footer - - - - - -*/
 
 .site-footer{
@@ -158,7 +217,7 @@ Images License: GNU General Public License v2 or later
  border-top: 1px solid grey;
  margin-left: 0;
  position: absolute;
- bottom: 0;
+ /*bottom: 0;*/
  width: 100%;
  margin-bottom: 0;
  padding-bottom: 0;
@@ -201,19 +260,6 @@ Images License: GNU General Public License v2 or later
 /*- - - - - -  media queries - - - - - -*/
 
 @media (min-width: 768px){
-  .col-full {
-    max-width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    box-sizing: content-box;
-    max-height: 75px;
-  }
 
-  ul.menu li.current-menu-item > a {
-   color: white;
- }
 }
-
-
 
