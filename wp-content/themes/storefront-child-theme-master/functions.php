@@ -33,3 +33,9 @@ function storefront_credit() {
     </div><!-- .site-info -->
     <?php
 }
+
+function storefront_header_container() {
+  echo '<div class="col-full site-branding-and-search-wrapper">';
+}
+
+

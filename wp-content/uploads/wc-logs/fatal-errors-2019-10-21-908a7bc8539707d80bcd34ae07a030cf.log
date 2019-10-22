@@ -58,3 +58,225 @@
 
 2019-10-21T22:10:58+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
 
+2019-10-21T22:16:57+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T22:20:16+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T22:25:38+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T22:31:27+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 12288 bytes)
+
+2019-10-21T22:35:28+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T22:41:29+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T22:57:56+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:00:56+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:05:01+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:07:23+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_contents_counts() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_te
+
+2019-10-21T23:07:25+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_contents_counts() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_te
+
+2019-10-21T23:07:26+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_contents_counts() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_te
+
+2019-10-21T23:07:40+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:07:41+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:07:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:08:43+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:08:45+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:08:46+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotals() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:11:52+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:13:27+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotaly() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:13:28+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotaly() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:13:29+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_subtotaly() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:31
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-
+
+2019-10-21T23:17:15+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:19:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_contents_counts() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:30
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_te
+
+2019-10-21T23:19:20+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_cart_contents_counts() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:30
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_te
+
+2019-10-21T23:20:00+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:21:54+00:00 CRITICAL Uncaught Error: Call to undefined function println() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:29
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.
+
+2019-10-21T23:21:55+00:00 CRITICAL Uncaught Error: Call to undefined function println() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:29
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/header.php(46): do_action('storefront_head...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(704): require_once('/Users/electric...')
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.
+
+2019-10-21T23:26:54+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:33:24+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:35:09+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:40:03+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 12288 bytes)
+
+2019-10-21T23:45:01+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:50:29+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-21T23:55:58+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 12288 bytes)
+
+2019-10-22T00:00:24+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 12288 bytes)
+
+2019-10-22T00:05:29+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:13:31+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:15:03+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:21:38+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:25:19+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:31:20+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:35:20+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 12288 bytes)
+
+2019-10-22T00:40:02+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:45:20+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:50:03+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+
+2019-10-22T00:59:08+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 40960 bytes)
+

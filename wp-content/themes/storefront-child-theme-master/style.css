@@ -40,35 +40,112 @@ Images License: GNU General Public License v2 or later
    background-color: #2B2B2B;
  }
 
-
  /*- - - - - -  header - - - - - -*/
 
  .site-branding{
    font-family:'Renogare Regular';
    width: 30%;
    float: left;
+   margin-bottom: 1em;
  }
 
- .site-header{
-   background-color: rgb(240, 2445, 50);
-   border: 0;
- }
+ .site-branding .site-title{
+  font-size: 1.4em;
+  letter-spacing: 0px;
+}
 
- .site-title{
-  
- }
+.site-header{
+ background-color: rgb(240, 2445, 50);
+ border: 0;
+ margin: 0;
+}
 
- #menu-master-menu{
-  text-align: right;
+.home.page:not(.page-template-template-homepage) .site-header{
+  margin: 0;
+  padding: 0; 
+}
+
+#menu-master-menu{
+  /*text-align: right;*/
   float: right;
-  width: 40%;
- }
+  /*width: 40%;*/
+}
+
+#site-branding-and-nav-wrapper{
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  height: 55px;
+}
+
+.site-branding-and-search-wrapper{
+  width: 45%;
+  display: inline-block;
+}
+
+.storefront-primary-navigation{
+  width: 55%;
+  display: inline-block;
+}
+
+/*- - cart - -*/
+
+.site-header-cart .cart-contents {
+  padding: 18px 0;
+  width: 1px;
+}
+
+.site-header-cart .cart-contents .count{
+  padding: 0 20px;
+}
+
+.site-header-cart .cart-contents span {
+  display: none;
+}
+
+.woocommerce-active .site-header .site-header-cart{
+  padding: 2px 10px;
+  width: 1px;
+}
+
+.site-header-cart .widget_shopping_cart{
+  position: absolute;
+  left: -55px;
+  border-radius: 5px;
+  -webkit-box-shadow: 8px 12px 10px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 8px 12px 10px -10px rgba(0,0,0,0.75);
+  box-shadow: 8px 12px 10px -10px rgba(0,0,0,0.75);
+  opacity: 0;
+  color: white;
+  background-color: black;
+  width: 125px;
+
+}
+
+.woocommerce-active .site-header .main-navigation {
+  width: 93%;
+}
+
+.site-header-cart:hover .widget_shopping_cart{
+  left: -55px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
 
 
- /*- - cart - -*/
+.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a {
+  padding: 1.618em 1em;
+  font-family:'Renogare Regular';
+  font-size: 0.8rem;
+}
 
- .site-header-cart .cart-contents .count{
-  padding-right: 20px;
+.woocommerce-active .site-header .main-navigation{
+  margin-right: 0;
+}
+
+.woocommerce-active .site-header .site-header-cart {
+  /* padding: 0 10px; */
 }
 
 /*- - - - - -  footer - - - - - -*/
@@ -77,10 +154,17 @@ Images License: GNU General Public License v2 or later
  background: none;
  color: white;
  font-family:'Renogare Regular';
- font-size: 1rem;
+ font-size: 0.8rem;
  border-top: 1px solid grey;
  margin-left: 0;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ margin-bottom: 0;
+ padding-bottom: 0;
+ max-height: 70px;
 }
+
 
 .site-footer a:not(.button){
  color: white;
@@ -122,8 +206,8 @@ Images License: GNU General Public License v2 or later
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    /* padding: 0 2.617924em; */
     box-sizing: content-box;
+    max-height: 75px;
   }
 
   ul.menu li.current-menu-item > a {
