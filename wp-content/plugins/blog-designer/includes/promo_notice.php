@@ -1,63 +1,62 @@
 <?php
-add_action('plugins_loaded', 'bd_load_plugin');
+//add_action( 'plugins_loaded', 'bd_load_plugin' );
 function bd_load_plugin() {
-    // The promo time
-    $first_review_time = get_option('blog_designer_promo_time');
-    $second_review_time = get_option('blog_designer_promo_time_review');
+	// The promo time
+	$first_review_time  = get_option( 'blog_designer_promo_time' );
+	$second_review_time = get_option( 'blog_designer_promo_time_review' );
 
-    if ($first_review_time == '') {
-        $first_review_time = time();
-        update_option('blog_designer_promo_time', $first_review_time);
-    }
+	if ( $first_review_time == '' ) {
+		$first_review_time = time();
+		update_option( 'blog_designer_promo_time', $first_review_time );
+	}
 
-    if ($second_review_time == '') {
-        $second_review_time = time();
-        update_option('blog_designer_promo_time_review', $second_review_time);
-    }
+	if ( $second_review_time == '' ) {
+		$second_review_time = time();
+		update_option( 'blog_designer_promo_time_review', $second_review_time );
+	}
 
-    if ($second_review_time < (time() - (60 * 60 * 24 * 3))) {
-        update_option('blog_designer_promo_time', $second_review_time);
-    }
+	if ( $second_review_time < ( time() - ( 60 * 60 * 24 * 3 ) ) ) {
+		update_option( 'blog_designer_promo_time', $second_review_time );
+	}
 
-    // Are we to show the Blog Designer promo
-    if ($first_review_time != '' && $first_review_time > 0) {
-        add_action('admin_notices', 'bd_promo');
-    }
-    else{
-        $already_dismissed = get_option('blog_designer_already_dismissed');
-        $already_dismissed_time = get_option('blog_designer_already_dismissed_time');
-        if($already_dismissed == 'yes' && $already_dismissed_time < (time() - (60 * 60 * 24 * 7))) {
-            update_option('blog_designer_promo_time_review', '');
-            update_option('blog_designer_already_dismissed', '');
-            update_option('blog_designer_already_dismissed_time', '');
-        }
-    }
+	// Are we to show the Blog Designer promo
+	if ( $first_review_time != '' && $first_review_time > 0 ) {
+		add_action( 'admin_notices', 'bd_promo' );
+	} else {
+		$already_dismissed      = get_option( 'blog_designer_already_dismissed' );
+		$already_dismissed_time = get_option( 'blog_designer_already_dismissed_time' );
+		if ( $already_dismissed == 'yes' && $already_dismissed_time < ( time() - ( 60 * 60 * 24 * 7 ) ) ) {
+			update_option( 'blog_designer_promo_time_review', '' );
+			update_option( 'blog_designer_already_dismissed', '' );
+			update_option( 'blog_designer_already_dismissed_time', '' );
+		}
+	}
 
-    // Are we to disable the promo
-    if (isset($_GET['blog_designer_promo']) && (int) $_GET['blog_designer_promo'] == 0) {
-        if ($second_review_time < (time() - (60 * 60 * 24 * 3))) {
-            update_option('blog_designer_promo_time', (0 - time()));
-            update_option('blog_designer_promo_time_review', (0 - time()));
-            update_option('blog_designer_already_dismissed', 'yes');
-            update_option('blog_designer_already_dismissed_time', time());
-            die('DONE');
-        } else {
-            update_option('blog_designer_promo_time', (0 - time()));
-            die('DONE');
-        }
-    }
+	// Are we to disable the promo
+	if ( isset( $_GET['blog_designer_promo'] ) && (int) $_GET['blog_designer_promo'] == 0 ) {
+		if ( $second_review_time < ( time() - ( 60 * 60 * 24 * 3 ) ) ) {
+			update_option( 'blog_designer_promo_time', ( 0 - time() ) );
+			update_option( 'blog_designer_promo_time_review', ( 0 - time() ) );
+			update_option( 'blog_designer_already_dismissed', 'yes' );
+			update_option( 'blog_designer_already_dismissed_time', time() );
+			die( 'DONE' );
+		} else {
+			update_option( 'blog_designer_promo_time', ( 0 - time() ) );
+			die( 'DONE' );
+		}
+	}
 }
 
-if (!function_exists('bd_promo')) {
+if ( ! function_exists( 'bd_promo' ) ) {
 
-    // Show the promo
-    function bd_promo() {
-        $upgrade_display = false;
-        $first_review_time = get_option('blog_designer_promo_time');
-        if ($first_review_time < (time() - (60 * 60 * 24 * 3))) {
-            $upgrade_display = true;
-        }
-        echo '
+	// Show the promo
+	function bd_promo() {
+		$upgrade_display   = false;
+		$first_review_time = get_option( 'blog_designer_promo_time' );
+		if ( $first_review_time < ( time() - ( 60 * 60 * 24 * 3 ) ) ) {
+			$upgrade_display = true;
+		}
+		echo '
             <script>
             jQuery(document).ready( function() {
                     (function($) {
@@ -68,7 +67,7 @@ if (!function_exists('bd_promo')) {
                                     $("#blog_designer_promo").hide();
 
                                     // Save this preference
-                                    $.post("' . admin_url('?blog_designer_promo=0') . '", data, function(response) {
+                                    $.post("' . admin_url( '?blog_designer_promo=0' ) . '", data, function(response) {
                                             //alert(response);
                                     });
                             });
@@ -145,39 +144,38 @@ if (!function_exists('bd_promo')) {
                     color: red;
                 }
                 </style>';
-            if($upgrade_display) {
-                echo '
+		if ( $upgrade_display ) {
+			echo '
                 <div class="notice notice-success" id="blog_designer_promo" style="min-height:120px">
                         <a class="blog_designer_promo-close" href="javascript:" aria-label="Dismiss this Notice">
                                 <span class="dashicons dashicons-dismiss"></span> Dismiss
                         </a>
                         <img src="' . BLOGDESIGNER_URL . 'images/blog-designer-200.png" style="float:left; margin:10px 20px 10px 10px" width="100" />
-                        <p style="font-size:16px">' . __("It's been a while you are using <strong>Blog Designer</strong>, tell us did you like it or not? Care to share some love.", "blog-designer") . '</p>
+                        <p style="font-size:16px">' . __( "It's been a while you are using <strong>Blog Designer</strong>, tell us did you like it or not? Care to share some love.", 'blog-designer' ) . '</p>
                         <p>
-                                <a class="bd_button bd_button2" target="_blank" href="https://wordpress.org/support/plugin/blog-designer/reviews/?filter=5">' . __("Rate it 5&#9733;'s", "blog-designer") . '</a>
-                                <a class="bd_button bd_button3" target="_blank" href="https://www.facebook.com/SolwinInfotech/">' . __("Like us on Facebook", "blog-designer") . '</a>
-                                <a class="bd_button bd_button4" target="_blank" href="https://twitter.com/home?status=' . rawurlencode('I use #blogdesigner to design my #WordPress blog site - http://blogdesigner.solwininfotech.com') . '">' . __("Follow us on Twitter", "blog-designer") . '</a>
-                                <a class="bd_button bd_button5" target="_blank" href="https://www.solwininfotech.com/documents/wordpress/blog-designer/">' . __("Explore Documentation", "blog-designer") . '</a>
-                                <a class="bd_button bd_button1" target="_blank" href="http://blogdesigner.solwininfotech.com/pricing/#ptp-816">' . __("Upgrade to Pro", "blog-designer") . '</a>
+                                <a class="bd_button bd_button2" target="_blank" href="https://wordpress.org/support/plugin/blog-designer/reviews/?filter=5">' . __( "Rate it 5&#9733;'s", 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button3" target="_blank" href="https://www.facebook.com/SolwinInfotech/">' . __( 'Like us on Facebook', 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button4" target="_blank" href="https://twitter.com/home?status=' . rawurlencode( 'I use #blogdesigner to design my #WordPress blog site - http://blogdesigner.solwininfotech.com' ) . '">' . __( 'Follow us on Twitter', 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button5" target="_blank" href="https://www.solwininfotech.com/documents/wordpress/blog-designer/">' . __( 'Explore Documentation', 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button1" target="_blank" href="http://blogdesigner.solwininfotech.com/pricing/#ptp-816">' . __( 'Upgrade to Pro', 'blog-designer' ) . '</a>
                         </p>
                 </div>';
-            } else {
-                echo '
+		} else {
+			echo '
                 <div class="notice notice-success" id="blog_designer_promo" style="min-height:120px">
                         <a class="blog_designer_promo-close" href="javascript:" aria-label="Dismiss this Notice">
                                 <span class="dashicons dashicons-dismiss"></span> Dismiss
                         </a>
                         <img src="' . BLOGDESIGNER_URL . 'images/blog-designer-200.png" style="float:left; margin:10px 20px 10px 10px" width="100" />
-                        <p style="font-size:16px">' . __("We are delighted that you are using <strong>Blog Designer</strong>.", "blog-designer") . '</p>
+                        <p style="font-size:16px">' . __( 'We are delighted that you are using <strong>Blog Designer</strong>.', 'blog-designer' ) . '</p>
                         <p>
-                                <a class="bd_button bd_button2" target="_blank" href="https://wordpress.org/support/plugin/blog-designer/reviews/?filter=5">' . __("Rate it 5&#9733;'s", "blog-designer") . '</a>
-                                <a class="bd_button bd_button3" target="_blank" href="https://www.facebook.com/SolwinInfotech/">' . __("Like us on Facebook", "blog-designer") . '</a>
-                                <a class="bd_button bd_button4" target="_blank" href="https://twitter.com/home?status=' . rawurlencode('I use #blogdesigner to design my #WordPress blog site - http://blogdesigner.solwininfotech.com') . '">' . __("Follow us on Twitter", "blog-designer") . '</a>
-                                <a class="bd_button bd_button5" target="_blank" href="https://www.solwininfotech.com/documents/wordpress/blog-designer/">' . __("Explore Documentation", "blog-designer") . '</a>
+                                <a class="bd_button bd_button2" target="_blank" href="https://wordpress.org/support/plugin/blog-designer/reviews/?filter=5">' . __( "Rate it 5&#9733;'s", 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button3" target="_blank" href="https://www.facebook.com/SolwinInfotech/">' . __( 'Like us on Facebook', 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button4" target="_blank" href="https://twitter.com/home?status=' . rawurlencode( 'I use #blogdesigner to design my #WordPress blog site - http://blogdesigner.solwininfotech.com' ) . '">' . __( 'Follow us on Twitter', 'blog-designer' ) . '</a>
+                                <a class="bd_button bd_button5" target="_blank" href="https://www.solwininfotech.com/documents/wordpress/blog-designer/">' . __( 'Explore Documentation', 'blog-designer' ) . '</a>
                         </p>
                 </div>';
-            }
+		}
 
-    }
-
+	}
 }

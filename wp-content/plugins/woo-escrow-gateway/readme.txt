@@ -2,7 +2,7 @@
 Contributors: escrowdotcom
 Tags: escrow, payment, gateway, ecommerce, woocommerce
 Requires at least: 4.0
-Tested up to: 4.9.6
+Tested up to: 5.2.1
 Requires PHP: 5.6
 Stable tag: trunk
 License: GNU General Public License v2.0 or later
@@ -21,11 +21,11 @@ This plugin allows you to add Escrow.com as a payment option on your checkout pa
 
 1. Install the **Escrow.com Payments for WooCommerce** extension directly via the WordPress plugin directory or download the latest from [our plugin page on WordPress.org](https://wordpress.org/plugins/woo-escrow-gateway/) and upload the **woocommerce-gateway-escrow.zip** file via the WordPress plugin upload page.
 1. Activate the plugin through the **Plugins** menu in WordPress.
-1. Once you have activated the plugin, navigate to the settings page under **WooCommerce** / **Settings** / **Checkout** / **Escrow.com**.
+1. Once you have activated the plugin, navigate to the settings page under **WooCommerce** / **Settings** / **Payments** / **Escrow.com**.
 1. The settings page allows you to configure the plugin to your liking.
 1. Your Escrow Email is the email address you used to create an account on either escrow.com or escrow-sandbox.com. The escrow.com environment is the production environment and is used for live transactions. The escrow-sandbox.com environment is for testing. Make sure the credentials you enter match the selected environment. These are two separate environments, so creating an account in one environment does not mean that it will be duplicated in the other environment.
 1. [Create a production account here](https://www.escrow.com/integrations/signup) and [create a sandbox account here](https://www.escrow-sandbox.com/integrations/signup).
-1. Enable the Escrow.com payment option on your checkout page by checking the **Enable Escrow.com Payment Method** on the settings page and clicking **Save** at the bottom of the screen.
+1. Enable the Escrow.com payment option on your checkout page by checking the **Enable Escrow.com Payment Method** check box on the settings page and clicking **Save** at the bottom of the screen.
 
 Further information may be found at:
 
@@ -50,11 +50,34 @@ Our privacy policy may be found at:
 To assist the customer service process around plugin usage, this plugin sends a notification to Escrow.com upon plugin activation and deactivation. This data is used in accordance with the above privacy policy.
 
 == Changelog ==
+= 2.3.0 =
+* The British pound (GBP) has been added to the Currency drop down list on the Escrow.com settings page. When selected all transactions will be denominated in GBP.
+
+= 2.2.0 =
+* The Australian dollar (AUD) has been added to the Currency drop down list on the Escrow.com settings page. When selected all transactions will be denominated in AUD.
+
+= 2.1.0 =
+* The buyer's address is no longer required by the Escrow.com extension. If you wish to disable the address fields on your checkout page, you may now make this change to your WooCommerce installation.
+
+= 2.0.0 =
+* Buyers placing orders on the WooCommerce checkout page are now redirected to the new streamlined Escrow.com Pay workflow. This allows the buyer to register, verify, and pay all from a single page on Escrow.com. This replaces the old workflow which unnecessarily bounced the buyer around to various parts of Escrow.com.
+* When the shopping cart contains products from a single vendor at the time of checkout, the buyer is redirected directly to Escrow.com, not to the WooCommerce order receipt page (the buyer used to have to click through to Escrow.com from here).
+* When the shopping cart contains products from multiple vendors at the time of checkout, the buyer is redirected to the WooCommerce order receipt page, which displays a button to the Escrow.com Pay workflow for each vendor in the order.
+* The Escrow.com Pay workflow redirects the buyer back to the WooCommerce order detail page when they have finished paying for their order on Escrow.com.
+* To avoid a potential issue when upgrading to version 2.0.0, please re-save your settings on the Escrow.com settings page. Make sure that the desired Escrow API URL is selected; note that this now contains only the root URL (e.g. https://api.escrow.com/), not any additional path information (e.g. https://api.escrow.com/2017-09-01/).
+* More information about the Escrow.com Pay workflow may be found at [www.escrow.com/pay](https://www.escrow.com/pay)
+
+= 1.5.1 =
+* Fixed a bug where a non-one-day inspection period would lead to an HTTP 422 exception when tax was charged on the checkout page.
+
+= 1.5.0 =
+* Milestone transactions are now supported. See **Transaction Type** on the Escrow.com settings page.
+
 = 1.4.1 =
 * Item description now contains the perma-link to the product in WooCommerce instead of repeating the item name. The **Tax** item is now more accurately called **Tax collected by seller**.
 
 = 1.4.0 =
-* Tax total from shopping cart now may be included as a line item in Escrow.com transaction. See **Tax Options** on Escrow.com settings page.
+* Tax total from shopping cart now may be included as a line item in Escrow.com transaction. See **Tax Options** on the Escrow.com settings page.
 
 = 1.3.0 =
 * Address data of the buyer is now sent to Escrow.com when an order is placed. This means that new buyers will not need to re-enter address data on Escrow.com. The address data of existing Escrow.com users is not overwritten.

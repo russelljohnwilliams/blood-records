@@ -6,12 +6,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WOE_Formatter_Json extends WOE_Formatter {
 	var $prev_added = false;
 
+	public function __construct(
+		$mode,
+		$filename,
+		$settings,
+		$format,
+		$labels,
+		$field_formats,
+		$date_format,
+		$offset
+	) {
+		parent::__construct( $mode, $filename, $settings, $format, $labels, $field_formats, $date_format, $offset );
+		$this->prev_added = ( $offset > 0 );
+	}
+
 	public function start( $data = '' ) {
 		parent::start( $data );
 
-		$start_text = $this->convert_literals( $this->settings[ 'start_tag' ] );
+		$start_text = $this->convert_literals( $this->settings['start_tag'] );
 
-		fwrite( $this->handle, apply_filters( "woe_json_start_text", $start_text) );
+		fwrite( $this->handle, apply_filters( "woe_json_start_text", $start_text ) );
 	}
 
 	public function output( $rec ) {
@@ -19,34 +33,52 @@ class WOE_Formatter_Json extends WOE_Formatter {
 		if ( $this->prev_added ) {
 			fwrite( $this->handle, "," );
 		}
-		if ( $this->mode == 'preview' ) 
+		if ( $this->mode == 'preview' ) {
 			fwrite( $this->handle, "\n" );
+		}
 
 		//rename fields in array
 		$rec_out = array();
 		$labels  = $this->labels['order'];
-		foreach ( $rec as $field => $value ) {
-			if ( is_array( $value ) ) {
-				if ( $field == "products" ) {
+
+
+		foreach ( $labels->get_labels() as $label_data ) {
+			$original_key = $label_data['key'];
+			$label        = $label_data['label'];
+			$key          = $label_data['parent_key'] ? $label_data['parent_key'] : $original_key;
+
+			$field_value = $rec[ $key ];
+			if ( is_array( $field_value ) ) {
+				if ( $original_key == "products" ) {
 					$child_labels = $this->labels['products'];
-				} elseif ( $field == "coupons" ) {
+				} elseif ( $original_key == "coupons" ) {
 					$child_labels = $this->labels['coupons'];
 				} else {
-					$rec_out[ $labels[ $field ] ] = $value;
+					$rec_out[ $label ] = $field_value;
 					continue;
 				}
 
-				$rec_out[ $labels[ $field ] ] = array();
-				foreach ( $value as $child_elements ) {
-					$child = array();
-					foreach ( $child_elements as $field_child => $value_child ) {
-						if( isset( $child_labels[ $field_child ] ) )
-							$child[ $child_labels[ $field_child ] ] = $value_child;
-					}
-					$rec_out[ $labels[ $field ] ][] = $child;
+				if ( empty( $child_labels ) ) // can't export!
+				{
+					continue;
 				}
+
+				$rec_out[ $label ] = array();
+				foreach ( $field_value as $child_element ) {
+					$child = array();
+					foreach ( $child_labels->get_labels() as $child_label_data ) {
+						$child_original_key = $child_label_data['key'];
+						$child_label        = $child_label_data['label'];
+						$child_key          = $child_label_data['parent_key'] ? $child_label_data['parent_key'] : $child_original_key;
+						if ( isset( $child_element[ $child_key ] ) ) {
+							$child[ $child_label ] = $child_element[ $child_key ];
+						}
+					}
+					$rec_out[ $label ][] = $child;
+				}
+
 			} else {
-				$rec_out[ $labels[ $field ] ] = $value;
+				$rec_out[ $label ] = $field_value;
 			}
 		}
 
@@ -57,7 +89,7 @@ class WOE_Formatter_Json extends WOE_Formatter {
 		}
 
 		if ( $this->has_output_filter ) {
-			$json = apply_filters( "woe_json_output_filter", $json, $rec_out);
+			$json = apply_filters( "woe_json_output_filter", $json, $rec_out, $this );
 		}
 		fwrite( $this->handle, $json );
 
@@ -68,11 +100,12 @@ class WOE_Formatter_Json extends WOE_Formatter {
 	}
 
 	public function finish( $data = '' ) {
-		if ( $this->mode == 'preview' ) 
+		if ( $this->mode == 'preview' ) {
 			fwrite( $this->handle, "\n" );
+		}
 
-		$end_text = $this->convert_literals( $this->settings[ 'end_tag' ] );
-		fwrite( $this->handle, apply_filters( "woe_json_end_text", $end_text) );
+		$end_text = $this->convert_literals( $this->settings['end_tag'] );
+		fwrite( $this->handle, apply_filters( "woe_json_end_text", $end_text ) );
 		parent::finish();
 	}
 }

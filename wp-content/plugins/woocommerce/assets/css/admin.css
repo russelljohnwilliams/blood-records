@@ -92,8 +92,8 @@
   font-weight: normal;
   font-style: normal; }
 /**
- * Styling begins
- */
+  * Styling begins
+  */
 .blockUI.blockOverlay::before {
   height: 1em;
   width: 1em;
@@ -153,9 +153,9 @@
   .wc_addons_wrap ul.subsubsub.subsubsub {
     margin: -2px 0 12px; }
   .wc_addons_wrap .subsubsub li::after {
-    content: '|'; }
+    content: "|"; }
   .wc_addons_wrap .subsubsub li:last-child::after {
-    content: ''; }
+    content: ""; }
   .wc_addons_wrap .addons-banner-block-item-icon,
   .wc_addons_wrap .addons-column-block-item-icon {
     align-items: center;
@@ -163,7 +163,7 @@
     justify-content: center; }
   .wc_addons_wrap .addons-banner-block,
   .wc_addons_wrap .addons-wcs-banner-block {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ddd;
     margin: 0 0 1em 0;
     padding: 2em 2em 1em; }
@@ -232,7 +232,7 @@
   .wc_addons_wrap .addons-column {
     flex: 1;
     width: 50%;
-    padding: 0 .5em; }
+    padding: 0 0.5em; }
   .wc_addons_wrap .addons-column:nth-child(2) {
     margin-right: 0; }
   .wc_addons_wrap .addons-small-light-block,
@@ -247,7 +247,7 @@
     max-width: 50px; }
   .wc_addons_wrap .addons-small-light-block,
   .wc_addons_wrap .addons-column-block {
-    background: #ffffff; }
+    background: #fff; }
   .wc_addons_wrap .addons-column-block-left {
     float: left; }
   .wc_addons_wrap .addons-column-block-right {
@@ -296,7 +296,7 @@
   .wc_addons_wrap .addons-small-dark-item {
     margin: 0 0 20px; }
   .wc_addons_wrap .addons-small-dark-block h1 {
-    color: #ffffff; }
+    color: #fff; }
   .wc_addons_wrap .addons-small-dark-block p {
     color: #fafafa; }
   .wc_addons_wrap .addons-small-dark-item-icon img {
@@ -334,9 +334,9 @@
     width: 124px; }
   .wc_addons_wrap .addons-button-solid {
     background-color: #955a89;
-    color: #ffffff; }
+    color: #fff; }
   .wc_addons_wrap .addons-button-solid:hover {
-    color: #ffffff;
+    color: #fff;
     opacity: 0.8; }
   .wc_addons_wrap .addons-button-outline-green {
     border: 1px solid #73ae39;
@@ -345,10 +345,10 @@
     color: #73ae39;
     opacity: 0.8; }
   .wc_addons_wrap .addons-button-outline-white {
-    border: 1px solid #ffffff;
-    color: #ffffff; }
+    border: 1px solid #fff;
+    color: #fff; }
   .wc_addons_wrap .addons-button-outline-white:hover {
-    color: #ffffff;
+    color: #fff;
     opacity: 0.8; }
   .wc_addons_wrap .addons-button-installed {
     background: #e6e6e6;
@@ -374,11 +374,11 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    margin: 0 -.5em; }
+    margin: 0 -0.5em; }
     .wc_addons_wrap .products li {
       float: left;
       border: 1px solid #ddd;
-      margin: 0 .5em 1em !important;
+      margin: 0 0.5em 1em !important;
       padding: 0;
       vertical-align: top;
       width: 25%;
@@ -408,7 +408,8 @@
           display: none; }
         .wc_addons_wrap .products li a .price {
           display: none; }
-        .wc_addons_wrap .products li a h2, .wc_addons_wrap .products li a h3 {
+        .wc_addons_wrap .products li a h2,
+        .wc_addons_wrap .products li a h3 {
           margin: 0 !important;
           padding: 20px !important;
           background: #fff; }
@@ -468,7 +469,7 @@
   .woocommerce-message a.woocommerce-message-close {
     position: static;
     float: right;
-    padding: 0px 15px 10px 28px;
+    padding: 0 15px 10px 28px;
     margin-top: -10px;
     font-size: 13px;
     line-height: 1.23076923;
@@ -483,7 +484,8 @@
     margin-left: 3px;
     vertical-align: middle; }
 
-#variable_product_options #message, #variable_product_options .notice {
+#variable_product_options #message,
+#variable_product_options .notice {
   margin: 10px; }
 
 .clear {
@@ -497,17 +499,9 @@ mark.amount {
   background: transparent none;
   color: inherit; }
 
-.simplify-commerce-banner {
-  overflow: hidden; }
-  .simplify-commerce-banner img {
-    float: right;
-    padding: 15px 0;
-    margin-left: 1em;
-    width: 200px; }
-
 /**
- * Help Tip
- */
+  * Help Tip
+  */
 .woocommerce-help-tip {
   color: #666;
   display: inline-block;
@@ -556,34 +550,44 @@ table.wc_status_table {
     width: 33%; }
   table.wc_status_table td.help {
     width: 1em; }
-  table.wc_status_table td, table.wc_status_table th {
+  table.wc_status_table td,
+  table.wc_status_table th {
     font-size: 1.1em;
     font-weight: normal; }
-    table.wc_status_table td.run-tool, table.wc_status_table th.run-tool {
+    table.wc_status_table td.run-tool,
+    table.wc_status_table th.run-tool {
       text-align: right; }
-    table.wc_status_table td strong.name, table.wc_status_table th strong.name {
+    table.wc_status_table td strong.name,
+    table.wc_status_table th strong.name {
       display: block;
-      margin-bottom: .5em; }
-    table.wc_status_table td mark, table.wc_status_table th mark {
+      margin-bottom: 0.5em; }
+    table.wc_status_table td mark,
+    table.wc_status_table th mark {
       background: transparent none; }
-    table.wc_status_table td mark.yes, table.wc_status_table th mark.yes {
+    table.wc_status_table td mark.yes,
+    table.wc_status_table th mark.yes {
       color: #7ad03a; }
-    table.wc_status_table td mark.no, table.wc_status_table th mark.no {
+    table.wc_status_table td mark.no,
+    table.wc_status_table th mark.no {
       color: #999; }
-    table.wc_status_table td mark.error, table.wc_status_table td .red, table.wc_status_table th mark.error, table.wc_status_table th .red {
+    table.wc_status_table td mark.error,
+    table.wc_status_table td .red,
+    table.wc_status_table th mark.error,
+    table.wc_status_table th .red {
       color: #a00; }
-    table.wc_status_table td ul, table.wc_status_table th ul {
+    table.wc_status_table td ul,
+    table.wc_status_table th ul {
       margin: 0; }
   table.wc_status_table .help_tip {
     cursor: help; }
 
-table.wc_status_table--tools td, table.wc_status_table--tools th {
+table.wc_status_table--tools td,
+table.wc_status_table--tools th {
   padding: 2em; }
 
-.taxonomy-product_cat .column-thumb .woocommerce-help-tip {
+.taxonomy-product_cat .check-column .woocommerce-help-tip {
   font-size: 1.5em;
-  margin: 0 0 0 -34px;
-  padding: 0px 2px 5px;
+  margin: -3px 0 0 5px;
   display: block;
   position: absolute; }
 
@@ -605,22 +609,22 @@ table.wc_status_table--tools td, table.wc_status_table--tools th {
     outline: 0; }
 
 /**
- * DB log viewer
- */
+  * DB log viewer
+  */
 .wp-list-table.logs {
   /**
-   * Add color to levels
-   *
-   * Descending severity:
-   *   emergency, alert -> red
-   *   critical, error  -> orange
-   *   warning, notice  -> yellow
-   *   info             -> blue
-   *   debug            -> gree
-   */ }
+    * Add color to levels
+    *
+    * Descending severity:
+    *   emergency, alert -> red
+    *   critical, error  -> orange
+    *   warning, notice  -> yellow
+    *   info             -> blue
+    *   debug            -> gree
+    */ }
   .wp-list-table.logs .log-level {
     display: inline;
-    padding: .2em .6em .3em;
+    padding: 0.2em 0.6em 0.3em;
     font-size: 80%;
     font-weight: bold;
     line-height: 1;
@@ -628,7 +632,7 @@ table.wc_status_table--tools td, table.wc_status_table--tools th {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: .2em; }
+    border-radius: 0.2em; }
     .wp-list-table.logs .log-level:empty {
       display: none; }
   .wp-list-table.logs .log-level--emergency,
@@ -696,7 +700,9 @@ table.wc_status_table--tools td, table.wc_status_table--tools th {
     width: 99%;
     float: left;
     margin: 1px 1% 1px 1px; }
-  #woocommerce-fields.inline-edit-col .length, #woocommerce-fields.inline-edit-col .width, #woocommerce-fields.inline-edit-col .height {
+  #woocommerce-fields.inline-edit-col .length,
+  #woocommerce-fields.inline-edit-col .width,
+  #woocommerce-fields.inline-edit-col .height {
     width: 32.33%; }
   #woocommerce-fields.inline-edit-col .height {
     margin-right: 0; }
@@ -741,7 +747,7 @@ ul.wc_coupon_list {
     ul.wc_coupon_list li.code {
       display: inline-block;
       position: relative;
-      padding: 0 .5em;
+      padding: 0 0.5em;
       background-color: #fff;
       border: 1px solid #aaa;
       -webkit-box-shadow: 0 1px 0 #dfdfdf;
@@ -764,8 +770,8 @@ ul.wc_coupon_list {
         top: 7px;
         right: 20px;
         /*rtl:raw:
-        left: 7px;
-        */ }
+         left: 7px;
+         */ }
         ul.wc_coupon_list li.code .remove-coupon::before {
           font-family: 'Dashicons';
           speak: none;
@@ -841,7 +847,7 @@ ul.wc_coupon_list_block {
   padding: 23px 24px 12px; }
   #order_data h2 {
     margin: 0;
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
     font-size: 21px;
     font-weight: normal;
     line-height: 1.2;
@@ -849,14 +855,15 @@ ul.wc_coupon_list_block {
     padding: 0; }
   #order_data h3 {
     font-size: 14px; }
-  #order_data h3, #order_data h4 {
+  #order_data h3,
+  #order_data h4 {
     color: #333;
     margin: 1.33em 0 0; }
   #order_data p {
     color: #777; }
   #order_data p.order_number {
     margin: 0;
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
     font-weight: normal;
     line-height: 1.6em;
     font-size: 16px; }
@@ -948,7 +955,8 @@ ul.wc_coupon_list_block {
       display: none;
       zoom: 1;
       padding-right: 1px; }
-    #order_data .order_data_column .wc-customer-user label a, #order_data .order_data_column .wc-order-status label a {
+    #order_data .order_data_column .wc-customer-user label a,
+    #order_data .order_data_column .wc-order-status label a {
       float: right;
       margin-left: 8px; }
     #order_data .order_data_column a.edit_address {
@@ -964,7 +972,7 @@ ul.wc_coupon_list_block {
       #order_data .order_data_column a.edit_address:hover, #order_data .order_data_column a.edit_address:focus {
         color: #000; }
       #order_data .order_data_column a.edit_address::after {
-        font-family: 'WooCommerce';
+        font-family: "WooCommerce";
         position: absolute;
         top: 0;
         left: 0;
@@ -974,8 +982,8 @@ ul.wc_coupon_list_block {
         font-size: 14px;
         font-weight: 400; }
     #order_data .order_data_column a.edit_address::after {
-      font-family: 'Dashicons';
-      content: '\f464'; }
+      font-family: "Dashicons";
+      content: "\f464"; }
     #order_data .order_data_column .billing-same-as-shipping,
     #order_data .order_data_column .load_customer_shipping,
     #order_data .order_data_column .load_customer_billing {
@@ -983,7 +991,7 @@ ul.wc_coupon_list_block {
       display: inline-block;
       font-weight: normal; }
     #order_data .order_data_column .load_customer_shipping {
-      margin-right: .3em; }
+      margin-right: 0.3em; }
 
 .order_actions {
   margin: 0;
@@ -1068,7 +1076,7 @@ ul.wc_coupon_list_block {
     width: 10em;
     margin: 0 0 0 0.5em;
     box-sizing: border-box; }
-    #woocommerce-order-items .wc-order-totals .total input[type='text'] {
+    #woocommerce-order-items .wc-order-totals .total input[type="text"] {
       width: 96%;
       float: right; }
   #woocommerce-order-items .wc-order-totals .refunded-total {
@@ -1083,9 +1091,6 @@ ul.wc_coupon_list_block {
   #woocommerce-order-items .refund-actions .cancel-action {
     float: left;
     margin-left: 0; }
-#woocommerce-order-items .wc-order-item-bulk-edit .cancel-action {
-  float: left;
-  margin-left: 0; }
 #woocommerce-order-items .add_meta {
   margin-left: 0 !important; }
 #woocommerce-order-items h3 small {
@@ -1103,7 +1108,8 @@ ul.wc_coupon_list_block {
 
 #woocommerce-order-items .inside {
   display: block !important; }
-#woocommerce-order-items .hndle, #woocommerce-order-items .handlediv {
+#woocommerce-order-items .hndle,
+#woocommerce-order-items .handlediv {
   display: none; }
 #woocommerce-order-items .woocommerce_order_items_wrapper {
   margin: 0;
@@ -1133,31 +1139,32 @@ ul.wc_coupon_list_block {
         float: right;
         position: relative;
         margin-right: -1em; }
-    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td {
+    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th,
+    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td {
       padding: 1.5em 1em 1em;
       text-align: left;
       line-height: 1.5em;
       vertical-align: top;
       border-bottom: 1px solid #f8f8f8; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th textarea, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td textarea {
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th textarea,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td textarea {
         width: 100%; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th select, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td select {
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th select,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td select {
         width: 50%; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th input, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th textarea, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td input, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td textarea {
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th input,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th textarea,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td input,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td textarea {
         font-size: 14px;
         padding: 4px;
         color: #555; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th:last-child, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td:last-child {
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th:last-child,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td:last-child {
         padding-right: 2em; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th:first-child, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td:first-child {
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody th:first-child,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td:first-child {
         padding-left: 2em; }
-    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr td {
-      cursor: pointer; }
-    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr.selected {
-      background: #f5ebf3; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr.selected td {
-        border-color: #e6cce1;
-        opacity: 0.8; }
     #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr:last-child td {
       border-bottom: 1px solid #dfdfdf; }
     #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr:first-child td {
@@ -1204,7 +1211,8 @@ ul.wc_coupon_list_block {
           margin: 0;
           padding: 0;
           position: relative; }
-    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.name .wc-order-item-sku, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.name .wc-order-item-variation {
+    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.name .wc-order-item-sku,
+    #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items td.name .wc-order-item-variation {
       display: block;
       margin-top: 0.5em;
       font-size: 0.92em !important;
@@ -1361,7 +1369,11 @@ ul.wc_coupon_list_block {
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax_class .edit,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .item_cost .edit {
         text-align: left; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost small.times, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost del, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-discount, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost small.times,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost del,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-discount,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax small.times,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax del,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax .wc-order-item-taxes,
@@ -1394,7 +1406,8 @@ ul.wc_coupon_list_block {
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .item_cost .wc-order-item-refund-fields {
         font-size: 0.92em !important;
         color: #888; }
-      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes,
+      #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax .wc-order-item-taxes,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax .wc-order-item-refund-fields,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .quantity .wc-order-item-taxes,
@@ -1408,7 +1421,8 @@ ul.wc_coupon_list_block {
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .item_cost .wc-order-item-taxes,
       #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .item_cost .wc-order-item-refund-fields {
         margin: 0; }
-        #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes label, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields label,
+        #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-taxes label,
+        #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .cost .wc-order-item-refund-fields label,
         #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax .wc-order-item-taxes label,
         #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .tax .wc-order-item-refund-fields label,
         #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .quantity .wc-order-item-taxes label,
@@ -1771,7 +1785,9 @@ ul.wc_coupon_list_block {
     display: block;
     color: #999;
     margin: 3px 0; }
-.widefat .column-orders, .widefat .column-paying, .widefat .column-spent {
+.widefat .column-orders,
+.widefat .column-paying,
+.widefat .column-spent {
   text-align: center;
   width: 8%; }
 .widefat .column-last_order {
@@ -1789,9 +1805,10 @@ ul.wc_coupon_list_block {
     padding: 0 !important;
     height: 2em !important;
     width: 2em;
-    overflow: hidden; }
+    overflow: hidden;
+    vertical-align: middle; }
     .widefat .column-wc_actions a.button::after {
-      font-family: 'Dashicons';
+      font-family: "Dashicons";
       speak: none;
       font-weight: normal;
       font-variant: normal;
@@ -1810,20 +1827,20 @@ ul.wc_coupon_list_block {
       width: 12px;
       height: auto; }
   .widefat .column-wc_actions a.edit::after {
-    content: '\f464'; }
+    content: "\f464"; }
   .widefat .column-wc_actions a.link::after {
-    font-family: 'WooCommerce';
-    content: '\e00d'; }
+    font-family: "WooCommerce";
+    content: "\e00d"; }
   .widefat .column-wc_actions a.view::after {
-    content: '\f177'; }
+    content: "\f177"; }
   .widefat .column-wc_actions a.refresh::after {
-    font-family: 'WooCommerce';
-    content: '\e031'; }
+    font-family: "WooCommerce";
+    content: "\e031"; }
   .widefat .column-wc_actions a.processing::after {
-    font-family: 'WooCommerce';
-    content: '\e00f'; }
+    font-family: "WooCommerce";
+    content: "\e00f"; }
   .widefat .column-wc_actions a.complete::after {
-    content: '\f147'; }
+    content: "\f147"; }
 .widefat small.meta {
   display: block;
   color: #999;
@@ -1836,8 +1853,9 @@ ul.wc_coupon_list_block {
   margin-top: 1em; }
   .post-type-shop_order .wp-list-table thead th,
   .post-type-shop_order .wp-list-table tfoot th {
-    padding: .75em 1em; }
-  .post-type-shop_order .wp-list-table thead th.sortable a, .post-type-shop_order .wp-list-table thead th.sorted a,
+    padding: 0.75em 1em; }
+  .post-type-shop_order .wp-list-table thead th.sortable a,
+  .post-type-shop_order .wp-list-table thead th.sorted a,
   .post-type-shop_order .wp-list-table tfoot th.sortable a,
   .post-type-shop_order .wp-list-table tfoot th.sorted a {
     padding: 0; }
@@ -1933,22 +1951,23 @@ ul.wc_coupon_list_block {
     .post-type-shop_order .wp-list-table .order-preview:hover {
       border: 2px solid #00a0d2; }
   .post-type-shop_order .wp-list-table .order-preview.disabled::before {
-    content: '';
-    background: url("../images/wpspin.gif") no-repeat center top; }
+    content: "";
+    background: url("../images/wpspin-2x.gif") no-repeat center top;
+    background-size: 71%; }
 
 .order-status {
   display: inline-flex;
   line-height: 2.5em;
   color: #777;
-  background: #E5E5E5;
+  background: #e5e5e5;
   border-radius: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  margin: -.25em 0;
+  margin: -0.25em 0;
   cursor: inherit !important;
   white-space: nowrap;
   max-width: 100%; }
   .order-status.status-completed {
-    background: #C8D7E1;
+    background: #c8d7e1;
     color: #2e4453; }
   .order-status.status-on-hold {
     background: #f8dda7;
@@ -1957,8 +1976,8 @@ ul.wc_coupon_list_block {
     background: #eba3a3;
     color: #761919; }
   .order-status.status-processing {
-    background: #C6E1C6;
-    color: #5B841B; }
+    background: #c6e1c6;
+    color: #5b841b; }
   .order-status.status-trash {
     background: #eba3a3;
     color: #761919; }
@@ -1977,7 +1996,8 @@ ul.wc_coupon_list_block {
 .wc-order-preview .wc-order-preview-table {
   width: 100%;
   margin: 0; }
-  .wc-order-preview .wc-order-preview-table th, .wc-order-preview .wc-order-preview-table td {
+  .wc-order-preview .wc-order-preview-table th,
+  .wc-order-preview .wc-order-preview-table td {
     padding: 1em 1.5em;
     text-align: left;
     border: 0;
@@ -1995,16 +2015,17 @@ ul.wc_coupon_list_block {
   .wc-order-preview .wc-order-preview-table tr:last-child td {
     border: 0; }
   .wc-order-preview .wc-order-preview-table .wc-order-item-sku {
-    margin-top: .5em; }
+    margin-top: 0.5em; }
   .wc-order-preview .wc-order-preview-table .wc-order-item-meta {
-    margin-top: .5em; }
-    .wc-order-preview .wc-order-preview-table .wc-order-item-meta th, .wc-order-preview .wc-order-preview-table .wc-order-item-meta td {
+    margin-top: 0.5em; }
+    .wc-order-preview .wc-order-preview-table .wc-order-item-meta th,
+    .wc-order-preview .wc-order-preview-table .wc-order-item-meta td {
       padding: 0;
       border: 0;
       text-align: left;
       vertical-align: top; }
     .wc-order-preview .wc-order-preview-table .wc-order-item-meta td:last-child {
-      padding-left: .5em; }
+      padding-left: 0.5em; }
 .wc-order-preview .wc-order-preview-addresses {
   overflow: hidden;
   padding-bottom: 1.5em; }
@@ -2097,13 +2118,13 @@ ul.wc_coupon_list_block {
     width: 1em; }
   .post-type-shop_order .wp-list-table td.column-order_number {
     padding-left: 0;
-    padding-bottom: .5em; }
+    padding-bottom: 0.5em; }
   .post-type-shop_order .wp-list-table td.column-order_status,
   .post-type-shop_order .wp-list-table td.column-order_date {
     display: inline-block !important;
     padding: 0 1em 1em 1em !important; }
-    .post-type-shop_order .wp-list-table td.column-order_status:before,
-    .post-type-shop_order .wp-list-table td.column-order_date:before {
+    .post-type-shop_order .wp-list-table td.column-order_status::before,
+    .post-type-shop_order .wp-list-table td.column-order_date::before {
       display: none !important; }
   .post-type-shop_order .wp-list-table td.column-order_date {
     padding-left: 0 !important; }
@@ -2194,7 +2215,7 @@ ul.wc_coupon_list_block {
       height: 100%;
       text-align: center;
       content: "";
-      font-family: 'Dashicons';
+      font-family: "Dashicons";
       line-height: 1.85; }
 
 /* Order notes */
@@ -2218,7 +2239,7 @@ ul.order_notes {
   ul.order_notes li a.delete_note {
     color: #a00; }
   ul.order_notes li .note_content::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: -10px;
@@ -2259,8 +2280,8 @@ table.wp-list-table tbody td.column-handle {
   text-align: center;
   vertical-align: text-top; }
   table.wp-list-table tbody td.column-handle::before {
-    content: '\f333';
-    font-family: 'Dashicons';
+    content: "\f333";
+    font-family: "Dashicons";
     text-align: center;
     line-height: 1;
     color: #999;
@@ -2337,9 +2358,9 @@ table.wp-list-table span.wc-featured {
     text-align: center;
     content: ""; }
 table.wp-list-table span.wc-featured::before {
-  content: '\f155'; }
+  content: "\f155"; }
 table.wp-list-table span.wc-featured.not-featured::before {
-  content: '\f154'; }
+  content: "\f154"; }
 table.wp-list-table td.column-featured span.wc-featured {
   font-size: 1.6em;
   cursor: pointer; }
@@ -2350,7 +2371,7 @@ table.wp-list-table mark.instock, table.wp-list-table mark.outofstock, table.wp-
 table.wp-list-table mark.instock {
   color: #7ad03a; }
 table.wp-list-table mark.outofstock {
-  color: #aa4444; }
+  color: #a44; }
 table.wp-list-table mark.onbackorder {
   color: #eaa600; }
 table.wp-list-table .order-notes_head,
@@ -2381,11 +2402,11 @@ table.wp-list-table .status_head {
     text-align: center;
     content: ""; }
 table.wp-list-table .order-notes_head::after {
-  content: '\e028'; }
+  content: "\e028"; }
 table.wp-list-table .notes_head::after {
-  content: '\e026'; }
+  content: "\e026"; }
 table.wp-list-table .status_head::after {
-  content: '\e011'; }
+  content: "\e011"; }
 table.wp-list-table .column-order_items {
   width: 12%; }
   table.wp-list-table .column-order_items table.order_items {
@@ -2433,7 +2454,8 @@ a.import_rates {
 table.wc_tax_rates,
 table.wc_input_table {
   width: 100%; }
-  table.wc_tax_rates th, table.wc_tax_rates td,
+  table.wc_tax_rates th,
+  table.wc_tax_rates td,
   table.wc_input_table th,
   table.wc_input_table td {
     display: table-cell !important; }
@@ -2511,8 +2533,8 @@ table.wc_input_table {
     vertical-align: middle; }
     table.wc_tax_rates .ui-sortable:not(.ui-sortable-disabled) td.sort::before,
     table.wc_input_table .ui-sortable:not(.ui-sortable-disabled) td.sort::before {
-      content: '\f333';
-      font-family: 'Dashicons';
+      content: "\f333";
+      font-family: "Dashicons";
       text-align: center;
       line-height: 1;
       color: #999;
@@ -2556,7 +2578,8 @@ table.wc_gateways,
 table.wc_emails,
 table.wc_shipping {
   position: relative; }
-  table.wc_gateways th, table.wc_gateways td,
+  table.wc_gateways th,
+  table.wc_gateways td,
   table.wc_emails th,
   table.wc_emails td,
   table.wc_shipping th,
@@ -2614,22 +2637,79 @@ table.wc_shipping {
   table.wc_gateways td.sort,
   table.wc_emails td.sort,
   table.wc_shipping td.sort {
-    cursor: move;
     font-size: 15px;
     text-align: center; }
-    table.wc_gateways td.sort::before,
-    table.wc_emails td.sort::before,
-    table.wc_shipping td.sort::before {
-      content: '\f333';
-      font-family: 'Dashicons';
-      text-align: center;
-      line-height: 1;
-      color: #999;
-      display: block;
-      width: 17px;
-      float: left;
-      height: 100%;
-      line-height: 24px; }
+    table.wc_gateways td.sort .wc-item-reorder-nav,
+    table.wc_emails td.sort .wc-item-reorder-nav,
+    table.wc_shipping td.sort .wc-item-reorder-nav {
+      white-space: nowrap;
+      width: 72px; }
+      table.wc_gateways td.sort .wc-item-reorder-nav::before,
+      table.wc_emails td.sort .wc-item-reorder-nav::before,
+      table.wc_shipping td.sort .wc-item-reorder-nav::before {
+        content: "\f333";
+        font-family: "Dashicons";
+        text-align: center;
+        line-height: 1;
+        color: #999;
+        display: block;
+        width: 24px;
+        float: left;
+        height: 100%;
+        line-height: 24px;
+        cursor: move; }
+      table.wc_gateways td.sort .wc-item-reorder-nav button,
+      table.wc_emails td.sort .wc-item-reorder-nav button,
+      table.wc_shipping td.sort .wc-item-reorder-nav button {
+        position: relative;
+        overflow: hidden;
+        float: left;
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        color: #82878c;
+        text-indent: -9999px;
+        cursor: pointer;
+        outline: none; }
+      table.wc_gateways td.sort .wc-item-reorder-nav button::before,
+      table.wc_emails td.sort .wc-item-reorder-nav button::before,
+      table.wc_shipping td.sort .wc-item-reorder-nav button::before {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        font: normal 20px/23px dashicons;
+        text-align: center;
+        text-indent: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      table.wc_gateways td.sort .wc-item-reorder-nav button:hover,
+      table.wc_gateways td.sort .wc-item-reorder-nav button:focus,
+      table.wc_emails td.sort .wc-item-reorder-nav button:hover,
+      table.wc_emails td.sort .wc-item-reorder-nav button:focus,
+      table.wc_shipping td.sort .wc-item-reorder-nav button:hover,
+      table.wc_shipping td.sort .wc-item-reorder-nav button:focus {
+        color: #191e23; }
+      table.wc_gateways td.sort .wc-item-reorder-nav .wc-move-down::before,
+      table.wc_emails td.sort .wc-item-reorder-nav .wc-move-down::before,
+      table.wc_shipping td.sort .wc-item-reorder-nav .wc-move-down::before {
+        content: "\f347"; }
+      table.wc_gateways td.sort .wc-item-reorder-nav .wc-move-up::before,
+      table.wc_emails td.sort .wc-item-reorder-nav .wc-move-up::before,
+      table.wc_shipping td.sort .wc-item-reorder-nav .wc-move-up::before {
+        content: "\f343"; }
+      table.wc_gateways td.sort .wc-item-reorder-nav .wc-move-disabled,
+      table.wc_emails td.sort .wc-item-reorder-nav .wc-move-disabled,
+      table.wc_shipping td.sort .wc-item-reorder-nav .wc-move-disabled {
+        color: #d5d5d5 !important;
+        cursor: default;
+        pointer-events: none; }
   table.wc_gateways .wc-payment-gateway-method-name,
   table.wc_emails .wc-payment-gateway-method-name,
   table.wc_shipping .wc-payment-gateway-method-name {
@@ -2666,16 +2746,16 @@ table.wc_shipping {
 
 .wc-shipping-zone-settings th {
   padding: 24px 24px 24px 0; }
-.wc-shipping-zone-settings td.forminp input, .wc-shipping-zone-settings td.forminp textarea {
+.wc-shipping-zone-settings td.forminp input,
+.wc-shipping-zone-settings td.forminp textarea {
   padding: 8px;
-  width: 448px;
   max-width: 100% !important; }
 .wc-shipping-zone-settings td.forminp .wc-shipping-zone-region-select {
   width: 448px;
   max-width: 100% !important; }
   .wc-shipping-zone-settings td.forminp .wc-shipping-zone-region-select .select2-choices {
     padding: 8px 8px 4px;
-    border-color: #DDDDDD;
+    border-color: #ddd;
     min-height: 0;
     line-height: 1; }
     .wc-shipping-zone-settings td.forminp .wc-shipping-zone-region-select .select2-choices input {
@@ -2698,41 +2778,91 @@ table.wc_shipping {
 .wc-shipping-zone-settings + p.submit {
   margin-top: 0; }
 
-table tr table.wc-shipping-zone-methods tr .row-actions, table tr:hover table.wc-shipping-zone-methods tr .row-actions {
+.wc-shipping-zone-settings tbody {
+  display: inherit; }
+
+table tr table.wc-shipping-zone-methods tr .row-actions,
+table tr:hover table.wc-shipping-zone-methods tr .row-actions {
   position: relative; }
-table tr table.wc-shipping-zone-methods tr:hover .row-actions, table tr:hover table.wc-shipping-zone-methods tr:hover .row-actions {
+table tr table.wc-shipping-zone-methods tr:hover .row-actions,
+table tr:hover table.wc-shipping-zone-methods tr:hover .row-actions {
   position: static; }
 
 .wc-shipping-zones-heading .page-title-action {
   display: inline-block; }
 
-table.wc-shipping-zones td, table.wc-shipping-zones th, table.wc-shipping-zone-methods td, table.wc-shipping-zone-methods th, table.wc-shipping-classes td, table.wc-shipping-classes th {
+table.wc-shipping-zones td,
+table.wc-shipping-zones th,
+table.wc-shipping-zone-methods td,
+table.wc-shipping-zone-methods th,
+table.wc-shipping-classes td,
+table.wc-shipping-classes th {
   vertical-align: top;
   line-height: 24px;
   padding: 1em !important;
   font-size: 14px;
   background: #fff;
   display: table-cell !important; }
-  table.wc-shipping-zones td li, table.wc-shipping-zones th li, table.wc-shipping-zone-methods td li, table.wc-shipping-zone-methods th li, table.wc-shipping-classes td li, table.wc-shipping-classes th li {
+  table.wc-shipping-zones td li,
+  table.wc-shipping-zones th li,
+  table.wc-shipping-zone-methods td li,
+  table.wc-shipping-zone-methods th li,
+  table.wc-shipping-classes td li,
+  table.wc-shipping-classes th li {
     line-height: 24px;
     font-size: 14px; }
-  table.wc-shipping-zones td .woocommerce-help-tip, table.wc-shipping-zones th .woocommerce-help-tip, table.wc-shipping-zone-methods td .woocommerce-help-tip, table.wc-shipping-zone-methods th .woocommerce-help-tip, table.wc-shipping-classes td .woocommerce-help-tip, table.wc-shipping-classes th .woocommerce-help-tip {
+  table.wc-shipping-zones td .woocommerce-help-tip,
+  table.wc-shipping-zones th .woocommerce-help-tip,
+  table.wc-shipping-zone-methods td .woocommerce-help-tip,
+  table.wc-shipping-zone-methods th .woocommerce-help-tip,
+  table.wc-shipping-classes td .woocommerce-help-tip,
+  table.wc-shipping-classes th .woocommerce-help-tip {
     margin: 0 !important; }
-table.wc-shipping-zones thead th, table.wc-shipping-zone-methods thead th, table.wc-shipping-classes thead th {
+table.wc-shipping-zones thead th,
+table.wc-shipping-zone-methods thead th,
+table.wc-shipping-classes thead th {
   vertical-align: middle; }
-table.wc-shipping-zones thead .wc-shipping-zone-sort, table.wc-shipping-zone-methods thead .wc-shipping-zone-sort, table.wc-shipping-classes thead .wc-shipping-zone-sort {
+table.wc-shipping-zones thead .wc-shipping-zone-sort,
+table.wc-shipping-zone-methods thead .wc-shipping-zone-sort,
+table.wc-shipping-classes thead .wc-shipping-zone-sort {
   text-align: center; }
-table.wc-shipping-zones td.wc-shipping-zones-blank-state, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state, table.wc-shipping-classes td.wc-shipping-zones-blank-state, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state {
+table.wc-shipping-zones td.wc-shipping-zones-blank-state,
+table.wc-shipping-zones td.wc-shipping-zone-method-blank-state,
+table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state,
+table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state,
+table.wc-shipping-classes td.wc-shipping-zones-blank-state,
+table.wc-shipping-classes td.wc-shipping-zone-method-blank-state {
   background: #f7f1f6 !important;
   overflow: hidden;
   position: relative;
   padding: 7.5em 7.5% !important;
   border-bottom: 2px solid #eee2ec; }
-  table.wc-shipping-zones td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state, table.wc-shipping-classes td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state {
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state {
     padding: 2em !important; }
-    table.wc-shipping-zones td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p, table.wc-shipping-classes td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p {
+    table.wc-shipping-zones td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p,
+    table.wc-shipping-zones td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p,
+    table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p,
+    table.wc-shipping-classes td.wc-shipping-zones-blank-state.wc-shipping-zone-method-blank-state p,
+    table.wc-shipping-classes td.wc-shipping-zone-method-blank-state.wc-shipping-zone-method-blank-state p {
       margin-bottom: 0; }
-  table.wc-shipping-zones td.wc-shipping-zones-blank-state p, table.wc-shipping-zones td.wc-shipping-zones-blank-state li, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state p, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state p, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state p, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li, table.wc-shipping-classes td.wc-shipping-zones-blank-state p, table.wc-shipping-classes td.wc-shipping-zones-blank-state li, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state p, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li {
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state p,
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state p,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state p,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state p,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state p,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state p,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li {
     color: #a46497;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -2740,14 +2870,35 @@ table.wc-shipping-zones td.wc-shipping-zones-blank-state, table.wc-shipping-zone
     position: relative;
     z-index: 1;
     text-shadow: 1px 1px 1px white; }
-    table.wc-shipping-zones td.wc-shipping-zones-blank-state p.main, table.wc-shipping-zones td.wc-shipping-zones-blank-state li.main, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state p.main, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li.main, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state p.main, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li.main, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state p.main, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li.main, table.wc-shipping-classes td.wc-shipping-zones-blank-state p.main, table.wc-shipping-classes td.wc-shipping-zones-blank-state li.main, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state p.main, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li.main {
+    table.wc-shipping-zones td.wc-shipping-zones-blank-state p.main,
+    table.wc-shipping-zones td.wc-shipping-zones-blank-state li.main,
+    table.wc-shipping-zones td.wc-shipping-zone-method-blank-state p.main,
+    table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li.main,
+    table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state p.main,
+    table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li.main,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state p.main,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li.main,
+    table.wc-shipping-classes td.wc-shipping-zones-blank-state p.main,
+    table.wc-shipping-classes td.wc-shipping-zones-blank-state li.main,
+    table.wc-shipping-classes td.wc-shipping-zone-method-blank-state p.main,
+    table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li.main {
       font-size: 2em; }
-  table.wc-shipping-zones td.wc-shipping-zones-blank-state li, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li, table.wc-shipping-classes td.wc-shipping-zones-blank-state li, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li {
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state li,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li {
     margin-left: 1em;
     list-style: circle inside; }
-  table.wc-shipping-zones td.wc-shipping-zones-blank-state::before, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state::before, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state::before, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state::before, table.wc-shipping-classes td.wc-shipping-zones-blank-state::before, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state::before {
-    content: '\e01b';
-    font-family: 'WooCommerce';
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state::before,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state::before,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state::before,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state::before {
+    content: "\e01b";
+    font-family: "WooCommerce";
     text-align: center;
     line-height: 1;
     color: #eee2ec;
@@ -2758,7 +2909,12 @@ table.wc-shipping-zones td.wc-shipping-zones-blank-state, table.wc-shipping-zone
     right: -3.75%;
     margin-top: -0.1875em;
     position: absolute; }
-  table.wc-shipping-zones td.wc-shipping-zones-blank-state .button-primary, table.wc-shipping-zones td.wc-shipping-zone-method-blank-state .button-primary, table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state .button-primary, table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state .button-primary, table.wc-shipping-classes td.wc-shipping-zones-blank-state .button-primary, table.wc-shipping-classes td.wc-shipping-zone-method-blank-state .button-primary {
+  table.wc-shipping-zones td.wc-shipping-zones-blank-state .button-primary,
+  table.wc-shipping-zones td.wc-shipping-zone-method-blank-state .button-primary,
+  table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state .button-primary,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state .button-primary,
+  table.wc-shipping-classes td.wc-shipping-zones-blank-state .button-primary,
+  table.wc-shipping-classes td.wc-shipping-zone-method-blank-state .button-primary {
     background-color: #804877;
     border-color: #804877;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -2770,26 +2926,54 @@ table.wc-shipping-zones td.wc-shipping-zones-blank-state, table.wc-shipping-zone
     height: auto;
     position: relative;
     z-index: 1; }
-table.wc-shipping-zones .wc-shipping-zone-method-rows tr:nth-child(even) td, table.wc-shipping-zone-methods .wc-shipping-zone-method-rows tr:nth-child(even) td, table.wc-shipping-classes .wc-shipping-zone-method-rows tr:nth-child(even) td {
+table.wc-shipping-zones .wc-shipping-zone-method-rows tr:nth-child(even) td,
+table.wc-shipping-zone-methods .wc-shipping-zone-method-rows tr:nth-child(even) td,
+table.wc-shipping-classes .wc-shipping-zone-method-rows tr:nth-child(even) td {
   background: #f9f9f9; }
-table.wc-shipping-zones tr.odd td, table.wc-shipping-zones .wc-shipping-class-rows tr:nth-child(odd) td, table.wc-shipping-zone-methods tr.odd td, table.wc-shipping-zone-methods .wc-shipping-class-rows tr:nth-child(odd) td, table.wc-shipping-classes tr.odd td, table.wc-shipping-classes .wc-shipping-class-rows tr:nth-child(odd) td {
+table.wc-shipping-zones tr.odd td,
+table.wc-shipping-zones .wc-shipping-class-rows tr:nth-child(odd) td,
+table.wc-shipping-zone-methods tr.odd td,
+table.wc-shipping-zone-methods .wc-shipping-class-rows tr:nth-child(odd) td,
+table.wc-shipping-classes tr.odd td,
+table.wc-shipping-classes .wc-shipping-class-rows tr:nth-child(odd) td {
   background: #f9f9f9; }
-table.wc-shipping-zones tbody.wc-shipping-zone-rows td, table.wc-shipping-zone-methods tbody.wc-shipping-zone-rows td, table.wc-shipping-classes tbody.wc-shipping-zone-rows td {
+table.wc-shipping-zones tbody.wc-shipping-zone-rows td,
+table.wc-shipping-zone-methods tbody.wc-shipping-zone-rows td,
+table.wc-shipping-classes tbody.wc-shipping-zone-rows td {
   border-top: 2px solid #f9f9f9; }
-table.wc-shipping-zones tbody.wc-shipping-zone-rows tr:first-child td, table.wc-shipping-zone-methods tbody.wc-shipping-zone-rows tr:first-child td, table.wc-shipping-classes tbody.wc-shipping-zone-rows tr:first-child td {
+table.wc-shipping-zones tbody.wc-shipping-zone-rows tr:first-child td,
+table.wc-shipping-zone-methods tbody.wc-shipping-zone-rows tr:first-child td,
+table.wc-shipping-classes tbody.wc-shipping-zone-rows tr:first-child td {
   border-top: 0; }
-table.wc-shipping-zones tr.wc-shipping-zone-worldwide td, table.wc-shipping-zone-methods tr.wc-shipping-zone-worldwide td, table.wc-shipping-classes tr.wc-shipping-zone-worldwide td {
+table.wc-shipping-zones tr.wc-shipping-zone-worldwide td,
+table.wc-shipping-zone-methods tr.wc-shipping-zone-worldwide td,
+table.wc-shipping-classes tr.wc-shipping-zone-worldwide td {
   background: #f9f9f9;
   border-top: 2px solid #e1e1e1; }
-table.wc-shipping-zones ul, table.wc-shipping-zones p, table.wc-shipping-zone-methods ul, table.wc-shipping-zone-methods p, table.wc-shipping-classes ul, table.wc-shipping-classes p {
+table.wc-shipping-zones ul,
+table.wc-shipping-zones p,
+table.wc-shipping-zone-methods ul,
+table.wc-shipping-zone-methods p,
+table.wc-shipping-classes ul,
+table.wc-shipping-classes p {
   margin: 0; }
-table.wc-shipping-zones td.wc-shipping-zone-sort, table.wc-shipping-zones td.wc-shipping-zone-method-sort, table.wc-shipping-zone-methods td.wc-shipping-zone-sort, table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort, table.wc-shipping-classes td.wc-shipping-zone-sort, table.wc-shipping-classes td.wc-shipping-zone-method-sort {
+table.wc-shipping-zones td.wc-shipping-zone-sort,
+table.wc-shipping-zones td.wc-shipping-zone-method-sort,
+table.wc-shipping-zone-methods td.wc-shipping-zone-sort,
+table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort,
+table.wc-shipping-classes td.wc-shipping-zone-sort,
+table.wc-shipping-classes td.wc-shipping-zone-method-sort {
   cursor: move;
   font-size: 15px;
   text-align: center; }
-  table.wc-shipping-zones td.wc-shipping-zone-sort::before, table.wc-shipping-zones td.wc-shipping-zone-method-sort::before, table.wc-shipping-zone-methods td.wc-shipping-zone-sort::before, table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort::before, table.wc-shipping-classes td.wc-shipping-zone-sort::before, table.wc-shipping-classes td.wc-shipping-zone-method-sort::before {
-    content: '\f333';
-    font-family: 'Dashicons';
+  table.wc-shipping-zones td.wc-shipping-zone-sort::before,
+  table.wc-shipping-zones td.wc-shipping-zone-method-sort::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-sort::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort::before,
+  table.wc-shipping-classes td.wc-shipping-zone-sort::before,
+  table.wc-shipping-classes td.wc-shipping-zone-method-sort::before {
+    content: "\f333";
+    font-family: "Dashicons";
     text-align: center;
     line-height: 1;
     color: #999;
@@ -2798,13 +2982,22 @@ table.wc-shipping-zones td.wc-shipping-zone-sort, table.wc-shipping-zones td.wc-
     float: left;
     height: 100%;
     line-height: 24px; }
-  table.wc-shipping-zones td.wc-shipping-zone-sort:hover::before, table.wc-shipping-zones td.wc-shipping-zone-method-sort:hover::before, table.wc-shipping-zone-methods td.wc-shipping-zone-sort:hover::before, table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort:hover::before, table.wc-shipping-classes td.wc-shipping-zone-sort:hover::before, table.wc-shipping-classes td.wc-shipping-zone-method-sort:hover::before {
+  table.wc-shipping-zones td.wc-shipping-zone-sort:hover::before,
+  table.wc-shipping-zones td.wc-shipping-zone-method-sort:hover::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-sort:hover::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-method-sort:hover::before,
+  table.wc-shipping-classes td.wc-shipping-zone-sort:hover::before,
+  table.wc-shipping-classes td.wc-shipping-zone-method-sort:hover::before {
     color: #333; }
-table.wc-shipping-zones td.wc-shipping-zone-worldwide, table.wc-shipping-zone-methods td.wc-shipping-zone-worldwide, table.wc-shipping-classes td.wc-shipping-zone-worldwide {
+table.wc-shipping-zones td.wc-shipping-zone-worldwide,
+table.wc-shipping-zone-methods td.wc-shipping-zone-worldwide,
+table.wc-shipping-classes td.wc-shipping-zone-worldwide {
   text-align: center; }
-  table.wc-shipping-zones td.wc-shipping-zone-worldwide::before, table.wc-shipping-zone-methods td.wc-shipping-zone-worldwide::before, table.wc-shipping-classes td.wc-shipping-zone-worldwide::before {
-    content: '\f319';
-    font-family: 'dashicons';
+  table.wc-shipping-zones td.wc-shipping-zone-worldwide::before,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-worldwide::before,
+  table.wc-shipping-classes td.wc-shipping-zone-worldwide::before {
+    content: "\f319";
+    font-family: "dashicons";
     text-align: center;
     line-height: 1;
     color: #999;
@@ -2814,11 +3007,15 @@ table.wc-shipping-zones td.wc-shipping-zone-worldwide, table.wc-shipping-zone-me
     height: 100%;
     line-height: 24px; }
 table.wc-shipping-zones .wc-shipping-zone-name,
-table.wc-shipping-zones .wc-shipping-zone-methods, table.wc-shipping-zone-methods .wc-shipping-zone-name,
-table.wc-shipping-zone-methods .wc-shipping-zone-methods, table.wc-shipping-classes .wc-shipping-zone-name,
+table.wc-shipping-zones .wc-shipping-zone-methods,
+table.wc-shipping-zone-methods .wc-shipping-zone-name,
+table.wc-shipping-zone-methods .wc-shipping-zone-methods,
+table.wc-shipping-classes .wc-shipping-zone-name,
 table.wc-shipping-classes .wc-shipping-zone-methods {
   width: 25%; }
-table.wc-shipping-zones .wc-shipping-class-description input, table.wc-shipping-zones .wc-shipping-class-description select, table.wc-shipping-zones .wc-shipping-class-description textarea,
+table.wc-shipping-zones .wc-shipping-class-description input,
+table.wc-shipping-zones .wc-shipping-class-description select,
+table.wc-shipping-zones .wc-shipping-class-description textarea,
 table.wc-shipping-zones .wc-shipping-class-name input,
 table.wc-shipping-zones .wc-shipping-class-name select,
 table.wc-shipping-zones .wc-shipping-class-name textarea,
@@ -2830,7 +3027,10 @@ table.wc-shipping-zones .wc-shipping-zone-name select,
 table.wc-shipping-zones .wc-shipping-zone-name textarea,
 table.wc-shipping-zones .wc-shipping-zone-region input,
 table.wc-shipping-zones .wc-shipping-zone-region select,
-table.wc-shipping-zones .wc-shipping-zone-region textarea, table.wc-shipping-zone-methods .wc-shipping-class-description input, table.wc-shipping-zone-methods .wc-shipping-class-description select, table.wc-shipping-zone-methods .wc-shipping-class-description textarea,
+table.wc-shipping-zones .wc-shipping-zone-region textarea,
+table.wc-shipping-zone-methods .wc-shipping-class-description input,
+table.wc-shipping-zone-methods .wc-shipping-class-description select,
+table.wc-shipping-zone-methods .wc-shipping-class-description textarea,
 table.wc-shipping-zone-methods .wc-shipping-class-name input,
 table.wc-shipping-zone-methods .wc-shipping-class-name select,
 table.wc-shipping-zone-methods .wc-shipping-class-name textarea,
@@ -2842,7 +3042,10 @@ table.wc-shipping-zone-methods .wc-shipping-zone-name select,
 table.wc-shipping-zone-methods .wc-shipping-zone-name textarea,
 table.wc-shipping-zone-methods .wc-shipping-zone-region input,
 table.wc-shipping-zone-methods .wc-shipping-zone-region select,
-table.wc-shipping-zone-methods .wc-shipping-zone-region textarea, table.wc-shipping-classes .wc-shipping-class-description input, table.wc-shipping-classes .wc-shipping-class-description select, table.wc-shipping-classes .wc-shipping-class-description textarea,
+table.wc-shipping-zone-methods .wc-shipping-zone-region textarea,
+table.wc-shipping-classes .wc-shipping-class-description input,
+table.wc-shipping-classes .wc-shipping-class-description select,
+table.wc-shipping-classes .wc-shipping-class-description textarea,
 table.wc-shipping-classes .wc-shipping-class-name input,
 table.wc-shipping-classes .wc-shipping-class-name select,
 table.wc-shipping-classes .wc-shipping-class-name textarea,
@@ -2856,7 +3059,8 @@ table.wc-shipping-classes .wc-shipping-zone-region input,
 table.wc-shipping-classes .wc-shipping-zone-region select,
 table.wc-shipping-classes .wc-shipping-zone-region textarea {
   width: 100%; }
-table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-zone-delete, table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-class-delete,
+table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-zone-delete,
+table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-class-delete,
 table.wc-shipping-zones .wc-shipping-class-name a.wc-shipping-zone-delete,
 table.wc-shipping-zones .wc-shipping-class-name a.wc-shipping-class-delete,
 table.wc-shipping-zones .wc-shipping-class-slug a.wc-shipping-zone-delete,
@@ -2864,7 +3068,9 @@ table.wc-shipping-zones .wc-shipping-class-slug a.wc-shipping-class-delete,
 table.wc-shipping-zones .wc-shipping-zone-name a.wc-shipping-zone-delete,
 table.wc-shipping-zones .wc-shipping-zone-name a.wc-shipping-class-delete,
 table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-zone-delete,
-table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-class-delete, table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-zone-delete, table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-class-delete,
+table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-class-delete,
+table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-zone-delete,
+table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-class-delete,
 table.wc-shipping-zone-methods .wc-shipping-class-name a.wc-shipping-zone-delete,
 table.wc-shipping-zone-methods .wc-shipping-class-name a.wc-shipping-class-delete,
 table.wc-shipping-zone-methods .wc-shipping-class-slug a.wc-shipping-zone-delete,
@@ -2872,7 +3078,9 @@ table.wc-shipping-zone-methods .wc-shipping-class-slug a.wc-shipping-class-delet
 table.wc-shipping-zone-methods .wc-shipping-zone-name a.wc-shipping-zone-delete,
 table.wc-shipping-zone-methods .wc-shipping-zone-name a.wc-shipping-class-delete,
 table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-zone-delete,
-table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-class-delete, table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-zone-delete, table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-class-delete,
+table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-class-delete,
+table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-zone-delete,
+table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-class-delete,
 table.wc-shipping-classes .wc-shipping-class-name a.wc-shipping-zone-delete,
 table.wc-shipping-classes .wc-shipping-class-name a.wc-shipping-class-delete,
 table.wc-shipping-classes .wc-shipping-class-slug a.wc-shipping-zone-delete,
@@ -2882,7 +3090,8 @@ table.wc-shipping-classes .wc-shipping-zone-name a.wc-shipping-class-delete,
 table.wc-shipping-classes .wc-shipping-zone-region a.wc-shipping-zone-delete,
 table.wc-shipping-classes .wc-shipping-zone-region a.wc-shipping-class-delete {
   color: #a00; }
-table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-zone-delete:hover, table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-class-delete:hover,
+table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-zone-delete:hover,
+table.wc-shipping-zones .wc-shipping-class-description a.wc-shipping-class-delete:hover,
 table.wc-shipping-zones .wc-shipping-class-name a.wc-shipping-zone-delete:hover,
 table.wc-shipping-zones .wc-shipping-class-name a.wc-shipping-class-delete:hover,
 table.wc-shipping-zones .wc-shipping-class-slug a.wc-shipping-zone-delete:hover,
@@ -2890,7 +3099,9 @@ table.wc-shipping-zones .wc-shipping-class-slug a.wc-shipping-class-delete:hover
 table.wc-shipping-zones .wc-shipping-zone-name a.wc-shipping-zone-delete:hover,
 table.wc-shipping-zones .wc-shipping-zone-name a.wc-shipping-class-delete:hover,
 table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-zone-delete:hover,
-table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-class-delete:hover, table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-zone-delete:hover, table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-class-delete:hover,
+table.wc-shipping-zones .wc-shipping-zone-region a.wc-shipping-class-delete:hover,
+table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-zone-delete:hover,
+table.wc-shipping-zone-methods .wc-shipping-class-description a.wc-shipping-class-delete:hover,
 table.wc-shipping-zone-methods .wc-shipping-class-name a.wc-shipping-zone-delete:hover,
 table.wc-shipping-zone-methods .wc-shipping-class-name a.wc-shipping-class-delete:hover,
 table.wc-shipping-zone-methods .wc-shipping-class-slug a.wc-shipping-zone-delete:hover,
@@ -2898,7 +3109,9 @@ table.wc-shipping-zone-methods .wc-shipping-class-slug a.wc-shipping-class-delet
 table.wc-shipping-zone-methods .wc-shipping-zone-name a.wc-shipping-zone-delete:hover,
 table.wc-shipping-zone-methods .wc-shipping-zone-name a.wc-shipping-class-delete:hover,
 table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-zone-delete:hover,
-table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-class-delete:hover, table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-zone-delete:hover, table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-class-delete:hover,
+table.wc-shipping-zone-methods .wc-shipping-zone-region a.wc-shipping-class-delete:hover,
+table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-zone-delete:hover,
+table.wc-shipping-classes .wc-shipping-class-description a.wc-shipping-class-delete:hover,
 table.wc-shipping-classes .wc-shipping-class-name a.wc-shipping-zone-delete:hover,
 table.wc-shipping-classes .wc-shipping-class-name a.wc-shipping-class-delete:hover,
 table.wc-shipping-classes .wc-shipping-class-slug a.wc-shipping-zone-delete:hover,
@@ -2908,31 +3121,49 @@ table.wc-shipping-classes .wc-shipping-zone-name a.wc-shipping-class-delete:hove
 table.wc-shipping-classes .wc-shipping-zone-region a.wc-shipping-zone-delete:hover,
 table.wc-shipping-classes .wc-shipping-zone-region a.wc-shipping-class-delete:hover {
   color: red; }
-table.wc-shipping-zones .wc-shipping-class-count, table.wc-shipping-zone-methods .wc-shipping-class-count, table.wc-shipping-classes .wc-shipping-class-count {
+table.wc-shipping-zones .wc-shipping-class-count,
+table.wc-shipping-zone-methods .wc-shipping-class-count,
+table.wc-shipping-classes .wc-shipping-class-count {
   text-align: center; }
-table.wc-shipping-zones td.wc-shipping-zone-methods, table.wc-shipping-zone-methods td.wc-shipping-zone-methods, table.wc-shipping-classes td.wc-shipping-zone-methods {
+table.wc-shipping-zones td.wc-shipping-zone-methods,
+table.wc-shipping-zone-methods td.wc-shipping-zone-methods,
+table.wc-shipping-classes td.wc-shipping-zone-methods {
   color: #555; }
-  table.wc-shipping-zones td.wc-shipping-zone-methods .method_disabled, table.wc-shipping-zone-methods td.wc-shipping-zone-methods .method_disabled, table.wc-shipping-classes td.wc-shipping-zone-methods .method_disabled {
+  table.wc-shipping-zones td.wc-shipping-zone-methods .method_disabled,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-methods .method_disabled,
+  table.wc-shipping-classes td.wc-shipping-zone-methods .method_disabled {
     text-decoration: line-through; }
-  table.wc-shipping-zones td.wc-shipping-zone-methods ul, table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul, table.wc-shipping-classes td.wc-shipping-zone-methods ul {
+  table.wc-shipping-zones td.wc-shipping-zone-methods ul,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul,
+  table.wc-shipping-classes td.wc-shipping-zone-methods ul {
     position: relative;
     padding-right: 32px; }
-    table.wc-shipping-zones td.wc-shipping-zone-methods ul li, table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li, table.wc-shipping-classes td.wc-shipping-zone-methods ul li {
+    table.wc-shipping-zones td.wc-shipping-zone-methods ul li,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li,
+    table.wc-shipping-classes td.wc-shipping-zone-methods ul li {
       color: #555;
       display: inline;
       margin: 0; }
-    table.wc-shipping-zones td.wc-shipping-zone-methods ul li::before, table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li::before, table.wc-shipping-classes td.wc-shipping-zone-methods ul li::before {
-      content: ', '; }
-    table.wc-shipping-zones td.wc-shipping-zone-methods ul li:first-child::before, table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li:first-child::before, table.wc-shipping-classes td.wc-shipping-zone-methods ul li:first-child::before {
-      content: ''; }
-  table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method, table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method, table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method {
+    table.wc-shipping-zones td.wc-shipping-zone-methods ul li::before,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li::before,
+    table.wc-shipping-classes td.wc-shipping-zone-methods ul li::before {
+      content: ", "; }
+    table.wc-shipping-zones td.wc-shipping-zone-methods ul li:first-child::before,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-methods ul li:first-child::before,
+    table.wc-shipping-classes td.wc-shipping-zone-methods ul li:first-child::before {
+      content: ""; }
+  table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method,
+  table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method,
+  table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method {
     display: block;
     width: 24px;
     padding: 24px 0 0;
     height: 0;
     overflow: hidden;
     cursor: pointer; }
-    table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method::before, table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method::before, table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method::before {
+    table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method::before,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method::before,
+    table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method::before {
       font-family: 'WooCommerce';
       speak: none;
       font-weight: normal;
@@ -2948,34 +3179,62 @@ table.wc-shipping-zones td.wc-shipping-zone-methods, table.wc-shipping-zone-meth
       height: 100%;
       text-align: center;
       content: "";
-      font-family: 'Dashicons';
-      content: '\f502';
+      font-family: "Dashicons";
+      content: "\f502";
       color: #999;
       vertical-align: middle;
       line-height: 24px;
       font-size: 16px;
       margin: 0; }
-    table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method.disabled, table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method.disabled, table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method.disabled {
+    table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method.disabled,
+    table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method.disabled,
+    table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method.disabled {
       cursor: not-allowed; }
-      table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method.disabled::before, table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method.disabled::before, table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method.disabled::before {
+      table.wc-shipping-zones td.wc-shipping-zone-methods .add_shipping_method.disabled::before,
+      table.wc-shipping-zone-methods td.wc-shipping-zone-methods .add_shipping_method.disabled::before,
+      table.wc-shipping-classes td.wc-shipping-zone-methods .add_shipping_method.disabled::before {
         color: #ccc; }
-table.wc-shipping-zones .wc-shipping-zone-method-title, table.wc-shipping-zone-methods .wc-shipping-zone-method-title, table.wc-shipping-classes .wc-shipping-zone-method-title {
+table.wc-shipping-zones .wc-shipping-zone-method-title,
+table.wc-shipping-zone-methods .wc-shipping-zone-method-title,
+table.wc-shipping-classes .wc-shipping-zone-method-title {
   width: 25%; }
-  table.wc-shipping-zones .wc-shipping-zone-method-title .wc-shipping-zone-method-delete, table.wc-shipping-zone-methods .wc-shipping-zone-method-title .wc-shipping-zone-method-delete, table.wc-shipping-classes .wc-shipping-zone-method-title .wc-shipping-zone-method-delete {
+  table.wc-shipping-zones .wc-shipping-zone-method-title .wc-shipping-zone-method-delete,
+  table.wc-shipping-zone-methods .wc-shipping-zone-method-title .wc-shipping-zone-method-delete,
+  table.wc-shipping-classes .wc-shipping-zone-method-title .wc-shipping-zone-method-delete {
     color: red; }
-table.wc-shipping-zones .wc-shipping-zone-method-enabled, table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled, table.wc-shipping-classes .wc-shipping-zone-method-enabled {
+table.wc-shipping-zones .wc-shipping-zone-method-enabled,
+table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled,
+table.wc-shipping-classes .wc-shipping-zone-method-enabled {
   text-align: center; }
-  table.wc-shipping-zones .wc-shipping-zone-method-enabled a, table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled a, table.wc-shipping-classes .wc-shipping-zone-method-enabled a {
+  table.wc-shipping-zones .wc-shipping-zone-method-enabled a,
+  table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled a,
+  table.wc-shipping-classes .wc-shipping-zone-method-enabled a {
     display: inline-block; }
-  table.wc-shipping-zones .wc-shipping-zone-method-enabled .woocommerce-input-toggle, table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled .woocommerce-input-toggle, table.wc-shipping-classes .wc-shipping-zone-method-enabled .woocommerce-input-toggle {
+  table.wc-shipping-zones .wc-shipping-zone-method-enabled .woocommerce-input-toggle,
+  table.wc-shipping-zone-methods .wc-shipping-zone-method-enabled .woocommerce-input-toggle,
+  table.wc-shipping-classes .wc-shipping-zone-method-enabled .woocommerce-input-toggle {
     margin-top: 3px; }
-table.wc-shipping-zones .wc-shipping-zone-method-type, table.wc-shipping-zone-methods .wc-shipping-zone-method-type, table.wc-shipping-classes .wc-shipping-zone-method-type {
+table.wc-shipping-zones .wc-shipping-zone-method-type,
+table.wc-shipping-zone-methods .wc-shipping-zone-method-type,
+table.wc-shipping-classes .wc-shipping-zone-method-type {
   display: block; }
-table.wc-shipping-zones tfoot input, table.wc-shipping-zones tfoot select, table.wc-shipping-zone-methods tfoot input, table.wc-shipping-zone-methods tfoot select, table.wc-shipping-classes tfoot input, table.wc-shipping-classes tfoot select {
+table.wc-shipping-zones tfoot input,
+table.wc-shipping-zones tfoot select,
+table.wc-shipping-zone-methods tfoot input,
+table.wc-shipping-zone-methods tfoot select,
+table.wc-shipping-classes tfoot input,
+table.wc-shipping-classes tfoot select {
   vertical-align: middle !important; }
-table.wc-shipping-zones tfoot .button-secondary, table.wc-shipping-zone-methods tfoot .button-secondary, table.wc-shipping-classes tfoot .button-secondary {
+table.wc-shipping-zones tfoot .button-secondary,
+table.wc-shipping-zone-methods tfoot .button-secondary,
+table.wc-shipping-classes tfoot .button-secondary {
   float: right; }
-table.wc-shipping-zones .editing .wc-shipping-zone-view, table.wc-shipping-zones .editing .wc-shipping-zone-edit, table.wc-shipping-zone-methods .editing .wc-shipping-zone-view, table.wc-shipping-zone-methods .editing .wc-shipping-zone-edit, table.wc-shipping-classes .editing .wc-shipping-zone-view, table.wc-shipping-classes .editing .wc-shipping-zone-edit {
+table.wc-shipping-zones .editing .wc-shipping-zone-view,
+table.wc-shipping-zones .editing .wc-shipping-zone-edit,
+table.wc-shipping-zone-methods .editing .wc-shipping-zone-view,
+table.wc-shipping-zone-methods .editing .wc-shipping-zone-edit,
+table.wc-shipping-classes .editing .wc-shipping-zone-view,
+table.wc-shipping-classes .editing .wc-shipping-zone-edit {
   display: none; }
 
 .woocommerce-input-toggle {
@@ -2989,7 +3248,7 @@ table.wc-shipping-zones .editing .wc-shipping-zone-view, table.wc-shipping-zones
   position: relative;
   margin-top: -1px;
   vertical-align: text-top; }
-  .woocommerce-input-toggle:before {
+  .woocommerce-input-toggle::before {
     content: "";
     display: block;
     width: 16px;
@@ -3002,7 +3261,7 @@ table.wc-shipping-zones .editing .wc-shipping-zone-view, table.wc-shipping-zones
   .woocommerce-input-toggle.woocommerce-input-toggle--disabled {
     border-color: #999;
     background-color: #999; }
-    .woocommerce-input-toggle.woocommerce-input-toggle--disabled:before {
+    .woocommerce-input-toggle.woocommerce-input-toggle--disabled::before {
       right: auto;
       left: 0; }
   .woocommerce-input-toggle.woocommerce-input-toggle--loading {
@@ -3025,13 +3284,16 @@ table.wc-shipping-zones .editing .wc-shipping-zone-view, table.wc-shipping-zones
         right: 0;
         top: 50%;
         position: absolute; }
-    .wc-modal-shipping-method-settings form .form-table tr td input, .wc-modal-shipping-method-settings form .form-table tr td select, .wc-modal-shipping-method-settings form .form-table tr td textarea {
+    .wc-modal-shipping-method-settings form .form-table tr td input,
+    .wc-modal-shipping-method-settings form .form-table tr td select,
+    .wc-modal-shipping-method-settings form .form-table tr td textarea {
       width: 50%;
       min-width: 250px; }
-    .wc-modal-shipping-method-settings form .form-table tr td input[type='checkbox'] {
+    .wc-modal-shipping-method-settings form .form-table tr td input[type="checkbox"] {
       width: auto;
       min-width: 16px; }
-    .wc-modal-shipping-method-settings form .form-table tr td, .wc-modal-shipping-method-settings form .form-table tr th {
+    .wc-modal-shipping-method-settings form .form-table tr td,
+    .wc-modal-shipping-method-settings form .form-table tr th {
       vertical-align: middle;
       margin: 0;
       line-height: 24px;
@@ -3143,7 +3405,7 @@ img.help_tip {
     margin-top: -4px; }
   .woocommerce #template div .editor textarea {
     margin-bottom: 8px; }
-.woocommerce textarea[disabled='disabled'] {
+.woocommerce textarea[disabled="disabled"] {
   background: #dfdfdf !important; }
 .woocommerce table.form-table {
   margin: 0;
@@ -3165,12 +3427,26 @@ img.help_tip {
   .woocommerce table.form-table input[type="text"],
   .woocommerce table.form-table input[type="email"],
   .woocommerce table.form-table input[type="number"],
+  .woocommerce table.form-table input[type="password"],
+  .woocommerce table.form-table input[type="datetime"],
+  .woocommerce table.form-table input[type="datetime-local"],
+  .woocommerce table.form-table input[type="date"],
+  .woocommerce table.form-table input[type="time"],
+  .woocommerce table.form-table input[type="week"],
+  .woocommerce table.form-table input[type="url"],
+  .woocommerce table.form-table input[type="tel"],
   .woocommerce table.form-table input.regular-input {
     width: 400px;
     margin: 0;
     padding: 6px;
     box-sizing: border-box;
     vertical-align: top; }
+  .woocommerce table.form-table input[type="datetime-local"],
+  .woocommerce table.form-table input[type="date"],
+  .woocommerce table.form-table input[type="time"],
+  .woocommerce table.form-table input[type="week"],
+  .woocommerce table.form-table input[type="tel"] {
+    width: 200px; }
   .woocommerce table.form-table select {
     width: 400px;
     margin: 0;
@@ -3216,10 +3492,12 @@ img.help_tip {
     position: absolute;
     right: 0;
     top: 20px; }
-  .woocommerce table.form-table woocommerce-help-tip
-  .select2-container {
+  .woocommerce table.form-table .select2-container {
     vertical-align: top;
     margin-bottom: 3px; }
+  .woocommerce table.form-table .select2-container + span.description {
+    display: block;
+    margin-top: 8px; }
   .woocommerce table.form-table table.widefat th {
     padding-right: inherit; }
   .woocommerce table.form-table .wp-list-table .woocommerce-help-tip {
@@ -3266,6 +3544,12 @@ img.help_tip {
   .woocommerce table.form-table .wc_payment_gateways_wrapper,
   .woocommerce table.form-table .wc_emails_wrapper {
     padding: 0 15px 10px 0; }
+.woocommerce .wc-shipping-zone-settings td.forminp input,
+.woocommerce .wc-shipping-zone-settings td.forminp textarea {
+  width: 448px;
+  padding: 6px 11px; }
+.woocommerce .wc-shipping-zone-settings td.forminp .select2-search input {
+  padding: 6px; }
 
 .woocommerce #tabs-wrap table a.remove {
   margin-left: 4px; }
@@ -3323,7 +3607,7 @@ img.help_tip {
           height: auto;
           display: block; }
       #woocommerce-product-images .inside #product_images_container ul li.wc-metabox-sortable-placeholder {
-        border: 3px dashed #dddddd;
+        border: 3px dashed #ddd;
         position: relative; }
         #woocommerce-product-images .inside #product_images_container ul li.wc-metabox-sortable-placeholder::after {
           font-family: 'Dashicons';
@@ -3417,7 +3701,8 @@ img.help_tip {
   #woocommerce-product-data .hndle label:first-child {
     margin-right: 1em;
     border-right: 1px solid #dfdfdf; }
-  #woocommerce-product-data .hndle input, #woocommerce-product-data .hndle select {
+  #woocommerce-product-data .hndle input,
+  #woocommerce-product-data .hndle select {
     margin-top: -3px 0 0;
     vertical-align: middle; }
   #woocommerce-product-data .hndle select {
@@ -3496,7 +3781,7 @@ img.help_tip {
   #woocommerce-product-data ul.wc-tabs::after,
   #woocommerce-coupon-data ul.wc-tabs::after,
   .woocommerce ul.wc-tabs::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 9999em;
@@ -3542,48 +3827,52 @@ img.help_tip {
     #woocommerce-product-data ul.wc-tabs li.general_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.general_options a::before,
     .woocommerce ul.wc-tabs li.general_options a::before {
-      content: '\f107'; }
+      content: "\f107"; }
     #woocommerce-product-data ul.wc-tabs li.inventory_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.inventory_options a::before,
     .woocommerce ul.wc-tabs li.inventory_options a::before {
-      content: '\f481'; }
+      content: "\f481"; }
     #woocommerce-product-data ul.wc-tabs li.shipping_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.shipping_options a::before,
     .woocommerce ul.wc-tabs li.shipping_options a::before {
-      font-family: 'WooCommerce';
-      content: '\e01a'; }
+      font-family: "WooCommerce";
+      content: "\e01a"; }
     #woocommerce-product-data ul.wc-tabs li.linked_product_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.linked_product_options a::before,
     .woocommerce ul.wc-tabs li.linked_product_options a::before {
-      content: '\f103'; }
+      content: "\f103"; }
     #woocommerce-product-data ul.wc-tabs li.attribute_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.attribute_options a::before,
     .woocommerce ul.wc-tabs li.attribute_options a::before {
-      content: '\f175'; }
+      content: "\f175"; }
     #woocommerce-product-data ul.wc-tabs li.advanced_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.advanced_options a::before,
     .woocommerce ul.wc-tabs li.advanced_options a::before {
-      font-family: 'Dashicons';
-      content: '\f111'; }
+      font-family: "Dashicons";
+      content: "\f111"; }
+    #woocommerce-product-data ul.wc-tabs li.marketplace-suggestions_options a::before,
+    #woocommerce-coupon-data ul.wc-tabs li.marketplace-suggestions_options a::before,
+    .woocommerce ul.wc-tabs li.marketplace-suggestions_options a::before {
+      content: none; }
     #woocommerce-product-data ul.wc-tabs li.variations_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.variations_options a::before,
     .woocommerce ul.wc-tabs li.variations_options a::before {
-      content: '\f509'; }
+      content: "\f509"; }
     #woocommerce-product-data ul.wc-tabs li.usage_restriction_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.usage_restriction_options a::before,
     .woocommerce ul.wc-tabs li.usage_restriction_options a::before {
-      font-family: 'WooCommerce';
-      content: '\e602'; }
+      font-family: "WooCommerce";
+      content: "\e602"; }
     #woocommerce-product-data ul.wc-tabs li.usage_limit_options a::before,
     #woocommerce-coupon-data ul.wc-tabs li.usage_limit_options a::before,
     .woocommerce ul.wc-tabs li.usage_limit_options a::before {
-      font-family: 'WooCommerce';
-      content: '\e601'; }
+      font-family: "WooCommerce";
+      content: "\e601"; }
     #woocommerce-product-data ul.wc-tabs li.general_coupon_data a::before,
     #woocommerce-coupon-data ul.wc-tabs li.general_coupon_data a::before,
     .woocommerce ul.wc-tabs li.general_coupon_data a::before {
-      font-family: 'WooCommerce';
-      content: '\e600'; }
+      font-family: "WooCommerce";
+      content: "\e600"; }
     #woocommerce-product-data ul.wc-tabs li.active a,
     #woocommerce-coupon-data ul.wc-tabs li.active a,
     .woocommerce ul.wc-tabs li.active a {
@@ -3592,9 +3881,10 @@ img.help_tip {
       background-color: #eee; }
 
 /**
- * Shipping
- */
-.woocommerce_page_wc-settings input[type=url], .woocommerce_page_wc-settings input[type=email] {
+  * Shipping
+  */
+.woocommerce_page_wc-settings input[type=url],
+.woocommerce_page_wc-settings input[type=email] {
   direction: ltr; }
 .woocommerce_page_wc-settings .shippingrows th.check-column {
   padding-top: 20px; }
@@ -3649,7 +3939,7 @@ img.help_tip {
   .woocommerce_options_panel p::after,
   #woocommerce-product-type-options .panel p::after,
   .woocommerce_options_panel fieldset.form-field::after {
-    content: '.';
+    content: ".";
     display: block;
     height: 0;
     clear: both;
@@ -3736,8 +4026,8 @@ img.help_tip {
     padding-right: 7px !important; }
     .woocommerce_variations .downloadable_files table td.sort::before,
     .woocommerce_options_panel .downloadable_files table td.sort::before {
-      content: '\f333';
-      font-family: 'Dashicons';
+      content: "\f333";
+      font-family: "Dashicons";
       text-align: center;
       line-height: 1;
       color: #999;
@@ -3749,6 +4039,7 @@ img.help_tip {
     .woocommerce_options_panel .downloadable_files table td.sort:hover::before {
       color: #333; }
 
+.woocommerce_attribute h3 .sort,
 .woocommerce_variation h3 .sort {
   width: 17px;
   height: 26px;
@@ -3760,9 +4051,10 @@ img.help_tip {
   visibility: hidden;
   text-align: center;
   vertical-align: middle; }
+  .woocommerce_attribute h3 .sort::before,
   .woocommerce_variation h3 .sort::before {
-    content: '\f333';
-    font-family: 'Dashicons';
+    content: "\f333";
+    font-family: "Dashicons";
     text-align: center;
     line-height: 28px;
     color: #999;
@@ -3770,9 +4062,12 @@ img.help_tip {
     width: 17px;
     float: left;
     height: 100%; }
+  .woocommerce_attribute h3 .sort:hover::before,
   .woocommerce_variation h3 .sort:hover::before {
     color: #777; }
-.woocommerce_variation h3:hover .sort, .woocommerce_variation.ui-sortable-helper .sort {
+.woocommerce_attribute h3:hover .sort, .woocommerce_attribute.ui-sortable-helper .sort,
+.woocommerce_variation h3:hover .sort,
+.woocommerce_variation.ui-sortable-helper .sort {
   visibility: visible; }
 
 .woocommerce_options_panel {
@@ -3825,10 +4120,10 @@ img.help_tip {
     height: 3.5em;
     line-height: 1.5em;
     vertical-align: top; }
-  .woocommerce_options_panel input[type='text'],
-  .woocommerce_options_panel input[type='email'],
-  .woocommerce_options_panel input[type='number'],
-  .woocommerce_options_panel input[type='password'] {
+  .woocommerce_options_panel input[type="text"],
+  .woocommerce_options_panel input[type="email"],
+  .woocommerce_options_panel input[type="number"],
+  .woocommerce_options_panel input[type="password"] {
     width: 50%;
     float: left; }
   .woocommerce_options_panel input.button {
@@ -3836,10 +4131,10 @@ img.help_tip {
     margin-left: 8px; }
   .woocommerce_options_panel select {
     float: left; }
-  .woocommerce_options_panel input[type='text'].short,
-  .woocommerce_options_panel input[type='email'].short,
-  .woocommerce_options_panel input[type='number'].short,
-  .woocommerce_options_panel input[type='password'].short,
+  .woocommerce_options_panel input[type="text"].short,
+  .woocommerce_options_panel input[type="email"].short,
+  .woocommerce_options_panel input[type="number"].short,
+  .woocommerce_options_panel input[type="password"].short,
   .woocommerce_options_panel .short {
     width: 50%; }
   .woocommerce_options_panel .sized {
@@ -3898,8 +4193,8 @@ img.help_tip {
   color: #666; }
 
 /**
- * WooCommerce meta boxes
- */
+  * WooCommerce meta boxes
+  */
 .wc-metaboxes-wrapper .toolbar {
   margin: 0 !important;
   border-top: 1px solid white;
@@ -3955,10 +4250,10 @@ img.help_tip {
   .wc-metaboxes-wrapper .wc-metabox .handlediv {
     width: 27px; }
     .wc-metaboxes-wrapper .wc-metabox .handlediv::before {
-      content: '\f142' !important;
+      content: "\f142" !important;
       cursor: pointer;
       display: inline-block;
-      font: 400 20px/1 'Dashicons';
+      font: 400 20px/1 "Dashicons";
       line-height: 0.5 !important;
       padding: 8px 10px;
       position: relative;
@@ -3967,7 +4262,7 @@ img.help_tip {
   .wc-metaboxes-wrapper .wc-metabox.closed {
     border-radius: 3px; }
     .wc-metaboxes-wrapper .wc-metabox.closed .handlediv::before {
-      content: '\f140' !important; }
+      content: "\f140" !important; }
     .wc-metaboxes-wrapper .wc-metabox.closed h3 {
       border: 0; }
   .wc-metaboxes-wrapper .wc-metabox h3 {
@@ -3977,7 +4272,8 @@ img.help_tip {
     overflow: hidden;
     zoom: 1;
     cursor: move; }
-    .wc-metaboxes-wrapper .wc-metabox h3 button, .wc-metaboxes-wrapper .wc-metabox h3 a.delete {
+    .wc-metaboxes-wrapper .wc-metabox h3 button,
+    .wc-metaboxes-wrapper .wc-metabox h3 a.delete {
       float: right; }
     .wc-metaboxes-wrapper .wc-metabox h3 a.delete {
       color: red;
@@ -4000,12 +4296,18 @@ img.help_tip {
       height: 26px; }
     .wc-metaboxes-wrapper .wc-metabox h3.fixed {
       cursor: pointer !important; }
-  .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 {
+  .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3, .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 {
     cursor: pointer;
     padding: 0.5em 0.75em 0.5em 1em !important; }
-    .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 a.delete, .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .handlediv, .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .sort {
+    .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 a.delete,
+    .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 .handlediv,
+    .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 .sort, .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 a.delete,
+    .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .handlediv,
+    .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .sort {
       margin-top: 0.25em; }
-  .wc-metaboxes-wrapper .wc-metabox h3:hover a.delete, .wc-metaboxes-wrapper .wc-metabox h3:hover .handlediv, .wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper a.delete, .wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper .handlediv {
+  .wc-metaboxes-wrapper .wc-metabox h3:hover a.delete,
+  .wc-metaboxes-wrapper .wc-metabox h3:hover .handlediv, .wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper a.delete,
+  .wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper .handlediv {
     visibility: visible; }
   .wc-metaboxes-wrapper .wc-metabox table {
     width: 100%;
@@ -4103,8 +4405,8 @@ img.help_tip {
       height: auto;
       display: none; }
     .woocommerce_variable_attributes .upload_image_button::before {
-      content: '\f128';
-      font-family: 'Dashicons';
+      content: "\f128";
+      font-family: "Dashicons";
       position: absolute;
       top: 0;
       left: 0;
@@ -4118,7 +4420,7 @@ img.help_tip {
     .woocommerce_variable_attributes .upload_image_button.remove img {
       display: block; }
     .woocommerce_variable_attributes .upload_image_button.remove::before {
-      content: '\f335';
+      content: "\f335";
       display: none; }
     .woocommerce_variable_attributes .upload_image_button.remove:hover::before {
       display: block; }
@@ -4137,8 +4439,20 @@ img.help_tip {
   display: inline-block; }
 .form-row .woocommerce-help-tip {
   float: right; }
-.form-row input[type=text],
-.form-row input[type=number],
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row input[type="password"],
+.form-row input[type="color"],
+.form-row input[type="date"],
+.form-row input[type="datetime"],
+.form-row input[type="datetime-local"],
+.form-row input[type="email"],
+.form-row input[type="month"],
+.form-row input[type="search"],
+.form-row input[type="tel"],
+.form-row input[type="time"],
+.form-row input[type="url"],
+.form-row input[type="week"],
 .form-row select,
 .form-row textarea {
   width: 100%;
@@ -4168,8 +4482,8 @@ img.help_tip {
   clear: both; }
 
 /**
- * Tooltips
- */
+  * Tooltips
+  */
 .tips {
   cursor: help;
   text-decoration: none; }
@@ -4236,11 +4550,11 @@ img.tips {
   width: 0; }
 
 /*rtl:raw:
-#tiptip_arrow {
-	right: 50%;
-	margin-right: -6px;
-}
-*/
+ #tiptip_arrow {
+	 right: 50%;
+	 margin-right: -6px;
+ }
+ */
 .wc_error_tip {
   max-width: 20em;
   line-height: 1.8em;
@@ -4250,7 +4564,7 @@ img.tips {
   margin: 1.5em 1px 0 -1em;
   z-index: 9999999; }
   .wc_error_tip::after {
-    content: '';
+    content: "";
     display: block;
     border: 8px solid #d82223;
     border-right-color: transparent;
@@ -4262,8 +4576,8 @@ img.tips {
     margin: -1em 0 0 -3px; }
 
 /**
- * Date picker
- */
+  * Date picker
+  */
 img.ui-datepicker-trigger {
   vertical-align: middle;
   margin-top: -1px;
@@ -4280,8 +4594,8 @@ img.ui-datepicker-trigger {
   display: none; }
 
 /**
- * Reports
- */
+  * Reports
+  */
 .woocommerce-reports-remove-filter {
   color: red;
   text-decoration: none; }
@@ -4307,7 +4621,7 @@ img.ui-datepicker-trigger {
     margin: 4px 0 0; }
 .woocommerce-reports-wrap .postbox::after,
 .woocommerce-reports-wide .postbox::after {
-  content: '.';
+  content: ".";
   display: block;
   height: 0;
   clear: both;
@@ -4367,7 +4681,7 @@ img.ui-datepicker-trigger {
     .woocommerce-reports-wide .postbox div.stats_range ul::after,
     .woocommerce-reports-wide .postbox h3.stats_range ul::before,
     .woocommerce-reports-wide .postbox h3.stats_range ul::after {
-      content: ' ';
+      content: " ";
       display: table; }
     .woocommerce-reports-wrap .postbox div.stats_range ul::after,
     .woocommerce-reports-wrap .postbox h3.stats_range ul::after,
@@ -4463,7 +4777,7 @@ img.ui-datepicker-trigger {
     border: 1px solid #dfdfdf; }
     .woocommerce-reports-wrap .postbox .chart-widgets li.chart-widget::after,
     .woocommerce-reports-wide .postbox .chart-widgets li.chart-widget::after {
-      content: '.';
+      content: ".";
       display: block;
       height: 0;
       clear: both;
@@ -4575,9 +4889,9 @@ img.ui-datepicker-trigger {
       margin-top: 10px; }
     .woocommerce-reports-wrap .postbox .chart-widgets li.chart-widget .description,
     .woocommerce-reports-wide .postbox .chart-widgets li.chart-widget .description {
-      margin-left: .5em;
+      margin-left: 0.5em;
       font-weight: normal;
-      opacity: .8; }
+      opacity: 0.8; }
 .woocommerce-reports-wrap .postbox .chart-legend,
 .woocommerce-reports-wide .postbox .chart-legend {
   list-style: none outside;
@@ -4603,7 +4917,7 @@ img.ui-datepicker-trigger {
       color: #464646;
       font-weight: normal;
       display: block;
-      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', sans-serif; }
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; }
       .woocommerce-reports-wrap .postbox .chart-legend li strong del,
       .woocommerce-reports-wide .postbox .chart-legend li strong del {
         color: #e74c3c;
@@ -4860,13 +5174,30 @@ table.bar_chart {
   .woocommerce-BlankState .woocommerce-BlankState-cta {
     font-size: 1.2em;
     padding: 0.75em 1.5em;
-    margin: 0 .25em;
+    margin: 0 0.25em;
     height: auto;
     display: inline-block !important; }
 
+.post-type-product .woocommerce-BlankState,
+.post-type-shop_order .woocommerce-BlankState {
+  max-width: 764px;
+  text-align: center;
+  margin: auto; }
+  .post-type-product .woocommerce-BlankState .woocommerce-BlankState-message,
+  .post-type-shop_order .woocommerce-BlankState .woocommerce-BlankState-message {
+    color: #444;
+    font-size: 1.5em;
+    margin: 0 auto 1em; }
+  .post-type-product .woocommerce-BlankState .woocommerce-BlankState-message::before,
+  .post-type-shop_order .woocommerce-BlankState .woocommerce-BlankState-message::before {
+    font-size: 120px; }
+  .post-type-product .woocommerce-BlankState .woocommerce-BlankState-buttons,
+  .post-type-shop_order .woocommerce-BlankState .woocommerce-BlankState-buttons {
+    margin-bottom: 4em; }
+
 /**
- * Small screen optimisation
- */
+  * Small screen optimisation
+  */
 @media only screen and (max-width: 1280px) {
   #order_data .order_data_column {
     width: 48%; }
@@ -4878,10 +5209,10 @@ table.bar_chart {
     clear: both;
     margin-left: 0; }
   .woocommerce_options_panel .short,
-  .woocommerce_options_panel input[type='text'].short,
-  .woocommerce_options_panel input[type='email'].short,
-  .woocommerce_options_panel input[type='number'].short,
-  .woocommerce_options_panel input[type='password'].short,
+  .woocommerce_options_panel input[type="text"].short,
+  .woocommerce_options_panel input[type="email"].short,
+  .woocommerce_options_panel input[type="number"].short,
+  .woocommerce_options_panel input[type="password"].short,
   .woocommerce_options_panel .dimensions_field .wrap {
     width: 80%; }
 
@@ -4904,8 +5235,8 @@ table.bar_chart {
     margin: 0 0 1em;
     width: 100%; } }
 /**
- * Optimisation for screens 900px and smaller
- */
+  * Optimisation for screens 900px and smaller
+  */
 @media only screen and (max-width: 900px) {
   #woocommerce-coupon-data ul.coupon_data_tabs,
   #woocommerce-product-data ul.product_data_tabs,
@@ -4936,8 +5267,8 @@ table.bar_chart {
       width: 100%;
       height: 40px; } }
 /**
- * Optimisation for screens 782px and smaller
- */
+  * Optimisation for screens 782px and smaller
+  */
 @media only screen and (max-width: 782px) {
   #wp-excerpt-media-buttons a {
     font-size: 16px;
@@ -5020,8 +5351,8 @@ table.bar_chart {
     .wc_addons_wrap .addons-wcs-banner-block-image .addons-img {
       margin: 0; } }
 /**
- * Backbone modal dialog
- */
+  * Backbone modal dialog
+  */
 .wc-backbone-modal * {
   box-sizing: border-box; }
 .wc-backbone-modal .wc-backbone-modal-content {
@@ -5088,10 +5419,10 @@ table.bar_chart {
       background-color: transparent;
       transition: color 0.1s ease-in-out, background 0.1s ease-in-out; }
       .wc-backbone-modal-main .wc-backbone-modal-header .modal-close-link::before {
-        font: normal 22px/50px 'dashicons' !important;
+        font: normal 22px/50px "dashicons" !important;
         color: #666;
         display: block;
-        content: '\f335';
+        content: "\f335";
         font-weight: 300; }
       .wc-backbone-modal-main .wc-backbone-modal-header .modal-close-link:hover, .wc-backbone-modal-main .wc-backbone-modal-header .modal-close-link:focus {
         background: #ddd;
@@ -5110,6 +5441,36 @@ table.bar_chart {
     .wc-backbone-modal-main article .pagination {
       padding: 10px 0 0;
       text-align: center; }
+    .wc-backbone-modal-main article table.widefat {
+      margin: 0;
+      width: 100%;
+      border: 0;
+      box-shadow: none; }
+      .wc-backbone-modal-main article table.widefat thead th {
+        padding: 0 1em 1em 1em;
+        text-align: left; }
+        .wc-backbone-modal-main article table.widefat thead th:first-child {
+          padding-left: 0; }
+        .wc-backbone-modal-main article table.widefat thead th:last-child {
+          padding-right: 0;
+          text-align: right; }
+      .wc-backbone-modal-main article table.widefat tbody td,
+      .wc-backbone-modal-main article table.widefat tbody th {
+        padding: 1em;
+        text-align: left;
+        vertical-align: middle; }
+        .wc-backbone-modal-main article table.widefat tbody td:first-child,
+        .wc-backbone-modal-main article table.widefat tbody th:first-child {
+          padding-left: 0; }
+        .wc-backbone-modal-main article table.widefat tbody td:last-child,
+        .wc-backbone-modal-main article table.widefat tbody th:last-child {
+          padding-right: 0;
+          text-align: right; }
+        .wc-backbone-modal-main article table.widefat tbody td select,
+        .wc-backbone-modal-main article table.widefat tbody td .select2-container,
+        .wc-backbone-modal-main article table.widefat tbody th select,
+        .wc-backbone-modal-main article table.widefat tbody th .select2-container {
+          width: 100%; }
   .wc-backbone-modal-main footer {
     position: absolute;
     left: 0;
@@ -5127,15 +5488,16 @@ table.bar_chart {
         margin-bottom: 0; }
 
 /**
- * Select2 elements.
- */
+  * Select2 elements.
+  */
 .select2-drop,
 .select2-dropdown {
   z-index: 999999 !important; }
 
 .select2-results {
   line-height: 1.5em; }
-  .select2-results .select2-results__option, .select2-results .select2-results__group {
+  .select2-results .select2-results__option,
+  .select2-results .select2-results__group {
     margin: 0;
     padding: 8px; }
   .select2-results .description {
@@ -5241,7 +5603,7 @@ table.bar_chart {
     .woocommerce-progress-form-wrapper .wc-progress-steps li::before,
     .woocommerce-exporter-wrapper .wc-progress-steps li::before,
     .woocommerce-importer-wrapper .wc-progress-steps li::before {
-      content: '';
+      content: "";
       border: 4px solid #ccc;
       border-radius: 100%;
       width: 4px;
@@ -5718,7 +6080,7 @@ table.bar_chart {
         .woocommerce-importer-wrapper .wc-progress-form-content .woocommerce-importer-options td .woocommerce-importer-file-url-field-wrapper input,
         .woocommerce-importer-wrapper .wc-progress-form-content .woocommerce-exporter-options th .woocommerce-importer-file-url-field-wrapper input,
         .woocommerce-importer-wrapper .wc-progress-form-content .woocommerce-exporter-options td .woocommerce-importer-file-url-field-wrapper input {
-          font-family: Consolas,Monaco,monospace;
+          font-family: Consolas, Monaco, monospace;
           border: 0;
           margin: 0;
           outline: 0;
@@ -5765,7 +6127,7 @@ table.bar_chart {
       border: 2px solid #eee;
       border-radius: 4px;
       padding: 0;
-      box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2); }
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2); }
     .woocommerce-progress-form-wrapper .woocommerce-exporter progress::-webkit-progress-bar,
     .woocommerce-progress-form-wrapper .woocommerce-importer progress::-webkit-progress-bar,
     .woocommerce-progress-form-wrapper .wc-progress-form-content progress::-webkit-progress-bar,
@@ -5791,8 +6153,8 @@ table.bar_chart {
     .woocommerce-importer-wrapper .wc-progress-form-content progress::-webkit-progress-value {
       border-radius: 3px;
       box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-      background: #A46497;
-      background: linear-gradient(top, #A46497, #66405F), #A46497;
+      background: #a46497;
+      background: linear-gradient(to bottom, #a46497, #66405f), #a46497;
       transition: width 1s ease; }
     .woocommerce-progress-form-wrapper .woocommerce-exporter progress::-moz-progress-bar,
     .woocommerce-progress-form-wrapper .woocommerce-importer progress::-moz-progress-bar,
@@ -5805,8 +6167,8 @@ table.bar_chart {
     .woocommerce-importer-wrapper .wc-progress-form-content progress::-moz-progress-bar {
       border-radius: 3px;
       box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-      background: #A46497;
-      background: linear-gradient(top, #A46497, #66405F), #A46497;
+      background: #a46497;
+      background: linear-gradient(to bottom, #a46497, #66405f), #a46497;
       transition: width 1s ease; }
     .woocommerce-progress-form-wrapper .woocommerce-exporter progress::-ms-fill,
     .woocommerce-progress-form-wrapper .woocommerce-importer progress::-ms-fill,
@@ -5819,8 +6181,8 @@ table.bar_chart {
     .woocommerce-importer-wrapper .wc-progress-form-content progress::-ms-fill {
       border-radius: 3px;
       box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-      background: #A46497;
-      background: linear-gradient(to bottom, #A46497, #66405F), #A46497;
+      background: #a46497;
+      background: linear-gradient(to bottom, #a46497, #66405f), #a46497;
       transition: width 1s ease; }
     .woocommerce-progress-form-wrapper .woocommerce-exporter.woocommerce-exporter__exporting .spinner, .woocommerce-progress-form-wrapper .woocommerce-exporter.woocommerce-importer__importing .spinner,
     .woocommerce-progress-form-wrapper .woocommerce-importer.woocommerce-exporter__exporting .spinner,
@@ -5934,8 +6296,10 @@ table.bar_chart {
       margin: 0;
       border: 0;
       box-shadow: none;
-      width: 100%; }
-      .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table td, .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table th,
+      width: 100%;
+      table-layout: fixed; }
+      .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table td,
+      .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table th,
       .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-error-log-table td,
       .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-error-log-table th,
       .woocommerce-progress-form-wrapper .woocommerce-importer .wc-importer-mapping-table td,
@@ -5972,8 +6336,10 @@ table.bar_chart {
       .woocommerce-importer-wrapper .wc-progress-form-content .wc-importer-error-log-table th {
         border: 0;
         padding: 12px;
-        vertical-align: middle; }
-        .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table td select, .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table th select,
+        vertical-align: middle;
+        word-wrap: break-word; }
+        .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table td select,
+        .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-mapping-table th select,
         .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-error-log-table td select,
         .woocommerce-progress-form-wrapper .woocommerce-exporter .wc-importer-error-log-table th select,
         .woocommerce-progress-form-wrapper .woocommerce-importer .wc-importer-mapping-table td select,
@@ -6241,7 +6607,7 @@ table.bar_chart {
         height: 100%;
         text-align: center;
         content: "";
-        color: #A16696;
+        color: #a16696;
         position: static;
         font-size: 100px;
         display: block;

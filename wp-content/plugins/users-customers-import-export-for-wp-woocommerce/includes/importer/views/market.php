@@ -86,30 +86,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 </style>
 <div class="wf_customer_import_export market-box table-box-main">
     <div class="pipe-premium-features">
-    <center><a href="http://www.xadapter.com/product/wordpress-users-woocommerce-customers-import-export/" target="_blank" class="button button-primary button-go-pro"><?php _e('Upgrade to Premium Version', 'wf_customer_import_export'); ?></a></center>
+    <center><a href="https://www.webtoffee.com/product/wordpress-users-woocommerce-customers-import-export/" target="_blank" class="button button-primary button-go-pro"><?php _e('Upgrade to Premium Version', 'users-customers-import-export-for-wp-woocommerce'); ?></a></center>
     <span>
         <ul>
-            <li style='color:red;'><strong><?php _e('Your Business is precious! Go Premium!','wf_customer_import_export'); ?></strong></li>
+            <li style='color:red;'><strong><?php _e('Your Business is precious! Go Premium!','users-customers-import-export-for-wp-woocommerce'); ?></strong></li>
         
-                <li><?php _e('HikeForce Import Export Users Plugin Premium version helps you to seamlessly import/export Customer details into your Woocommerce Store.', 'wf_customer_import_export'); ?></li>
+                <li><?php _e('HikeForce Import Export Users Plugin Premium version helps you to seamlessly import/export Customer details into your Woocommerce Store.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
         
-                <li><?php _e('Export/Import WooCommerce Customer details into a CSV file.', 'wf_customer_import_export'); ?><strong><?php _e('( Basic version supports only WordPress User details )', 'wf_customer_import_export'); ?></strong></li>
-                <li><?php _e('Various Filter options for exporting Customers.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Map and Transform fields while Importing Customers.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Change values while importing Customers using Evaluation Fields.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Choice to Update or Skip existing imported Customers.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Choice to Send or Skip Emails for newly imported Customers.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Import/Export file from/to a remote server via FTP in Scheduled time interval with Cron Job.', 'wf_customer_import_export'); ?></li>
-                <li><?php _e('Excellent Support for setting it up!', 'wf_customer_import_export'); ?></li>
+                <li><?php _e('Export/Import WooCommerce Customer details into a CSV file.', 'users-customers-import-export-for-wp-woocommerce'); ?><strong><?php _e('( Basic version supports only WordPress User details )', 'users-customers-import-export-for-wp-woocommerce'); ?></strong></li>
+                <li><?php _e('Various Filter options for exporting Customers.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Map and Transform fields while Importing Customers.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Change values while importing Customers using Evaluation Fields.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Choice to Update or Skip existing imported Customers.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Choice to Send or Skip Emails for newly imported Customers.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Import/Export file from/to a remote server via FTP in Scheduled time interval with Cron Job.', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
+                <li><?php _e('Excellent Support for setting it up!', 'users-customers-import-export-for-wp-woocommerce'); ?></li>
         </ul>
     </span>
     <center> 
         
-        <a href="https://www.xadapter.com/category/documentation/wordpress-users-woocommerce-customers-import-export/" target="_blank" class="button button-doc-demo"><?php _e('Documentation', 'wf_customer_import_export'); ?></a></center>
+        <a href="https://www.webtoffee.com/category/documentation/wordpress-users-woocommerce-customers-import-export/" target="_blank" class="button button-doc-demo"><?php _e('Documentation', 'users-customers-import-export-for-wp-woocommerce'); ?></a></center>
     </div>
     <div class="pipe-review-widget">
         <?php
-        echo sprintf(__('<div class=""><p><i>If you like the plugin please leave us a %1$s review!</i><p></div>', 'wf_customer_import_export'), '<a href="https://wordpress.org/support/plugin/users-customers-import-export-for-wp-woocommerce/reviews?rate=5#new-post" target="_blank" class="xa-pipe-rating-link" data-reviewed="' . esc_attr__('Thanks for the review.', 'wf_customer_import_export') . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
+        echo sprintf(__('<div class=""><p><i>If you like the plugin please leave us a %1$s review!</i><p></div>', 'users-customers-import-export-for-wp-woocommerce'), '<a href="https://wordpress.org/support/plugin/users-customers-import-export-for-wp-woocommerce/reviews?rate=5#new-post" target="_blank" class="xa-pipe-rating-link" data-reviewed="' . esc_attr__('Thanks for the review.', 'users-customers-import-export-for-wp-woocommerce') . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
         ?>
     </div>
     </div>

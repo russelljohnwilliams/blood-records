@@ -1,4 +1,4 @@
-jQuery( function ( $ ) {
+( function ( $, _, rwmb ) {
 	'use strict';
 
 	/**
@@ -11,7 +11,8 @@ jQuery( function ( $ ) {
 			$spinner = $this.siblings( '.spinner' ),
 			data = {
 				action: 'rwmb_get_embed',
-				url: $this.val()
+				url: this.value,
+				not_available: $this.data( 'not-available' ),
 			};
 
 		$spinner.css( 'visibility', 'visible' );
@@ -28,7 +29,7 @@ jQuery( function ( $ ) {
 		$( this ).siblings( '.rwmb-embed-media' ).html( '' );
 	}
 
-	$( document )
+	rwmb.$document
 		.on( 'change', '.rwmb-oembed', _.debounce( showPreview, 250 ) )
 	    .on( 'clone', '.rwmb-oembed', removePreview );
-} );
+} )( jQuery, _, rwmb );

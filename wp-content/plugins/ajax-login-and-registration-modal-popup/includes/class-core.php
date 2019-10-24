@@ -38,13 +38,6 @@ class LRM_Core {
         }
 
         if ( !empty($_REQUEST['lrm_action']) ) {
-            add_filter( 'wp_redirect', array($this, 'wp_redirect__filter'), 9, 2 );
-
-            // Disable redirect after Login
-            add_filter( 'ws_plugin__s2member_login_redirect', '__return_false', 99 );
-            // Try to remove all actions from "wp_login" action to avoid redirects
-            remove_all_actions('wp_login');
-
             add_action( 'wp_loaded', array($this, 'process_ajax'), 12 );
         }
 
@@ -75,21 +68,26 @@ class LRM_Core {
         LRM_Skins::instance()->load_defaults();
 
         LRM_Pages_Manager::init();
+
+	    LRM_Import_Export_Manager::init();
     }
 
     public function shortcode($atts) {
         $atts = wp_parse_args($atts, array(
-            'default_tab'  => 'login',
+            'default_tab'   => 'login',
             'logged_in_message'  => 'You have been already logged in!',
+            'role'          => '',
+            'role_silent'   => false,
         ));
 
+        $atts['role_silent'] = ($atts['role_silent'] || $atts['role_silent'] === 'yes') ? true : false;
 
         if ( !is_customize_preview() && is_user_logged_in() ) {
             return $atts['logged_in_message'];
         }
 
         ob_start();
-            $this->render_form( true, $atts['default_tab'] );
+            $this->render_form( true, $atts['default_tab'], $atts['role'], $atts['role_silent'] );
         return ob_get_clean(  );
     }
 
@@ -103,6 +101,8 @@ class LRM_Core {
         if ( !is_customize_preview() && is_user_logged_in() ) {
             return $atts['logged_in_message'];
         }
+
+
 
         ob_start();
             require LRM_PATH . 'views/restore-password.php';
@@ -189,25 +189,6 @@ class LRM_Core {
     }
 
     /**
-     * Try to change Hook position to avoid redirect during login/registration
-     * Calls only once
-     *
-     * @param $location
-     * @param $status
-     * @since 1.36
-     *
-     * @return mixed
-     */
-    public function wp_redirect__filter($location, $status) {
-        wp_send_json_error(array(
-            'message' => sprintf(
-                __( 'Some plugin try to redirect during this action to the following url: %s. Please try to disable plugins related to the Security/User Profile/Membership and try again.', 'ajax-login-and-registration-modal-popup' ),
-                $location
-            )
-        ));
-    }
-
-    /**
      * Load FB login link from plugin:
      * https://wordpress.org/plugins/wp-facebook-login/
      *
@@ -262,11 +243,15 @@ class LRM_Core {
         wp_enqueue_script('lrm-modal', LRM_URL . 'assets/lrm-core.js', $required_scripts, LRM_ASSETS_VER, true);
 
         wp_enqueue_style('lrm-modal', LRM_URL . 'assets/lrm-core-compiled.css', false, LRM_ASSETS_VER);
+        wp_enqueue_style('lrm-fonts', LRM_URL . 'assets/fonts.css', false, LRM_ASSETS_VER);
 
         LRM_Skins::i()->load_current_skin_assets();
         //wp_enqueue_style('lrm-modal-skin', LRM_URL . 'assets/lrm-skin.css', false, LRM_ASSETS_VER);
 
         $ajax_url = add_query_arg( 'lrm', '1', site_url('/') );
+        if ( defined("LRM_AJAX_URL_USE_ADMIN") ) {
+	        $ajax_url = add_query_arg( 'lrm', '1', admin_url('admin-ajax.php') );
+        }
 
         if ( LRM_WPML_Integration::is_wpml_active() ) {
             $ajax_url = apply_filters( 'wpml_permalink', $ajax_url );
@@ -299,8 +284,10 @@ class LRM_Core {
     /**
      * @param bool $is_inline
      * @param string $default_tab array('login', 'register', 'lost-password')
+     * @param string $role
+     * @param bool $role_silent
      */
-    public function render_form($is_inline = false, $default_tab = 'login' ) {
+    public function render_form( $is_inline = false, $default_tab = 'login', $role = '', $role_silent = false ) {
 
         if ( !in_array($default_tab, array('login', 'register', 'lost-password')) ) {
             $default_tab = 'login';

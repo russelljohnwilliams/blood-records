@@ -5,10 +5,10 @@ Author URI: http://wordpress.ieonly.com/category/my-plugins/anti-malware/
 Contributors: scheeeli, gotmls
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZHD8QHZ2E7PE
 Tags: security, firewall, anti-malware, scanner, automatic, repair, remove, malware, virus, threat, hacked, malicious, infection, timthumb, exploit, block, brute-force, wp-login, patch, antimalware, revslider, Revolution Slider
-Version: 4.18.69
-Stable tag: 4.18.69
+Version: 4.18.76
+Stable tag: 4.18.76
 Requires at least: 3.3
-Tested up to: 5.2
+Tested up to: 5.2.2
 
 This Anti-Malware scanner searches for Malware, Viruses, and other security threats and vulnerabilities on your server and it helps you fix them.
 
@@ -27,7 +27,7 @@ This Anti-Malware scanner searches for Malware, Viruses, and other security thre
 * Check the integrity of your WordPress Core files.
 * Automatically download new Definition Updates when running a Complete Scan.
 
-Updated Apr 29th
+Updated June 24th
 
 Register this plugin at [GOTMLS.NET](http://gotmls.net/) and get access to new definitions of "Known Threats" and added features like Automatic Removal, plus patches for specific security vulnerabilities like old versions of timthumb. Updated definition files can be downloaded automatically within the admin once your Key is registered. Otherwise, this plugin just scans for "Potential Threats" and leaves it up to you to identify and remove the malicious ones.
 
@@ -93,6 +93,20 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 5. The Quarantine showing threats that have been fix already.
 
 == Changelog ==
+
+= 4.18.76 =
+* Cleaned up the Nonce Token creation and storage functions.
+* Cleaned up View Quarantine page and fixed recovery link.
+* Added debugging for login errors WP head and footer Hooks.
+
+= 4.18.74 =
+* Fixed a bug in the Nonce Token Errors that was created by changes in the last release.
+
+= 4.18.71 =
+* Added wp_options table to the db_scan.
+* Fixed a few minor bugs in the db scan quarantine view.
+* Changed some wording and other minor fomatting issues.
+* Checked code for compatibility with WP 5.2.1 (latest release).
 
 = 4.18.69 =
 * Added a Warning message about the vulnerability in the yuzo-related-post plugin.
@@ -366,6 +380,15 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 * First versions available for WordPress (code removed, no longer compatible).
 
 == Upgrade Notice ==
+
+= 4.18.76 =
+Cleaned up the Nonce Token code and Quarantine page, fixed recovery link, and added debugging for login errors plus WP head and footer Hooks.
+
+= 4.18.74 =
+Fixed a bug in the Nonce Token Errors that was created by changes in the last release.
+
+= 4.18.71 =
+Added wp_options table to the db_scan and fixed a few minor bugs in the quarantine view, and changed some wording and checked code for compatibility with WP 5.2.1 (latest release).
 
 = 4.18.69 =
 Added a Warning message about the vulnerability in the yuzo-related-post plugin,  updated the Quarantine interface with a re-scan / re-clean feature, fixed a bug in the scan depth array that would produce PHP Notices, changed some wording and other minor fomatting issues, and checked code for compatibility with WP 5.2 (latest release).

@@ -52,6 +52,36 @@ add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 
 function woo_show_excerpt_shop_page() {
   global $product;
   echo $product->get_description();
-  echo $product->post->post_excerpt;
+ 
+    ?>
+  <div class= "get-price-and-date"><span>£<?php echo $product->get_price() ; ?></span><?php  echo $product->get_date_on_sale_to(); ?></div>
+  <?php
+    ?>
+  <div class= "get-date"></div>
+  <?php
+  // echo $product->post->post_excerpt;
 }
+
+
+// function blood_records_scripts() {
+
+//   wp_enqueue_script(
+//       'jquery_script', // name your script so that you can attach other scripts and de-register, etc.
+//       get_template_directory_uri() . '/assets/js/index.js', // this is the location of your script file
+//       array('jquery'), // this array lists the scripts upon which your script depends
+//   );
+  
+  
+// }
+
+
+/**
+ * Enqueue a script
+ */
+function myprefix_enqueue_scripts() {
+    wp_enqueue_script( 'my-script', get_template_directory_uri() . '/../storefront-child-theme-master/assets/js/index.js', array(), true );
+}
+add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
+
+// add_action( 'wp_enqueue_scripts', 'blood_records_scripts' );
 

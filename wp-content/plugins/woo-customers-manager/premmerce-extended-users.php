@@ -9,10 +9,10 @@ use Premmerce\ExtendedUsers\ExtendedUsersPlugin;
  * @package           Premmerce\ExtendedUsers
  *
  * @wordpress-plugin
- * Plugin Name:       WooCommerce Customers Manager
+ * Plugin Name:       Premmerce WooCommerce Customers Manager
  * Plugin URI:        https://premmerce.com/woocommerce-customers-manager/
  * Description:       This plugin extends the standard user list and the edit user page in WordPress and adds the customer data from WooCommerce.
- * Version:           1.1.5
+ * Version:           1.1.11
  * Author:            premmerce
  * Author URI:        https://premmerce.com/
  * License:           GPL-2.0+
@@ -21,7 +21,7 @@ use Premmerce\ExtendedUsers\ExtendedUsersPlugin;
  * Domain Path:       /languages
  *
  * WC requires at least: 3.0.0
- * WC tested up to: 3.2.5
+ * WC tested up to: 3.7
  */
 
 // If this file is called directly, abort.

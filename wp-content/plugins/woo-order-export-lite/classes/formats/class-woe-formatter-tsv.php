@@ -6,8 +6,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 include_once 'abstract-class-woe-formatter-sv.php';
 
 class WOE_Formatter_Tsv extends WOE_Formatter_sv {
-	public function __construct( $mode, $filename, $settings, $format, $labels, $field_formats, $date_format ) {
-		parent::__construct( $mode, $filename, $settings, $format, $labels, $field_formats, $date_format );
+	public function __construct(
+		$mode,
+		$filename,
+		$settings,
+		$format,
+		$labels,
+		$field_formats,
+		$date_format,
+		$offset
+	) {
+		parent::__construct( $mode, $filename, $settings, $format, $labels, $field_formats, $date_format, $offset );
 
 		$this->enclosure = '';
 		$this->delimiter = "\t";
@@ -21,6 +30,7 @@ class WOE_Formatter_Tsv extends WOE_Formatter_sv {
 		// show linebreaks as literals
 		$value = str_replace( "\n", '\n', $value );
 		$value = str_replace( "\r", '\r', $value );
+
 		return str_replace( $this->delimiter, '', $value );
 	}
 

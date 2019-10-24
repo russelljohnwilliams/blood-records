@@ -88,20 +88,9 @@ ul.lrm-switcher {
   content: "";
   display: inline-block;
   overflow: hidden;
-  vertical-align: text-bottom;
-  margin-right: 3px; }
-
-.lrm-switch-to--login:before {
-  width: 22px;
-  height: 24px;
-  background: url(img/login.png) no-repeat center center;
-  background-size: 100%; }
-
-.lrm-switch-to--register:before {
-  width: 22px;
-  height: 24px;
-  background: url(img/user.png) no-repeat center center;
-  background-size: 100%; }
+  vertical-align: middle;
+  margin-right: 3px;
+  height: 24px; }
 
 /* form.scss */
 .lrm-form {
@@ -133,59 +122,62 @@ ul.lrm-switcher {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 20px;
-  width: 20px;
+  height: 21px;
+  width: 22px;
   overflow: hidden;
-  text-indent: -300px;
+  color: #d2d8d8;
   white-space: nowrap;
-  color: transparent;
   text-shadow: none;
   background-repeat: no-repeat;
   background-position: 50% 0;
   padding: 0 !important; }
-  [dir="rtl"] .lrm-form label.image-replace, [lang="ar"] .lrm-form label.image-replace,
-  [dir="rtl"] .lrm-form .lrm-image-replace, [lang="ar"] .lrm-form .lrm-image-replace {
+  .lrm-font-svg .lrm-form label.image-replace,
+  .lrm-font-svg .lrm-form .lrm-image-replace {
+    height: 20px;
+    color: transparent; }
+  [dir="rtl"] .lrm-form label.image-replace, [lang="ar"] .lrm-form label.image-replace, [dir="rtl"] .lrm-form .lrm-image-replace, [lang="ar"] .lrm-form .lrm-image-replace {
     right: 15px;
     left: auto; }
-.lrm-form label.lrm-username {
-  background-image: url("img/cd-icon-username.svg"); }
-.lrm-form label.lrm-email {
-  background-image: url("img/cd-icon-email.svg"); }
-.lrm-form label.lrm-password {
-  background-image: url("img/cd-icon-password.svg"); }
-.lrm-form input {
+.lrm-form input, .lrm-form select {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 300;
   height: auto !important; }
 .lrm-form input.full-width,
+.lrm-form select.full-width,
 .lrm-form button.full-width {
   width: 100% !important;
   box-sizing: border-box; }
-.lrm-form input.has-padding, .lrm-form button.has-padding {
+.lrm-form input.has-padding, .lrm-form select.has-padding, .lrm-form button.has-padding {
   padding: 12px 20px 12px 50px; }
   [dir="rtl"] .lrm-form input.has-padding, [lang="ar"] .lrm-form input.has-padding,
+  [dir="rtl"] .lrm-form select.has-padding, [lang="ar"] .lrm-form select.has-padding,
   [dir="rtl"] .lrm-form button.has-padding, [lang="ar"] .lrm-form button.has-padding {
     padding: 12px 50px 12px 20px; }
   @media only screen and (min-width: 600px) {
     .lrm-form input.has-padding input.has-padding,
-    .lrm-form input.has-padding button.has-padding, .lrm-form button.has-padding input.has-padding,
+    .lrm-form input.has-padding button.has-padding, .lrm-form select.has-padding input.has-padding,
+    .lrm-form select.has-padding button.has-padding, .lrm-form button.has-padding input.has-padding,
     .lrm-form button.has-padding button.has-padding {
       padding: 16px 20px 16px 50px !important; }
     .lrm-form input.has-padding button[type=submit],
     .lrm-form input.has-padding input[type=submit],
-    .lrm-form input.has-padding #buddypress input[type=submit], .lrm-form button.has-padding button[type=submit],
+    .lrm-form input.has-padding #buddypress input[type=submit], .lrm-form select.has-padding button[type=submit],
+    .lrm-form select.has-padding input[type=submit],
+    .lrm-form select.has-padding #buddypress input[type=submit], .lrm-form button.has-padding button[type=submit],
     .lrm-form button.has-padding input[type=submit],
     .lrm-form button.has-padding #buddypress input[type=submit] {
       padding: 16px 0 !important; } }
-.lrm-form input.has-border {
+.lrm-form input.has-border,
+.lrm-form select.has-border {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none; }
-.lrm-form input.has-border:focus {
+.lrm-form input.has-border:focus,
+.lrm-form select.has-border:focus {
   outline: none; }
 .lrm-form input[type=password] {
   /* space left for the HIDE button */
@@ -236,30 +228,28 @@ ul.lrm-switcher {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 20px;
-  width: 20px;
+  height: 21px;
+  width: 22px;
   overflow: hidden;
-  text-indent: -300px;
+  color: #d2d8d8;
   white-space: nowrap;
-  color: transparent;
   text-shadow: none;
   background-repeat: no-repeat;
   background-position: 50% 0;
   left: unset;
-  background-image: url("img/iconmonstr-eye-4.svg");
   border-left: 1px solid black;
   font-size: 14px;
   font-size: 0.875rem;
   cursor: pointer;
   background-position: center;
-  padding: 20px 21px;
-  background-size: 24px;
+  padding: 10px 12px;
   right: 5px; }
+  .lrm-font-svg .lrm-form .hide-password {
+    height: 20px;
+    color: transparent; }
   [dir="rtl"] .lrm-form .hide-password, [lang="ar"] .lrm-form .hide-password {
     right: 15px;
     left: auto; }
-  .lrm-form .hide-password.hide-password--on {
-    background-image: url("img/iconmonstr-eye-8.svg?v3"); }
   [dir="rtl"] .lrm-form .hide-password, [lang="ar"] .lrm-form .hide-password {
     left: 0;
     right: unset;
@@ -491,28 +481,33 @@ html.html-has-lrm {
   text-align: center;
   width: 25em;
   opacity: 0;
-  display: inline-block;
+  display: none;
   width: 100%; }
+  .lrm-pass-strength-result[data-status] {
+    display: inline-block; }
 
-.lrm-pass-strength-result.short {
+.lrm-pass-strength-result[data-status="short"] {
   background-color: #f1adad;
   border-color: #e35b5b;
   opacity: 1; }
 
-.lrm-pass-strength-result.bad {
+.lrm-pass-strength-result[data-status="bad"] {
   background-color: #fbc5a9;
   border-color: #f78b53;
   opacity: 1; }
 
-.lrm-pass-strength-result.good {
+.lrm-pass-strength-result[data-status="good"] {
   background-color: #ffe399;
   border-color: #ffc733;
   opacity: 1; }
 
-.lrm-pass-strength-result.strong {
+.lrm-pass-strength-result[data-status="strong"] {
   background-color: #c1e1b9;
   border-color: #83c373;
   opacity: 1; }
+
+.lrm-pass-strength-result[data-status="empty"] {
+  display: none; }
 
 /* Catcha PLUGIN */
 .lrm-integrations .cptch_input {
@@ -600,6 +595,19 @@ a.jetpack-sso {
     top: 50%; } }
 .lrm-grecaptcha > div {
   margin: auto; }
+
+.lrm-math-captcha-wrap {
+  padding: 5px 0;
+  text-align: center; }
+  .lrm-math-captcha-wrap input.has-padding.has-border {
+    width: 64px !important;
+    text-align: center; }
+  .lrm-math-captcha-wrap input.has-padding.has-border[disabled] {
+    color: gray; }
+  .lrm-user-modal-container .lrm-math-captcha-wrap input.lrm-match-value {
+    font-weight: bold; }
+  .lrm-math-captcha-wrap .lrm-math-captcha-label {
+    font-weight: bold; }
 
 .lrm-nice-checkbox {
   position: absolute;

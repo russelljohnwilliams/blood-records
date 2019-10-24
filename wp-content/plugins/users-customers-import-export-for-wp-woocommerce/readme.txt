@@ -1,11 +1,12 @@
 === Import Export WordPress Users ===
 Contributors: webtoffee
+Donate link: https://www.webtoffee.com/plugins/
 Tags: Export Users to CSV, Import Users from CSV, woocommerce export customers, user export, export import users,  woocommerce import customers, woocommerce export customer email
 Requires at least: 3.0.1
-Tested up to: 4.9.7
-Stable tag: 1.1.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 5.2.3
+Stable tag: 1.3.3
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Import users and export users made simple! Easily Export Users to CSV, Import Users from CSV. Fastest user export import plugin. Export customers in WooCommerce (premium).
 
@@ -15,12 +16,13 @@ Import users and export users made simple! Easily Export Users to CSV, Import Us
 
 Import users and export users made fast and simple! Import Export WordPress Users plugin helps you to easily export and import users in your WordPress. User Export and User import are much required feature while moving Wordpress / WooCommerce websites.
 
-<ul>
-<li>Users Export - Export Users to CSV file.</li>
-<li>Users import - Import Users from CSV format to WordPress/WooCommerce Store.</li>
-</ul>
 
-Highlights: WordPress Users Export, WordPress Users CSV Import Suite, Export WordPress Users to CSV. Pro Version supports export and import of all additional user meta like WooCommerce deatils.
+ &#128312; Users Export - Export Users to CSV file.</li>
+ &#128312; Users import - Import Users from CSV format to WordPress/WooCommerce Store.
+ &#128312; Tested OK with WooCommerce 3.7.1
+ &#128312; Tested OK with PHP 7.3.5
+
+Highlights: WordPress Users Export, WordPress Users CSV Import Suite, Export WordPress Users to CSV. Pro Version supports export and import of all additional user meta like WooCommerce details.
 
 = How does it work? =
 
@@ -36,20 +38,19 @@ You can create the CSV from the scratch or you can export the users to get the f
 
 Import Export WordPress Users & WooCommerce Customers
 
-<ul>
-<li>Export Import WooCommerce Customer details into a CSV file.( Basic version supports only WordPress User Import and User Export )</li>
-<li>Option to choose All Roles or Multiple Roles while export (Basic Supports only single role at a time)</li>
-<li>Various Filter options for exporting Customers.</li>
-<li>Map and Transform fields while Importing Customers.</li>
-<li>Change values while improting Customers using Evaluation Fields.</li>
-<li>Choice to Update or Skip existing imported Customers.</li>
-<li>Choice to Send or Skip Emails for newly imported Customers.</li>
-<li>WPML Supported. French language support Out of the Box.</li>
-<li>Export Import users to/from a remote server via FTP in Scheduled time interval with Cron Job.</li>
-<li>Excellent Support for setting it up!'</li>
-</ul>
+ &#9989; Export Import WooCommerce Customer details into CSV a file.(Basic version supports only WordPress User Import and User Export)
+ &#9989; Option to choose All Roles or Multiple Roles while export (Basic Supports only single role at a time)
+ &#9989; Various Filter options for exporting Customers.
+ &#9989; Map and Transform fields while Importing Customers.
+ &#9989; Change values while improting Customers using Evaluation Fields.
+ &#9989; Choice to Update or Skip existing imported Customers.
+ &#9989; Choice to Send or Skip Emails for newly imported Customers.
+ &#9989; WPML Supported. French language support Out of the Box.
+ &#9989; Export Import users to/from a remote server via FTP in Scheduled time interval with Cron Job.
+ &#9989; Excellent Support for setting it up!
 
-Please visit <a rel="nofollow" href="https://www.xadapter.com/product/wordpress-users-woocommerce-customers-import-export/">Import Export WordPress Users & WooCommerce Customers</a> for more details
+
+Please visit <a rel="nofollow" href="https://www.webtoffee.com/product/wordpress-users-woocommerce-customers-import-export/">Import Export WordPress Users & WooCommerce Customers</a> for more details
 
 </blockquote>
 
@@ -59,12 +60,10 @@ Import Export WordPress Users Plugin is an ideal plugin for exporting and import
 
 The following use cases are handled by the plugin
 
-<ul>
-<li>User Export - WordPress Export Users to CSV.</li>
-<li>User Import - WordPress Import Users from CSV.</li>
-<li>Customer Export - WooCommerce Export Customers to CSV.(Premium)</li>
-<li>Customer Import - WooCommerce Import Customers from CSV.(Premium)</li>
-</ul>
+ &#9989; User Export - WordPress Export Users to CSV.</li>
+ &#9989; User Import - WordPress Import Users from CSV.</li>
+ &#9989; Customer Export - WooCommerce Export Customers to CSV.(Premium)</li>
+ &#9989; Customer Import - WooCommerce Import Customers from CSV.(Premium)</li>
     
 
 WordPress Export Users to CSV
@@ -99,9 +98,9 @@ You can map your import columns to the appropriate WooCommerce data to import or
 
 For importing WooCommerce customer details to your website, you must create a CSV(Comma-Separated Values) file which contains information about mapping fields in a tabular form. You can create CSV file by using a spreadsheet program, such as  Excel, or Google Spreadsheets. Save this file with extension .CSV.  After entering all details about WooCommerce users in the spreadsheet, you can import to your website.
 
-= About XAdapter.com =
+= About WebToffee.com =
 
-XAdapter creates quality WordPress/WooCommerce plugins that are easy to use and customize. We are proud to have thousands of customers actively using our plugins across the globe.
+WebToffee creates quality WordPress/WooCommerce plugins that are easy to use and customize. We are proud to have thousands of customers actively using our plugins across the globe.
 
 
 == Installation ==
@@ -138,6 +137,9 @@ Yes. This plugin will export users with passwords
 
 No. You may want to use https://wordpress.org/plugins/order-import-export-for-woocommerce/ for this
 
+= Are you redirected to dashboard or login page while exporting? =
+
+By default, admin and store manager are given access to export users. Please visit <a rel="nofollow" href="https://www.webtoffee.com/how-to-export-items-from-your-site-without-user-role-restriction/">How to export users without user role restriction</a> for more details
 
 
 == Screenshots ==
@@ -150,8 +152,58 @@ No. You may want to use https://wordpress.org/plugins/order-import-export-for-wo
 
 == Changelog ==
 
+= 1.3.3 =
+* Tested OK with WC 3.7.1 and WP 5.2.3
+* Biographical Info – reported by (@krsh333 and @wadehammes)
+= 1.3.2 =
+* CSV Injection was fixed – reported by one of our user (Javier Olmedo) CVE-2019-15092
+= 1.3.1 =
+* Tested OK with WC 3.7.0
+* Plugin update information hook added.
+= 1.2.9 =
+* Tested OK with WC 3.6.3 and WP 5.2.1
+= 1.2.8 =
+* Tested OK with WC 3.6.1
+= 1.2.7 =
+* Bug Fix:- Encoding issue with export CSV.
+= 1.2.6 =
+* Bug Fix:- Cannot insert user without e-mail.
+= 1.2.5 =
+* Minor UI change.
+* Tested OK with WC 3.5.7
+* Tested OK with PHP 7.3.3
+= 1.2.4 =
+* Bug Fix.
+= 1.2.3 =
+* Tested OK with WP 5.1.1 and WC 3.5.6
+* Minor UI changes.
+= 1.2.2 =
+* Tested OK with WP 5.0.3 and WC 3.5.3
+* Bug Fix: User cannot import without email.
+* Translation added German and French - Thanks for contributing French translation Jean(@momo-fr).
+= 1.2.1 =
+* Tested OK with WP 5.0.2 and WC 3.5.1
+= 1.2.0 =
+* Bug fix.
+= 1.1.9 =
+* Tested OK with WC 3.5.1
+* Feedback on uninstall
+= 1.1.8 =
+* Tested OK with WC 3.5.0
+= 1.1.7 =
+* Content Update.
+= 1.1.6 =
+* Bug fix.
+= 1.1.5 =
+* Tested OK with WC 3.4.5.
+* Review link added on footer.
+= 1.1.4 =
+* implement hashed/plaintext password processing during import.
+* Bug fix: User role import.
+= 1.1.3 =
+* Export page blank bug fix.
 = 1.1.2 =
-* Tested OK WC 3.4.3
+* Tested OK WC 3.4.4 and WP 4.9.8
 * Warnings fixed. 
 * UI Changed.
 * Export multiple roles at a time.
@@ -181,9 +233,3 @@ No. You may want to use https://wordpress.org/plugins/order-import-export-for-wo
 * Export Import WordPress Users.
 
 == Upgrade Notice ==
-
-= 1.1.2 =
-* Tested OK WC 3.4.3
-* Warnings fixed. 
-* UI Changed.
-* Export multiple roles at a time.

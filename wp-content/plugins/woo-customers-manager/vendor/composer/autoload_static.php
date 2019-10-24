@@ -9,15 +9,15 @@ class ComposerStaticInita9f4b6ad3c06ed9616597472d4a0059e
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
-            'Premmerce\\ExtendedUsers\\WordpressSDK\\' => 37,
+            'Premmerce\\SDK\\' => 14,
             'Premmerce\\ExtendedUsers\\' => 24,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Premmerce\\ExtendedUsers\\WordpressSDK\\' => 
+        'Premmerce\\SDK\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/sdk',
+            0 => __DIR__ . '/..' . '/premmerce/wordpress-sdk/src',
         ),
         'Premmerce\\ExtendedUsers\\' => 
         array (
@@ -25,20 +25,11 @@ class ComposerStaticInita9f4b6ad3c06ed9616597472d4a0059e
         ),
     );
 
-    public static $classMap = array (
-        'Premmerce\\ExtendedUsers\\Admin\\Admin' => __DIR__ . '/../..' . '/src/Admin/Admin.php',
-        'Premmerce\\ExtendedUsers\\ExtendedUsersPlugin' => __DIR__ . '/../..' . '/src/ExtendedUsersPlugin.php',
-        'Premmerce\\ExtendedUsers\\WordpressSDK\\FileManager\\FileManager' => __DIR__ . '/../..' . '/sdk/FileManager/FileManager.php',
-        'Premmerce\\ExtendedUsers\\WordpressSDK\\Notifications\\AdminNotifier' => __DIR__ . '/../..' . '/sdk/Notifications/AdminNotifier.php',
-        'Premmerce\\ExtendedUsers\\WordpressSDK\\Plugin\\PluginInterface' => __DIR__ . '/../..' . '/sdk/Plugin/PluginInterface.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita9f4b6ad3c06ed9616597472d4a0059e::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita9f4b6ad3c06ed9616597472d4a0059e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita9f4b6ad3c06ed9616597472d4a0059e::$classMap;
 
         }, null, ClassLoader::class);
     }

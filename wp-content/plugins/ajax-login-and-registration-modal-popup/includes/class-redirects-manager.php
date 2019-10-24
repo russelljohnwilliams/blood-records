@@ -18,7 +18,7 @@ class LRM_Redirects_Manager {
      */
     public static function register_settings( $settings_class ) {
 
-        $ACTIONS_SECTION = $settings_class->add_section( __( 'Actions / Redirects', 'ajax-login-and-registration-modal-popup' ), 'redirects' );
+	    $ACTIONS_SECTION = $settings_class->add_section( __( 'Actions / Redirects', 'ajax-login-and-registration-modal-popup' ), 'redirects' );
 
         //$wp_pages_arr = self::_get_pages_arr();
 
@@ -143,20 +143,7 @@ class LRM_Redirects_Manager {
             $redirect_to = LRM_PRO_Redirects_Manager::get_redirect( $action, $user_ID );
         }
 
-        return apply_filters('lrm/redirect_url', $redirect_to, $action);
+        return apply_filters('lrm/redirect_url', $redirect_to, $action, $user_ID);
     }
-
-
-    public static function get_wp_roles_flat() {
-
-        $editable_roles = get_editable_roles();
-        $roles = [];
-        foreach ($editable_roles as $role => $details) {
-            $roles[ $role ] = translate_user_role($details['name']);
-        }
-
-        return $roles;
-
-    }
-
+    
 }

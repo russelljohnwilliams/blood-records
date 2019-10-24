@@ -132,6 +132,12 @@
     box-shadow: none;
     padding: 7px 10px;
 }
+
+#datagrid .input-text{
+/*    margin-left: auto;    */
+    display: block;
+    width: 100%;
+}
 .bg-white{
     background: #fff;
 }
@@ -143,3 +149,8 @@
     color: white;
     border-color: #5ccc96;
 }
+.wt-userimport-rating-link{color:yellow;}
+.review-and-deactivate{color: #aa0073;}
+#v_offset.input-text{width: 400px;padding: 6px}
+#v_limit.input-text{width: 400px;padding: 6px}
+#v_user_roles{width: 400px}

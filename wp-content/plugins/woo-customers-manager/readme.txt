@@ -1,10 +1,10 @@
-=== WooCommerce Customers Manager ===
+=== Premmerce WooCommerce Customers Manager ===
 
 Contributors: premmerce
 Tags: woocommerce customers, customers, customers manager
 Requires at least: 4.8
-Tested up to: 4.9.2
-Stable tag: 1.1.5
+Tested up to: 5.2
+Stable tag: 1.1.11
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,9 +15,9 @@ This plugin extends the standard user list and the edit user page in WordPress a
 
 This plugin extends the standard user list and the edit user page in WordPress and adds the customer data from WooCommerce. This is the main customer management plugin from Premmerce, which we will constantly improve by adding new features, considering the needs of its users.
 
-Full documentation is available here: [WooCommerce Customers Manager](https://premmerce.com/woocommerce-customers-manager/)
+Full documentation is available here: [Premmerce WooCommerce Customers Manager](https://premmerce.com/woocommerce-customers-manager/)
 
-= Major features of “WooCommerce Customers Manager” =
+= Major features of “Premmerce WooCommerce Customers Manager” =
 
 * Filtering customers by the registration date
 * Filtering customers by the amount of money spent
@@ -40,12 +40,27 @@ You can create your personal demo store and test  this plugin together with [Pre
 
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the ‘wp-content/plugins/’ directory of your WordPress site.
-3. Activate ‘WooCommerce Customers Manager’ from the Plugins page.
+3. Activate ‘Premmerce WooCommerce Customers Manager’ from the Plugins page.
 
 == Screenshots ==
 
 1. Filtering customers
 2. Customer’s card
+
+== Frequently Asked Questions ==
+
+
+= Documentation =
+
+Full documentation is available here: [Premmerce WooCommerce Customers Manager](https://premmerce.com/woocommerce-customers-manager/)
+
+= Installation Instructions =
+Go to Plugins -> Add New section from your admin account and search for Premmerce WooCommerce Customers Manager.
+
+You can also install this plugin manually:
+* Download the plugin’s ZIP archive and unzip it.
+* Copy the unzipped premmerce-woocommerce-product-filter folder to the /wp-content/plugins/ directory.
+* Activate the plugin through the ‘Plugins’ menu in WordPress
 
 == Changelog ==
 
@@ -102,14 +117,45 @@ Release Date: Jan 24, 2018
 * Updated freemius sdk
 * Fixed the dependency check on multisite
 
-== Translators ==
+= 1.1.6 =
 
-= Available Languages =
+Release Date: Aug 22, 2018
 
-* English (Default)
-* Russian
-* Ukrainian
+* Fixed translations
+* Fixed security issues
+* Updated freemius SDk
+* Updated premmerce SDk
 
-== Documentation ==
+= 1.1.7 =
 
-Full documentation is available here: [WooCommerce Customers Manager](https://premmerce.com/woocommerce-customers-manager/)
+Release Date: Nov 13, 2018
+
+* Updated freemius version to 2.1.3
+* Added WooCommerce 3.5 support
+
+= 1.1.8 =
+
+Release Date: Nov 13, 2018
+
+* Fixed user filters
+
+= 1.1.9 =
+
+Release Date: Mar 1, 2019
+
+* Security fix
+
+
+= 1.1.10 =
+
+Release Date: Apr 24, 2019
+
+* Updated WooCommerce compatibility version to 3.6
+* Updated SDK version
+
+= 1.1.11 =
+
+Release Date: Sep 26, 2019
+
+* Freemius updated to 2.3.0
+* Updated WooCommerce compatibility version to 3.7

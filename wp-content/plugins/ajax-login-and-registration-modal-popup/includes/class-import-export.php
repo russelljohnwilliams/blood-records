@@ -13,6 +13,7 @@ class LRM_Import_Export_Manager {
 
     public static function init() {
         add_action('wp_ajax_lrm_import', array(__CLASS__, 'AJAX_process_import'));
+        add_action('wp_ajax_lrm_export', array(__CLASS__, 'AJAX_process_export'));
     }
 
     /**
@@ -22,70 +23,112 @@ class LRM_Import_Export_Manager {
      */
     public static function register_settings( $settings_class ) {
 
-        $SECTION = $settings_class->add_section( __( 'Import/Export', 'ajax-login-and-registration-modal-popup' ), 'import/export' );
+        $SECTION = $settings_class->add_section( __( 'Import/Export', 'ajax-login-and-registration-modal-popup' ), 'import/export', false );
+
+	    $SECTION->add_group( __( 'Export', 'ajax-login-and-registration-modal-popup' ), 'export' )
+	            ->add_field( array(
+		            'slug'        => 'export',
+		            'name'        => __('Export following sections:', 'ajax-login-and-registration-modal-popup' ),
+		            'default'     => true,
+		            'render'      => array( LRM_Settings::get(), '_render__text_section' ),
+		            'sanitize'    => '__return_false',
+		            'addons' => array('section_file'=>'export'),
+	            ) )
+		    ->description( __( 'Here you could simply export and import your plugin settings for backup or migrate to the another website.', 'ajax-login-and-registration-modal-popup' ) );
+
 
         $SECTION->add_group( __( 'Import', 'ajax-login-and-registration-modal-popup' ), 'import' )
 
             ->add_field( array(
                 'slug'        => 'import',
-                'name'        => __('Login page', 'ajax-login-and-registration-modal-popup'),
+                'name'        => __('Import following sections:', 'ajax-login-and-registration-modal-popup'),
                 'default'     => true,
                 'render'      => array( LRM_Settings::get(), '_render__text_section' ),
                 'sanitize'    => '__return_false',
                 'addons' => array('section_file'=>'import'),
-            ) )
-        ->description( __( 'Here you could override default WP pages (login, registration, restore password) to your custom pages.', 'ajax-login-and-registration-modal-popup' ) );
-
-        $SECTION->add_group( __( 'Export', 'ajax-login-and-registration-modal-popup' ), 'export' )
-            ->add_field( array(
-                'slug'        => 'export',
-                'name'        => __('Free version are compatible with:', 'ajax-login-and-registration-modal-popup' ),
-                'default'     => true,
-                'render'      => array( LRM_Settings::get(), '_render__text_section' ),
-                'sanitize'    => '__return_false',
-                'addons' => array('section_file'=>'export'),
             ) );
 
     }
 
-    /**
-     * @param bool $cached
-     * @return array
-     */
-    public static function _get_pages_arr( $cached = true ) {
+    public static function AJAX_process_export(  ) {
 
-        if ( $cached && $pages_list = wp_cache_get( 'lrm_pages_list', 'lrm' ) ) {
-            return $pages_list;
-        }
+    	if ( empty($_GET['_nonce']) || ! wp_verify_nonce($_GET['_nonce'], 'lrm_run_export') ) {
+    		wp_send_json_error( 'Invalid nonce!' );
+	    }
 
-        $pages_list = array();
-        $post_title = '';
+    	if ( ! current_user_can('manage_options') ) {
+    		wp_send_json_error( 'Not allowed!' );
+	    }
 
+	    if ( empty($_GET['sections']) ) {
+		    wp_send_json_error( 'No sections are selected!' );
+	    }
 
-        $args = array(
-            'post_type' => 'page',
-            'suppress_filters' => false,
-            'post_status' => 'publish',
-            'perm' => 'readable',
-            //'fields' => 'ids',
-        );
+    	$sections = $_GET['sections'];
+	    $export_string = '';
 
-        $query = new WP_Query($args);
+	    $section_data = [];
+	    $sections_data = [];
+    	foreach ( $sections as $section ) {
+		    $section = sanitize_text_field($section);
 
-        foreach ($query->posts as $page) {
-            $post_title = $page->post_title;
-            if ( 'publish' != $page->post_status ) {
-                $post_title .= ' [' . $page->post_status . ']';
-            }
-            $pages_list[(string)$page->ID] = $post_title . ' [#' . $page->ID . ']';
-        }
+		    $section_data = get_option( 'lrm_' . $section );
 
+		    if ( $section_data ) {
+			    $sections_data[$section] = $section_data;
+		    }
+	    }
 
-        if ( $cached ) {
-            wp_cache_add( 'lrm_pages_list', $pages_list, 'lrm' );
-        }
+    	if ( $sections_data ) {
+		    $export_string = json_encode( $sections_data );
+	    }
 
-        return $pages_list;
+    	wp_send_json_success( $export_string );
+    }
+
+    public static function AJAX_process_import(  ) {
+
+    	if ( empty($_POST['_nonce']) || ! wp_verify_nonce($_POST['_nonce'], 'lrm_run_import') ) {
+    		wp_send_json_error( 'Invalid nonce!' );
+	    }
+
+	    if ( ! current_user_can('manage_options') ) {
+		    wp_send_json_error( 'Not allowed!' );
+	    }
+
+	    if ( empty( trim($_POST['sections_import']) ) || empty($_POST['sections']) ) {
+		    wp_send_json_error( 'Import string is empty or no sections are selected!' );
+	    }
+
+    	$sections = $_POST['sections'];
+	    $sections_import = json_decode( trim(stripslashes($_POST['sections_import'])), true );
+
+	    if ( JSON_ERROR_NONE !== json_last_error() ) {
+		    wp_send_json_error( 'Json parse error: ' . json_last_error_msg() );
+	    }
+
+	    $section_data = [];
+	    $sections_data = [];
+
+    	foreach ( $sections as $section ) {
+		    $section = sanitize_text_field($section);
+
+		    // Skip if no setting in Import string
+		    if ( !isset($sections_import[$section]) ) {
+		    	continue;
+		    }
+
+		    $section_data = get_option( 'lrm_' . $section );
+
+		    if ( $section_data ) {
+			    $section_data = array_merge( $section_data, $sections_import[$section] );
+			    update_option( 'lrm_' . $section, $section_data );
+		    } else {
+		    	add_option( 'lrm_' . $section, $sections_import[$section] );
+		    }
+	    }
+
+    	wp_send_json_success();
     }
 
 }

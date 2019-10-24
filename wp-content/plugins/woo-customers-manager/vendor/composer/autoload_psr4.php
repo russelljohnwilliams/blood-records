@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Premmerce\\ExtendedUsers\\WordpressSDK\\' => array($baseDir . '/sdk'),
+    'Premmerce\\SDK\\' => array($vendorDir . '/premmerce/wordpress-sdk/src'),
     'Premmerce\\ExtendedUsers\\' => array($baseDir . '/src'),
 );

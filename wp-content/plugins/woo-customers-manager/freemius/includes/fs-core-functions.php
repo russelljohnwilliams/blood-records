@@ -86,9 +86,25 @@
     function fs_asset_url( $asset_abs_path ) {
         $wp_content_dir = fs_normalize_path( WP_CONTENT_DIR );
         $asset_abs_path = fs_normalize_path( $asset_abs_path );
-        $asset_rel_path = str_replace( $wp_content_dir, '', $asset_abs_path );
 
-        $asset_url = content_url( fs_normalize_path( $asset_rel_path ) );
+        if ( 0 === strpos( $asset_abs_path, $wp_content_dir ) ) {
+            // Handle both theme and plugin assets located in the standard directories.
+            $asset_rel_path = str_replace( $wp_content_dir, '', $asset_abs_path );
+            $asset_url      = content_url( fs_normalize_path( $asset_rel_path ) );
+        } else {
+            $wp_plugins_dir = fs_normalize_path( WP_PLUGIN_DIR );
+            if ( 0 === strpos( $asset_abs_path, $wp_plugins_dir ) ) {
+                // Try to handle plugin assets that may be located in a non-standard plugins directory.
+                $asset_rel_path = str_replace( $wp_plugins_dir, '', $asset_abs_path );
+                $asset_url      = plugins_url( fs_normalize_path( $asset_rel_path ) );
+            } else {
+                // Try to handle theme assets that may be located in a non-standard themes directory.
+                $active_theme_stylesheet = get_stylesheet();
+                $wp_themes_dir           = fs_normalize_path( trailingslashit( get_theme_root( $active_theme_stylesheet ) ) );
+                $asset_rel_path          = str_replace( $wp_themes_dir, '', fs_normalize_path( $asset_abs_path ) );
+                $asset_url               = trailingslashit( get_theme_root_uri( $active_theme_stylesheet ) ) . fs_normalize_path( $asset_rel_path );
+            }
+        }
 
         return $asset_url;
     }
@@ -111,6 +127,9 @@
 
     if ( ! function_exists( 'fs_request_get' ) ) {
         /**
+         * A helper method to fetch GET/POST user input with an optional default value when the input is not set.
+         * @author Vova Feldman (@svovaf)
+         *
          * @param string      $key
          * @param mixed       $def
          * @param string|bool $type Since 1.2.1.7 - when set to 'get' will look for the value passed via querystring, when
@@ -124,6 +143,10 @@
                 $type = strtolower( $type );
             }
 
+            /**
+             * Note to WordPress.org Reviewers:
+             *  This is a helper method to fetch GET/POST user input with an optional default value when the input is not set. The actual sanitization is done in the scope of the function's usage.
+             */
             switch ( $type ) {
                 case 'post':
                     $value = isset( $_POST[ $key ] ) ? $_POST[ $key ] : $def;
@@ -147,17 +170,39 @@
     }
 
     if ( ! function_exists( 'fs_request_get_bool' ) ) {
+        /**
+         * A helper method to fetch GET/POST user boolean input with an optional default value when the input is not set.
+         *
+         * @author Vova Feldman (@svovaf)
+         *
+         * @param string $key
+         * @param bool $def
+         *
+         * @return bool|mixed
+         */
         function fs_request_get_bool( $key, $def = false ) {
-            if ( ! isset( $_REQUEST[ $key ] ) ) {
+            $val = fs_request_get( $key, null );
+
+            if ( is_null( $val ) ) {
                 return $def;
             }
 
-            if ( 1 == $_REQUEST[ $key ] || 'true' === strtolower( $_REQUEST[ $key ] ) ) {
-                return true;
-            }
+            if ( is_bool( $val ) ) {
+                return $val;
+            } else if ( is_numeric( $val ) ) {
+                if ( 1 == $val ) {
+                    return true;
+                } else if ( 0 == $val ) {
+                    return false;
+                }
+            } else if ( is_string( $val ) ) {
+                $val = strtolower( $val );
 
-            if ( 0 == $_REQUEST[ $key ] || 'false' === strtolower( $_REQUEST[ $key ] ) ) {
-                return false;
+                if ( 'true' === $val ) {
+                    return true;
+                } else if ( 'false' === $val ) {
+                    return false;
+                }
             }
 
             return $def;
@@ -275,8 +320,10 @@
      * @param string      $page
      * @param string      $action
      * @param string      $title
+     * @param string      $button_class
      * @param array       $params
      * @param bool        $is_primary
+     * @param bool        $is_small
      * @param string|bool $icon_class   Optional class for an icon (since 1.1.7).
      * @param string|bool $confirmation Optional confirmation message before submit (since 1.1.7).
      * @param string      $method       Since 1.1.7
@@ -288,8 +335,10 @@
         $page,
         $action,
         $title,
+        $button_class = '',
         $params = array(),
         $is_primary = true,
+        $is_small = false,
         $icon_class = false,
         $confirmation = false,
         $method = 'GET'
@@ -299,8 +348,10 @@
             $page,
             $action,
             $title,
+            $button_class,
             $params,
             $is_primary,
+            $is_small,
             $icon_class,
             $confirmation,
             $method
@@ -315,8 +366,10 @@
      * @param string      $page
      * @param string      $action
      * @param string      $title
+     * @param string      $button_class
      * @param array       $params
      * @param bool        $is_primary
+     * @param bool        $is_small
      * @param string|bool $icon_class   Optional class for an icon.
      * @param string|bool $confirmation Optional confirmation message before submit.
      * @param string      $method
@@ -328,8 +381,10 @@
         $page,
         $action,
         $title,
+        $button_class = '',
         $params = array(),
         $is_primary = true,
+        $is_small = false,
         $icon_class = false,
         $confirmation = false,
         $method = 'GET'
@@ -343,7 +398,7 @@
                 $method,
                 $action,
                 wp_nonce_field( $action, '_wpnonce', true, false ),
-                'button' . ( $is_primary ? ' button-primary' : '' ),
+                'button' . ( ! empty( $button_class ) ? ' ' . $button_class : '' ) . ( $is_primary ? ' button-primary' : '' ) . ( $is_small ? ' button-small' : '' ),
                 $confirmation,
                 $title
             );
@@ -353,13 +408,13 @@
                 $method,
                 $action,
                 wp_nonce_field( $action, '_wpnonce', true, false ),
-                'button' . ( $is_primary ? ' button-primary' : '' ),
+                'button' . ( ! empty( $button_class ) ? ' ' . $button_class : '' ) . ( $is_primary ? ' button-primary' : '' ) . ( $is_small ? ' button-small' : '' ),
                 $title
             );
         } else {
             return sprintf( '<a href="%s" class="%s">%s</a></form>',
                 wp_nonce_url( freemius( $module_id )->_get_admin_page_url( $page, array_merge( $params, array( 'fs_action' => $action ) ) ), $action ),
-                'button' . ( $is_primary ? ' button-primary' : '' ),
+                'button' . ( ! empty( $button_class ) ? ' ' . $button_class : '' ) . ( $is_primary ? ' button-primary' : '' ) . ( $is_small ? ' button-small' : '' ),
                 $title
             );
         }
@@ -431,6 +486,42 @@
             $length = strlen( $needle );
 
             return ( substr( $haystack, 0, $length ) === $needle );
+        }
+    }
+
+    if ( ! function_exists( 'fs_ends_with' ) ) {
+        /**
+         * Check if string ends with.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  2.0.0
+         *
+         * @param string $haystack
+         * @param string $needle
+         *
+         * @return bool
+         */
+        function fs_ends_with( $haystack, $needle ) {
+            $length = strlen( $needle );
+            $start  = $length * - 1; // negative
+
+            return ( substr( $haystack, $start ) === $needle );
+        }
+    }
+
+    if ( ! function_exists( 'fs_strip_url_protocol' ) ) {
+        function fs_strip_url_protocol( $url ) {
+            if ( ! fs_starts_with( $url, 'http' ) ) {
+                return $url;
+            }
+
+            $protocol_pos = strpos( $url, '://' );
+
+            if ( $protocol_pos > 5 ) {
+                return $url;
+            }
+
+            return substr( $url, $protocol_pos + 3 );
         }
     }
 
@@ -629,101 +720,41 @@
          * @global       $fs_text , $fs_text_overrides
          */
         function fs_text( $key, $slug = 'freemius' ) {
-            return __fs( $key, $slug );
-        }
+            global $fs_text,
+                   $fs_module_info_text,
+                   $fs_text_overrides;
 
-        /**
-         * Get a translatable text override if exists, or `false`.
-         *
-         * @author Vova Feldman (@svovaf)
-         * @since  1.2.1.7
-         *
-         * @param string $text Translatable string.
-         * @param string $key  String key for overrides.
-         * @param string $slug Module slug for overrides.
-         *
-         * @return string|false
-         */
-        function fs_text_override( $text, $key, $slug ) {
-            global $fs_text_overrides;
+            if ( isset( $fs_text_overrides[ $slug ] ) ) {
+                if ( isset( $fs_text_overrides[ $slug ][ $key ] ) ) {
+                    return $fs_text_overrides[ $slug ][ $key ];
+                }
 
-            /**
-             * Check if string is overridden.
-             */
-            if ( ! isset( $fs_text_overrides[ $slug ] ) ) {
-                return false;
+                $lower_key = strtolower( $key );
+                if ( isset( $fs_text_overrides[ $slug ][ $lower_key ] ) ) {
+                    return $fs_text_overrides[ $slug ][ $lower_key ];
+                }
             }
 
-            if ( empty( $key ) ) {
-                $key = strtolower( str_replace( ' ', '-', $text ) );
+            if ( ! isset( $fs_text ) ) {
+                $dir = defined( 'WP_FS__DIR_INCLUDES' ) ?
+                    WP_FS__DIR_INCLUDES :
+                    dirname( __FILE__ );
+
+                require_once $dir . '/i18n.php';
             }
 
-            if ( isset( $fs_text_overrides[ $slug ][ $key ] ) ) {
-                return $fs_text_overrides[ $slug ][ $key ];
+            if ( isset( $fs_text[ $key ] ) ) {
+                return $fs_text[ $key ];
             }
 
-            $lower_key = strtolower( $key );
-            if ( isset( $fs_text_overrides[ $slug ][ $lower_key ] ) ) {
-                return $fs_text_overrides[ $slug ][ $lower_key ];
+            if ( isset( $fs_module_info_text[ $key ] ) ) {
+                return $fs_module_info_text[ $key ];
             }
 
-            return false;
-        }
-
-        /**
-         * Get a translatable text and its text domain.
-         *
-         * When the text is overridden by the module, returns the overridden text and the text domain of the module. Otherwise, returns the original text and 'freemius' as the text domain.
-         *
-         * @author Vova Feldman (@svovaf)
-         * @since  1.2.1.7
-         *
-         * @param string $text Translatable string.
-         * @param string $key  String key for overrides.
-         * @param string $slug Module slug for overrides.
-         *
-         * @return string[]
-         */
-        function fs_text_and_domain( $text, $key, $slug ) {
-            $override = fs_text_override( $text, $key, $slug );
-
-            if ( false === $override ) {
-                // No override, use FS text domain.
-                $text_domain = 'freemius';
-            } else {
-                // Found an override.
-                $text = $override;
-                // Use the module's text domain.
-                $text_domain = $slug;
-            }
-
-            return array( $text, $text_domain );
+            return $key;
         }
 
         #region Private
-
-        /**
-         * Retrieve an inline translated text by key.
-         *
-         * @author Vova Feldman (@svovaf)
-         * @since  1.2.3
-         *
-         * @param string $text Translatable string.
-         * @param string $key  String key for overrides.
-         * @param string $slug Module slug for overrides.
-         *
-         * @return string
-         *
-         * @global       $fs_text_overrides
-         */
-        function _fs_text_inline( $text, $key = '', $slug = 'freemius' ) {
-            list( $text, $text_domain ) = fs_text_and_domain( $text, $key, $slug );
-
-            // Avoid misleading Theme Check warning.
-            $fn = 'translate';
-
-            return $fn( $text, $text_domain );
-        }
 
         /**
          * Retrieve an inline translated text by key with a context.
@@ -750,24 +781,6 @@
         }
 
         #endregion
-
-        /**
-         * Retrieve an inline translated text by key.
-         *
-         * @author Vova Feldman (@svovaf)
-         * @since  1.2.3
-         *
-         * @param string $text Translatable string.
-         * @param string $key  String key for overrides.
-         * @param string $slug Module slug for overrides.
-         *
-         * @return string
-         *
-         * @global       $fs_text_overrides
-         */
-        function fs_text_inline( $text, $key = '', $slug = 'freemius' ) {
-            return _fs_text_inline( $text, $key, $slug );
-        }
 
         /**
          * Retrieve an inline translated text by key with a context.
@@ -828,6 +841,123 @@
          */
         function fs_echo_x_inline( $text, $context, $key = '', $slug = 'freemius' ) {
             echo _fs_text_x_inline( $text, $context, $key, $slug );
+        }
+    }
+
+    if ( ! function_exists( 'fs_text_override' ) ) {
+        /**
+         * Get a translatable text override if exists, or `false`.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.2.1.7
+         *
+         * @param string $text Translatable string.
+         * @param string $key  String key for overrides.
+         * @param string $slug Module slug for overrides.
+         *
+         * @return string|false
+         */
+        function fs_text_override( $text, $key, $slug ) {
+            global $fs_text_overrides;
+
+            /**
+             * Check if string is overridden.
+             */
+            if ( ! isset( $fs_text_overrides[ $slug ] ) ) {
+                return false;
+            }
+
+            if ( empty( $key ) ) {
+                $key = strtolower( str_replace( ' ', '-', $text ) );
+            }
+
+            if ( isset( $fs_text_overrides[ $slug ][ $key ] ) ) {
+                return $fs_text_overrides[ $slug ][ $key ];
+            }
+
+            $lower_key = strtolower( $key );
+            if ( isset( $fs_text_overrides[ $slug ][ $lower_key ] ) ) {
+                return $fs_text_overrides[ $slug ][ $lower_key ];
+            }
+
+            return false;
+        }
+    }
+
+    if ( ! function_exists( 'fs_text_and_domain' ) ) {
+        /**
+         * Get a translatable text and its text domain.
+         *
+         * When the text is overridden by the module, returns the overridden text and the text domain of the module. Otherwise, returns the original text and 'freemius' as the text domain.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.2.1.7
+         *
+         * @param string $text Translatable string.
+         * @param string $key  String key for overrides.
+         * @param string $slug Module slug for overrides.
+         *
+         * @return string[]
+         */
+        function fs_text_and_domain( $text, $key, $slug ) {
+            $override = fs_text_override( $text, $key, $slug );
+
+            if ( false === $override ) {
+                // No override, use FS text domain.
+                $text_domain = 'freemius';
+            } else {
+                // Found an override.
+                $text = $override;
+                // Use the module's text domain.
+                $text_domain = $slug;
+            }
+
+            return array( $text, $text_domain );
+        }
+    }
+
+    if ( ! function_exists( '_fs_text_inline' ) ) {
+        /**
+         * Retrieve an inline translated text by key.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.2.3
+         *
+         * @param string $text Translatable string.
+         * @param string $key  String key for overrides.
+         * @param string $slug Module slug for overrides.
+         *
+         * @return string
+         *
+         * @global       $fs_text_overrides
+         */
+        function _fs_text_inline( $text, $key = '', $slug = 'freemius' ) {
+            list( $text, $text_domain ) = fs_text_and_domain( $text, $key, $slug );
+
+            // Avoid misleading Theme Check warning.
+            $fn = 'translate';
+
+            return $fn( $text, $text_domain );
+        }
+    }
+
+    if ( ! function_exists( 'fs_text_inline' ) ) {
+        /**
+         * Retrieve an inline translated text by key.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.2.3
+         *
+         * @param string $text Translatable string.
+         * @param string $key  String key for overrides.
+         * @param string $slug Module slug for overrides.
+         *
+         * @return string
+         *
+         * @global       $fs_text_overrides
+         */
+        function fs_text_inline( $text, $key = '', $slug = 'freemius' ) {
+            return _fs_text_inline( $text, $key, $slug );
         }
     }
 
@@ -1115,4 +1245,107 @@
         }
     }
 
-#endregion
+    if ( ! function_exists( 'fs_override_i18n' ) ) {
+        /**
+         * Override default i18n text phrases.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.1.6
+         *
+         * @param array[string]string $key_value
+         * @param string              $slug
+         *
+         * @global $fs_text_overrides
+         */
+        function fs_override_i18n( array $key_value, $slug = 'freemius' ) {
+            global $fs_text_overrides;
+
+            if ( ! isset( $fs_text_overrides[ $slug ] ) ) {
+                $fs_text_overrides[ $slug ] = array();
+            }
+
+            foreach ( $key_value as $key => $value ) {
+                $fs_text_overrides[ $slug ][ $key ] = $value;
+            }
+        }
+    }
+
+    #endregion
+
+    #--------------------------------------------------------------------------------
+    #region Multisite Network
+    #--------------------------------------------------------------------------------
+
+    if ( ! function_exists( 'fs_is_plugin_uninstall' ) ) {
+        /**
+         * @author Vova Feldman (@svovaf)
+         * @since  2.0.0
+         */
+        function fs_is_plugin_uninstall() {
+            return (
+                defined( 'WP_UNINSTALL_PLUGIN' ) ||
+                ( 0 < did_action( 'update_option_uninstall_plugins' ) )
+            );
+        }
+    }
+
+    if ( ! function_exists( 'fs_is_network_admin' ) ) {
+        /**
+         * Unlike is_network_admin(), this one will also work properly when
+         * the context execution is WP AJAX handler, and during plugin
+         * uninstall.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  2.0.0
+         */
+        function fs_is_network_admin() {
+            return (
+                WP_FS__IS_NETWORK_ADMIN ||
+                ( is_multisite() && fs_is_plugin_uninstall() )
+            );
+        }
+    }
+
+    if ( ! function_exists( 'fs_is_blog_admin' ) ) {
+        /**
+         * Unlike is_blog_admin(), this one will also work properly when
+         * the context execution is WP AJAX handler, and during plugin
+         * uninstall.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  2.0.0
+         */
+        function fs_is_blog_admin() {
+            return (
+                WP_FS__IS_BLOG_ADMIN ||
+                ( ! is_multisite() && fs_is_plugin_uninstall() )
+            );
+        }
+    }
+
+    #endregion
+
+    if ( ! function_exists( 'fs_apply_filter' ) ) {
+        /**
+         * Apply filter for specific plugin.
+         *
+         * @author Vova Feldman (@svovaf)
+         * @since  1.0.9
+         *
+         * @param string $module_unique_affix Module's unique affix.
+         * @param string $tag                 The name of the filter hook.
+         * @param mixed  $value               The value on which the filters hooked to `$tag` are applied on.
+         *
+         * @return mixed The filtered value after all hooked functions are applied to it.
+         *
+         * @uses   apply_filters()
+         */
+        function fs_apply_filter( $module_unique_affix, $tag, $value ) {
+            $args = func_get_args();
+
+            return call_user_func_array( 'apply_filters', array_merge(
+                    array( "fs_{$tag}_{$module_unique_affix}" ),
+                    array_slice( $args, 2 ) )
+            );
+        }
+    }

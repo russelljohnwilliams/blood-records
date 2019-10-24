@@ -347,6 +347,8 @@ jQuery( function( $ ) {
 
 			// Check the availability of the Payment Request API first.
 			paymentRequest.canMakePayment().then( function( result ) {
+				var paymentRequestError = [];
+
 				if ( result ) {
 					paymentRequestType = result.applePay ? 'apple_pay' : 'payment_request_api';
 
@@ -362,6 +364,9 @@ jQuery( function( $ ) {
 								} else if ( addToCartButton.is( '.wc-variation-selection-needed' ) ) {
 									window.alert( wc_add_to_cart_variation_params.i18n_make_a_selection_text );
 								}
+							} else if ( 0 < paymentRequestError.length ) {
+								e.preventDefault();
+								window.alert( paymentRequestError );
 							} else {
 								wc_stripe_payment_request.addToCart();
 							}
@@ -380,27 +385,30 @@ jQuery( function( $ ) {
 							} );
 						} );
 
-						$( '.quantity' ).on( 'change', '.qty', function() {
+						$( '.quantity' ).on( 'keyup', '.qty', function() {
 							$( '#wc-stripe-payment-request-button' ).block( { message: null } );
+							paymentRequestError = [];
 
 							$.when( wc_stripe_payment_request.getSelectedProductData() ).then( function( response ) {
-								$.when( paymentRequest.update( {
-									total: response.total,
-									displayItems: response.displayItems
-								} ) ).then( function() {
+								if ( response.error ) {
+									paymentRequestError = [ response.error ];
 									$( '#wc-stripe-payment-request-button' ).unblock();
-								} );
+								} else {
+									$.when( paymentRequest.update( {
+										total: response.total,
+										displayItems: response.displayItems
+									} ) ).then( function() {
+										$( '#wc-stripe-payment-request-button' ).unblock();
+									} );
+								}
 							} );
 						} );
 					}
 
 					if ( $( '#wc-stripe-payment-request-button' ).length ) {
+						$( '#wc-stripe-payment-request-wrapper, #wc-stripe-payment-request-button-separator' ).show();
 						prButton.mount( '#wc-stripe-payment-request-button' );
-						$( '#wc-stripe-payment-request-button-separator' ).show();
 					}
-				} else {
-					$( '#wc-stripe-payment-request-button' ).hide();
-					$( '#wc-stripe-payment-request-button-separator' ).hide();
 				}
 			} );
 

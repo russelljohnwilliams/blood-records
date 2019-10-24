@@ -16,6 +16,7 @@ $columns = array(
     'first_name' => 'first_name',
     'last_name' => 'last_name',
     'user_status' => 'user_status',
+    'description' => 'description',
     'roles' => 'roles'
 );
 

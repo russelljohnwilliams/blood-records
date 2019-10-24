@@ -105,16 +105,34 @@ class WC_Stripe_Customer {
 		if ( $user ) {
 			$billing_first_name = get_user_meta( $user->ID, 'billing_first_name', true );
 			$billing_last_name  = get_user_meta( $user->ID, 'billing_last_name', true );
-			$description        = __( 'Name', 'woocommerce-gateway-stripe' ) . ': ' . $billing_first_name . ' ' . $billing_last_name . ' ' . __( 'Username', 'woocommerce-gateway-stripe' ) . ': ' . $user->user_login;
+
+			// If billing first name does not exists try the user first name.
+			if ( empty( $billing_first_name ) ) {
+				$billing_first_name = get_user_meta( $user->ID, 'first_name', true );
+			}
+
+			// If billing last name does not exists try the user last name.
+			if ( empty( $billing_last_name ) ) {
+				$billing_last_name = get_user_meta( $user->ID, 'last_name', true );
+			}
+
+			// translators: %1$s First name, %2$s Second name, %3$s Username.
+			$description = sprintf( __( 'Name: %1$s %2$s, Username: %s', 'woocommerce-gateway-stripe' ), $billing_first_name, $billing_last_name, $user->user_login );
 
 			$defaults = array(
 				'email'       => $user->user_email,
 				'description' => $description,
 			);
 		} else {
+			$billing_first_name = isset( $_POST['billing_first_name'] ) ? filter_var( wp_unslash( $_POST['billing_first_name'] ), FILTER_SANITIZE_STRING ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
+			$billing_last_name  = isset( $_POST['billing_last_name'] ) ? filter_var( wp_unslash( $_POST['billing_last_name'] ), FILTER_SANITIZE_STRING ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
+
+			// translators: %1$s First name, %2$s Second name.
+			$description = sprintf( __( 'Name: %1$s %2$s, Guest', 'woocommerce-gateway-stripe' ), $billing_first_name, $billing_last_name );
+
 			$defaults = array(
 				'email'       => $billing_email,
-				'description' => '',
+				'description' => $description,
 			);
 		}
 
@@ -160,17 +178,19 @@ class WC_Stripe_Customer {
 	/**
 	 * Add a source for this stripe customer.
 	 * @param string $source_id
-	 * @param bool $retry
 	 * @return WP_Error|int
 	 */
-	public function add_source( $source_id, $retry = true ) {
+	public function add_source( $source_id ) {
 		if ( ! $this->get_id() ) {
 			$this->set_id( $this->create_customer() );
 		}
 
-		$response = WC_Stripe_API::request( array(
-			'source' => $source_id,
-		), 'customers/' . $this->get_id() . '/sources' );
+		$response = WC_Stripe_API::request(
+			array(
+				'source' => $source_id,
+			),
+			'customers/' . $this->get_id() . '/sources'
+		);
 
 		$wc_token = false;
 
@@ -181,7 +201,7 @@ class WC_Stripe_Customer {
 			if ( $this->is_no_such_customer_error( $response->error ) ) {
 				delete_user_meta( $this->get_user_id(), '_stripe_customer_id' );
 				$this->create_customer();
-				return $this->add_source( $source_id, false );
+				return $this->add_source( $source_id );
 			} else {
 				return $response;
 			}
@@ -248,9 +268,13 @@ class WC_Stripe_Customer {
 
 		$sources = get_transient( 'stripe_sources_' . $this->get_id() );
 
-		$response = WC_Stripe_API::request( array(
-			'limit'       => 100,
-		), 'customers/' . $this->get_id() . '/sources', 'GET' );
+		$response = WC_Stripe_API::request(
+			array(
+				'limit' => 100,
+			),
+			'customers/' . $this->get_id() . '/sources',
+			'GET'
+		);
 
 		if ( ! empty( $response->error ) ) {
 			return array();
@@ -290,9 +314,13 @@ class WC_Stripe_Customer {
 	 * @param string $source_id
 	 */
 	public function set_default_source( $source_id ) {
-		$response = WC_Stripe_API::request( array(
-			'default_source' => sanitize_text_field( $source_id ),
-		), 'customers/' . $this->get_id(), 'POST' );
+		$response = WC_Stripe_API::request(
+			array(
+				'default_source' => sanitize_text_field( $source_id ),
+			),
+			'customers/' . $this->get_id(),
+			'POST'
+		);
 
 		$this->clear_cache();
 

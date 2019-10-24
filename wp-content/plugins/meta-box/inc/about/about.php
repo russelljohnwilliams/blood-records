@@ -10,21 +10,25 @@
  */
 class RWMB_About {
 	/**
-	 * Plugin data.
+	 * The updater checker object.
 	 *
-	 * @var array
+	 * @var object
 	 */
-	protected $plugin;
+	private $update_checker;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param object $update_checker The updater checker object.
+	 */
+	public function __construct( $update_checker ) {
+		$this->update_checker = $update_checker;
+	}
 
 	/**
 	 * Init hooks.
 	 */
 	public function init() {
-		if ( ! function_exists( 'get_plugin_data' ) ) {
-			include ABSPATH . 'wp-admin/includes/plugin.php';
-		}
-		$this->plugin = get_plugin_data( RWMB_DIR . 'meta-box.php' );
-
 		// Add links to about page in the plugin action links.
 		add_filter( 'plugin_action_links_meta-box/meta-box.php', array( $this, 'plugin_links' ) );
 
@@ -122,7 +126,7 @@ class RWMB_About {
 					<div id="postbox-container-1" class="postbox-container">
 						<?php
 						include dirname( __FILE__ ) . '/sections/newsletter.php';
-						if ( ! $this->is_premium_user() ) {
+						if ( ! $this->update_checker->has_extensions() ) {
 							include dirname( __FILE__ ) . '/sections/upgrade.php';
 						}
 						?>
@@ -137,24 +141,16 @@ class RWMB_About {
 	 * Enqueue CSS and JS.
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'meta-box-about', RWMB_URL . 'inc/about/css/about.css' );
-		wp_enqueue_script( 'meta-box-about', RWMB_URL . 'inc/about/js/about.js', array( 'jquery' ), '', true );
+		wp_enqueue_style( 'meta-box-about', RWMB_URL . 'inc/about/css/about.css', array(), RWMB_VER );
+		wp_enqueue_script( 'meta-box-about', RWMB_URL . 'inc/about/js/about.js', array( 'jquery' ), RWMB_VER, true );
 	}
 
 	/**
 	 * Change WordPress footer text on about page.
 	 */
 	public function change_footer_text() {
-		$allowed_html = array(
-			'a'      => array(
-				'href'   => array(),
-				'target' => array(),
-			),
-			'strong' => array(),
-		);
-
 		// Translators: %1$s - link to review form.
-		echo wp_kses( sprintf( __( 'Please rate <strong>Meta Box</strong> <a href="%1$s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href="%1$s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from the Meta Box team!', 'meta-box' ), 'https://wordpress.org/support/view/plugin-reviews/meta-box?filter=5#new-post' ), $allowed_html );
+		echo wp_kses_post( sprintf( __( 'Please rate <strong>Meta Box</strong> <a href="%1$s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href="%1$s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from the Meta Box team!', 'meta-box' ), 'https://wordpress.org/support/view/plugin-reviews/meta-box?filter=5#new-post' ) );
 	}
 
 	/**
@@ -164,8 +160,8 @@ class RWMB_About {
 	 * @param bool   $network_wide Whether to enable the plugin for all sites in the network
 	 *                             or just the current site. Multisite only. Default is false.
 	 */
-	public function redirect( $plugin, $network_wide ) {
-		if ( ! $network_wide && 'meta-box/meta-box.php' === $plugin && ! $this->is_bundled() ) {
+	public function redirect( $plugin, $network_wide = false ) {
+		if ( 'cli' !== php_sapi_name() && ! $network_wide && 'meta-box/meta-box.php' === $plugin && ! $this->is_bundled() ) {
 			wp_safe_redirect( $this->get_menu_link() );
 			die;
 		}
@@ -205,26 +201,10 @@ class RWMB_About {
 	protected function is_bundled() {
 		// @codingStandardsIgnoreLine
 		foreach ( $_REQUEST as $key => $value ) {
-			if ( false !== strpos( $key, 'tgmpa' ) || false !== strpos( $value, 'tgmpa' ) ) {
+			if ( false !== strpos( $key, 'tgmpa' ) || ( ! is_array( $value ) && false !== strpos( $value, 'tgmpa' ) ) ) {
 				return true;
 			}
 		}
 		return false;
-	}
-
-	/**
-	 * Check if current user is a premium user.
-	 *
-	 * @return bool
-	 */
-	protected function is_premium_user() {
-		$option = is_multisite() ? get_site_option( 'meta_box_updater' ) : get_option( 'meta_box_updater' );
-		if ( empty( $option['api_key'] ) ) {
-			return false;
-		}
-		if ( isset( $option['status'] ) && 'success' !== $option['status'] ) {
-			return false;
-		}
-		return true;
 	}
 }

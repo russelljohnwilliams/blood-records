@@ -27,15 +27,21 @@ class RWMB_Image_Advanced_Field extends RWMB_Media_Field {
 	 */
 	public static function normalize( $field ) {
 		$field['mime_type'] = 'image';
-		$field              = wp_parse_args( $field, array(
-			'image_size' => 'thumbnail',
-		) );
+		$field              = wp_parse_args(
+			$field,
+			array(
+				'image_size' => 'thumbnail',
+			)
+		);
 
 		$field = parent::normalize( $field );
 
-		$field['js_options'] = wp_parse_args( $field['js_options'], array(
-			'imageSize' => $field['image_size'],
-		) );
+		$field['js_options'] = wp_parse_args(
+			$field['js_options'],
+			array(
+				'imageSize' => $field['image_size'],
+			)
+		);
 
 		return $field;
 	}
@@ -55,12 +61,14 @@ class RWMB_Image_Advanced_Field extends RWMB_Media_Field {
 	/**
 	 * Get uploaded file information.
 	 *
-	 * @param int   $file Attachment image ID (post ID). Required.
-	 * @param array $args Array of arguments (for size).
+	 * @param int   $file  Attachment image ID (post ID). Required.
+	 * @param array $args  Array of arguments (for size).
+	 * @param array $field Field settings.
+	 *
 	 * @return array|bool False if file not found. Array of image info on success.
 	 */
-	public static function file_info( $file, $args = array() ) {
-		return RWMB_Image_Field::file_info( $file, $args );
+	public static function file_info( $file, $args = array(), $field = array() ) {
+		return RWMB_Image_Field::file_info( $file, $args, $field );
 	}
 
 	/**

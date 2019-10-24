@@ -1,5 +1,73 @@
 +(function ($) {
 
+	jQuery(".lrm-run-export").click(function(event) {
+		event.preventDefault();
+
+		var submitBtn = this;
+		submitBtn.innerHTML += '<span class="spinner is-active"></span>';
+
+		var sectionsToProcess = [];
+		var sectionsCheckbox = document.querySelectorAll(".lrm_export_sections_checkbox");
+		for ( var N=0; N < sectionsCheckbox.length; N++ ) {
+			if ( sectionsCheckbox[N].checked ) {
+				sectionsToProcess.push( sectionsCheckbox[N].value );
+			}
+		}
+
+		jQuery.get(
+			  LRM_ADMIN.ajax_url,
+			  { action: "lrm_export", sections: sectionsToProcess, _nonce: jQuery(submitBtn).data("nonce") },
+			  function(resp){
+				  if ( resp.success ) {
+				  	$(".lrm-export-string-wrap").show();
+				 	$("#lrm-export-string").val( resp.data );
+				  } else {
+					  if ( resp.data ) {
+						  alert(resp.data);
+					  } else {
+						  alert("Export error!");
+					  }
+				  }
+				  jQuery(submitBtn).find(".spinner").remove();
+			  }
+		);
+
+		return false;
+	});
+
+	jQuery(".lrm-run-import").click(function(event) {
+		event.preventDefault();
+
+		var submitBtn = this;
+		submitBtn.innerHTML += '<span class="spinner is-active"></span>';
+
+		var sectionsToProcess = [];
+		var sectionsCheckbox = document.querySelectorAll(".lrm_import_sections_checkbox");
+		for ( var N=0; N < sectionsCheckbox.length; N++ ) {
+			if ( sectionsCheckbox[N].checked ) {
+				sectionsToProcess.push( sectionsCheckbox[N].value );
+			}
+		}
+
+		jQuery.post(
+			  LRM_ADMIN.ajax_url,
+			  { action: "lrm_import", sections: sectionsToProcess, sections_import: $("#lrm-import-string").val(), _nonce: jQuery(submitBtn).data("nonce") },
+			  function(resp){
+				  if ( resp.success ) {
+					  alert("Import complete!");
+				  } else {
+					  if ( resp.data ) {
+						  alert(resp.data);
+					  } else {
+						  alert("Import error!");
+					  }
+				  }
+				  jQuery(submitBtn).find(".spinner").remove();
+			  }
+		);
+
+		return false;
+	});
 
 	/**
 	 * =======================================
@@ -36,9 +104,9 @@
 
 		//var rows_count = $(".lrm-redirects-field__roles-wrap").length;
 		var $new_row = $(
-			  $(".js-lrm-redirects-tpl[data-name='" + $(this).data("name") + "']").html().split('%key%').join( "0" )
+			  $(".js-lrm-repeater-tpl[data-name='" + $(this).data("name") + "']").html().split('%key%').join( "0" )
 		);
-		var $wrap = $(this).parent().find(".lrm-redirects-field__roles-wrap");
+		var $wrap = $(this).parent().find(".lrm-repeater-field__roles-wrap");
 		$wrap.prepend( $new_row );
 
 		$new_row.find( ".pretty-select" ).selectize();
@@ -52,20 +120,20 @@
 	$(document).on("click", ".js-lrm-delete-row",function (e) {
 		e.preventDefault();
 		if ( confirm("Are you sure to delete this row?") ) {
-			var parent = $(this).closest(".lrm-redirects-field__roles");
-			$(this).closest(".lrm-redirects-field__row").fadeOut(500).remove();
+			var parent = $(this).closest(".lrm-repeater-field__roles-wrap");
+			$(this).closest(".lrm-repeater-field__row").fadeOut(500).remove();
 
 			reorder_redirects( parent );
 		}
 	});
 	// 13223444444444444444444
 
-	$( ".lrm-redirects-field__roles-wrap" ).sortable({
+	$( ".lrm-repeater-field__roles-wrap" ).sortable({
 		//containment: ".lrm-redirects-field__row",
 		handle: ".js-lrm-sort-row",
-		items: ".lrm-redirects-field__row",
+		items: ".lrm-repeater-field__row",
 		update: function( evt, ui ) {
-			console.log(ui);
+			//console.log(ui);
 
 			reorder_redirects( ui.item.parent() );
 		},
@@ -73,7 +141,7 @@
 
 	function reorder_redirects( $wrap ) {
 
-		$wrap.find(".lrm-redirects-field__row").each(function(ID, el) {
+		$wrap.find(".lrm-repeater-field__row").each(function(ID, el) {
 			var current_KEY = $(el).data("key");
 			$(el).data("key", ID);
 

@@ -23,6 +23,7 @@ class WC_Stripe_Admin_Notices {
 	public function __construct() {
 		add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 		add_action( 'wp_loaded', array( $this, 'hide_notices' ) );
+		add_action( 'woocommerce_stripe_updated', array( $this, 'stripe_updated' ) );
 	}
 
 	/**
@@ -60,13 +61,13 @@ class WC_Stripe_Admin_Notices {
 			echo '<div class="' . esc_attr( $notice['class'] ) . '" style="position:relative;">';
 
 			if ( $notice['dismissible'] ) {
-			?>
-				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'wc-stripe-hide-notice', $notice_key ), 'wc_stripe_hide_notices_nonce', '_wc_stripe_notice_nonce' ) ); ?>" class="woocommerce-message-close notice-dismiss" style="position:absolute;right:1px;padding:9px;text-decoration:none;"></a>
-			<?php
+				?>
+				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'wc-stripe-hide-notice', $notice_key ), 'wc_stripe_hide_notices_nonce', '_wc_stripe_notice_nonce' ) ); ?>" class="woocommerce-message-close notice-dismiss" style="position:relative;float:right;padding:9px 0px 9px 9px 9px;text-decoration:none;"></a>
+				<?php
 			}
 
 			echo '<p>';
-			echo wp_kses( $notice['message'], array( 'a' => array( 'href' => array() ) ) );
+			echo wp_kses( $notice['message'], array( 'a' => array( 'href' => array(), 'target' => array() ) ) );
 			echo '</p></div>';
 		}
 	}
@@ -99,19 +100,41 @@ class WC_Stripe_Admin_Notices {
 	 * @version 4.0.0
 	 */
 	public function stripe_check_environment() {
+		$show_style_notice  = get_option( 'wc_stripe_show_style_notice' );
 		$show_ssl_notice    = get_option( 'wc_stripe_show_ssl_notice' );
 		$show_keys_notice   = get_option( 'wc_stripe_show_keys_notice' );
+		$show_3ds_notice    = get_option( 'wc_stripe_show_3ds_notice' );
 		$show_phpver_notice = get_option( 'wc_stripe_show_phpver_notice' );
 		$show_wcver_notice  = get_option( 'wc_stripe_show_wcver_notice' );
 		$show_curl_notice   = get_option( 'wc_stripe_show_curl_notice' );
+		$show_sca_notice    = get_option( 'wc_stripe_show_sca_notice' );
 		$options            = get_option( 'woocommerce_stripe_settings' );
 		$testmode           = ( isset( $options['testmode'] ) && 'yes' === $options['testmode'] ) ? true : false;
 		$test_pub_key       = isset( $options['test_publishable_key'] ) ? $options['test_publishable_key'] : '';
 		$test_secret_key    = isset( $options['test_secret_key'] ) ? $options['test_secret_key'] : '';
 		$live_pub_key       = isset( $options['publishable_key'] ) ? $options['publishable_key'] : '';
 		$live_secret_key    = isset( $options['secret_key'] ) ? $options['secret_key'] : '';
+		$three_d_secure     = isset( $options['three_d_secure'] ) && 'yes' === $options['three_d_secure'];
 
 		if ( isset( $options['enabled'] ) && 'yes' === $options['enabled'] ) {
+			if ( empty( $show_3ds_notice ) && $three_d_secure ) {
+				$url = 'https://stripe.com/docs/payments/3d-secure#three-ds-radar';
+
+				/* translators: 1) A URL that explains Stripe Radar. */
+				$message = __( 'WooCommerce Stripe - We see that you had the "Require 3D secure when applicable" setting turned on. This setting is not available here anymore, because it is now replaced by Stripe Radar. You can learn more about it <a href="%s" target="_blank">here</a>.', 'woocommerce-gateway-stripe' );
+
+				$this->add_admin_notice( '3ds', 'notice notice-warning', sprintf( $message, $url ), true );
+			}
+
+			if ( empty( $show_style_notice ) ) {
+				/* translators: 1) int version 2) int version */
+				$message = __( 'WooCommerce Stripe - We recently made changes to Stripe that may impact the appearance of your checkout. If your checkout has changed unexpectedly, please follow these <a href="https://docs.woocommerce.com/document/stripe/#styling" target="_blank">instructions</a> to fix.', 'woocommerce-gateway-stripe' );
+
+				$this->add_admin_notice( 'style', 'notice notice-warning', $message, true );
+
+				return;
+			}
+
 			if ( empty( $show_phpver_notice ) ) {
 				if ( version_compare( phpversion(), WC_STRIPE_MIN_PHP_VER, '<' ) ) {
 					/* translators: 1) int version 2) int version */
@@ -154,8 +177,7 @@ class WC_Stripe_Admin_Notices {
 					if (
 						! empty( $test_pub_key ) && ! preg_match( '/^pk_test_/', $test_pub_key )
 						|| ( ! empty( $test_secret_key ) && ! preg_match( '/^sk_test_/', $test_secret_key )
-						&& ! empty( $test_secret_key ) && ! preg_match( '/^rk_test_/', $test_secret_key ) ) )
-					{
+						&& ! empty( $test_secret_key ) && ! preg_match( '/^rk_test_/', $test_secret_key ) ) ) {
 						$setting_link = $this->get_setting_link();
 						/* translators: 1) link */
 						$this->add_admin_notice( 'keys', 'notice notice-error', sprintf( __( 'Stripe is in test mode however your test keys may not be valid. Test keys start with pk_test and sk_test or rk_test. Please go to your settings and, <a href="%s">set your Stripe account keys</a>.', 'woocommerce-gateway-stripe' ), $setting_link ), true );
@@ -164,8 +186,7 @@ class WC_Stripe_Admin_Notices {
 					if (
 						! empty( $live_pub_key ) && ! preg_match( '/^pk_live_/', $live_pub_key )
 						|| ( ! empty( $live_secret_key ) && ! preg_match( '/^sk_live_/', $live_secret_key )
-						&& ! empty( $live_secret_key ) && ! preg_match( '/^rk_live_/', $live_secret_key ) ) )
-					{
+						&& ! empty( $live_secret_key ) && ! preg_match( '/^rk_live_/', $live_secret_key ) ) ) {
 						$setting_link = $this->get_setting_link();
 						/* translators: 1) link */
 						$this->add_admin_notice( 'keys', 'notice notice-error', sprintf( __( 'Stripe is in live mode however your test keys may not be valid. Live keys start with pk_live and sk_live or rk_live. Please go to your settings and, <a href="%s">set your Stripe account keys</a>.', 'woocommerce-gateway-stripe' ), $setting_link ), true );
@@ -179,6 +200,10 @@ class WC_Stripe_Admin_Notices {
 					/* translators: 1) link */
 					$this->add_admin_notice( 'ssl', 'notice notice-warning', sprintf( __( 'Stripe is enabled, but a SSL certificate is not detected. Your checkout may not be secure! Please ensure your server has a valid <a href="%1$s" target="_blank">SSL certificate</a>', 'woocommerce-gateway-stripe' ), 'https://en.wikipedia.org/wiki/Transport_Layer_Security' ), true );
 				}
+			}
+
+			if ( empty( $show_sca_notice ) ) {
+				$this->add_admin_notice( 'sca', 'notice notice-success', sprintf( __( 'Stripe is now ready for Strong Customer Authentication (SCA) and 3D Secure 2! <a href="%1$s" target="_blank">Read about SCA</a>', 'woocommerce-gateway-stripe' ), 'https://woocommerce.com/posts/introducing-strong-customer-authentication-sca/' ), true );
 			}
 		}
 	}
@@ -200,7 +225,8 @@ class WC_Stripe_Admin_Notices {
 			}
 
 			if ( ! in_array( get_woocommerce_currency(), $gateway->get_supported_currency() ) ) {
-				$this->add_admin_notice( $method, 'notice notice-error', sprintf( __( '%s is enabled - it requires store currency to be set to %s', 'woocommerce-gateway-stripe' ), $method, implode( ', ', $gateway->get_supported_currency() ) ), true );
+				/* translators: %1$s Payment method, %2$s List of supported currencies */
+				$this->add_admin_notice( $method, 'notice notice-error', sprintf( __( '%1$s is enabled - it requires store currency to be set to %2$s', 'woocommerce-gateway-stripe' ), $method, implode( ', ', $gateway->get_supported_currency() ) ), true );
 			}
 		}
 	}
@@ -224,6 +250,9 @@ class WC_Stripe_Admin_Notices {
 			$notice = wc_clean( $_GET['wc-stripe-hide-notice'] );
 
 			switch ( $notice ) {
+				case 'style':
+					update_option( 'wc_stripe_show_style_notice', 'no' );
+					break;
 				case 'phpver':
 					update_option( 'wc_stripe_show_phpver_notice', 'no' );
 					break;
@@ -238,6 +267,9 @@ class WC_Stripe_Admin_Notices {
 					break;
 				case 'keys':
 					update_option( 'wc_stripe_show_keys_notice', 'no' );
+					break;
+				case '3ds':
+					update_option( 'wc_stripe_show_3ds_notice', 'no' );
 					break;
 				case 'Alipay':
 					update_option( 'wc_stripe_show_alipay_notice', 'no' );
@@ -266,6 +298,9 @@ class WC_Stripe_Admin_Notices {
 				case 'SOFORT':
 					update_option( 'wc_stripe_show_sofort_notice', 'no' );
 					break;
+				case 'sca':
+					update_option( 'wc_stripe_show_sca_notice', 'no' );
+					break;
 			}
 		}
 	}
@@ -283,6 +318,25 @@ class WC_Stripe_Admin_Notices {
 		$section_slug = $use_id_as_section ? 'stripe' : strtolower( 'WC_Gateway_Stripe' );
 
 		return admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . $section_slug );
+	}
+
+	/**
+	 * Saves options in order to hide notices based on the gateway's version.
+	 *
+	 * @since 4.3.0
+	 */
+	public function stripe_updated() {
+		$previous_version = get_option( 'wc_stripe_version' );
+
+		// Only show the style notice if the plugin was installed and older than 4.1.4.
+		if ( empty( $previous_version ) || version_compare( $previous_version, '4.1.4', 'ge' ) ) {
+			update_option( 'wc_stripe_show_style_notice', 'no' );
+		}
+
+		// Only show the SCA notice on pre-4.3.0 installs.
+		if ( empty( $previous_version ) || version_compare( $previous_version, '4.3.0', 'ge' ) ) {
+			update_option( 'wc_stripe_show_sca_notice', 'no' );
+		}
 	}
 }
 

@@ -1,11 +1,43 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a98dbbdd85d4be3c57524c3d902be8a",
+    "content-hash": "29a3fd50978d1acc72f9f06e0be5c71d",
     "packages": [
+        {
+            "name": "max-kk/wp-skins-customizer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/max-kk/wp-skins-customizer.git",
+                "reference": "a1e0419517c0d68e747ce77db6a7e39647f8385d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/max-kk/wp-skins-customizer/zipball/a1e0419517c0d68e747ce77db6a7e39647f8385d",
+                "reference": "a1e0419517c0d68e747ce77db6a7e39647f8385d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "includes/"
+                ],
+                "exclude-from-classmap": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kaminsky"
+                }
+            ],
+            "time": "2018-12-13T12:25:23+00:00"
+        },
         {
             "name": "underdev/settings",
             "version": "1.2",
@@ -40,7 +72,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "max-kk/wp-skins-customizer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

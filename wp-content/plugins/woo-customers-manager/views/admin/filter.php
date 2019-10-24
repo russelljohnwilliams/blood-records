@@ -1,4 +1,9 @@
-</div>
+<?php
+if ( ! defined('WPINC')) {
+    die;
+}
+?>
+<br>
 <div class="alignleft actions">
 
     <div class="prm-users-filter">
@@ -59,3 +64,4 @@
         </div>
 
     </div>
+</div>

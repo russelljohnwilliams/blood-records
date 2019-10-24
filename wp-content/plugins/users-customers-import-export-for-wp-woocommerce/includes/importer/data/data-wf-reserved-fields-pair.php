@@ -15,7 +15,7 @@ $columns = array(
     'first_name' => 'first_name | first_name',
     'last_name' => 'last_name | last_name',
     'user_status' => 'user_status | user_status',
+    'description' => 'description',
     'roles' => 'roles | roles'
 );
-
 return apply_filters('hf_csv_customer_import_columns', $columns);

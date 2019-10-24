@@ -82,6 +82,8 @@ class Settings {
 	 */
 	public function settings_page() {
 
+        set_exception_handler(['LRM_Debug', '_admin_global_exception_handler']);
+
 		$sections = $this->get_sections();
 
 		if ( isset( $_GET['section'] ) && ! empty( $_GET['section'] ) ) {
@@ -104,13 +106,13 @@ class Settings {
 	 *
 	 * @throws \Exception
 	 */
-	public function add_section( $name, $slug ) {
+	public function add_section( $name, $slug, $export = true ) {
 
 		if ( isset( $this->sections[ $slug ] ) ) {
 			throw new \Exception( 'Section with slug `' . $slug . '` already exists' );
 		}
 
-		$this->sections[ $slug ] = new Section( $this->handle, $name, $slug );
+		$this->sections[ $slug ] = new Section( $this->handle, $name, $slug, $export );
 
 		return $this->sections[ $slug ];
 

@@ -186,18 +186,16 @@ Images License: GNU General Public License v2 or later
   border-bottom: 1px solid white;
 }
 
-
 .columns-1  li a{
   overflow: hidden;
   height: 90vh;
-
 }
 
 .columns-1{
-  overflow: hidden;
+  /*overflow: hidden;*/
   height: 100vh;
   margin-bottom: 50px;
-
+  text-transform: uppercase;
 }
 
 ul.products li.product img{
@@ -206,6 +204,58 @@ ul.products li.product img{
   position: relative;
 }
 
+.columns-1 .product .add_to_cart_button{
+  position: relative;
+  left: -35%;
+  top: -99px;
+  height: auto;
+  font-size: 2em;
+  background: yellow;
+  padding: 0 5px;
+  text-transform: lowercase;
+}
+
+.groupbuy-time{
+  background-color: yellow;
+  position: relative;
+  left: 0;
+  top: -240%;
+  color: black;
+  font-size: 1.4em;
+  text-transform: lowercase;
+  display: none;
+}
+
+.columns-1 .product p, .columns-1 .product .amount, .get-price-and-date, .get-date{
+  text-align: left;
+  font-size: 5em;
+  background-color: yellow;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  top: -400px;
+  clear:both;
+  float:left;
+  width: auto;
+  margin: 25px 0 0 50px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.columns-1 .product .price{
+  top: -950px;
+  font-size: 2em;
+}
+  
+.get-price-and-date{
+  font-size: 2em;
+  text-transform: lowercase;
+  padding: 0;
+}
+
+.get-price-and-date span{
+  padding: 0 10px;
+}
 
 /*- - - - - -  footer - - - - - -*/
 
@@ -217,7 +267,6 @@ ul.products li.product img{
  border-top: 1px solid grey;
  margin-left: 0;
  position: absolute;
- /*bottom: 0;*/
  width: 100%;
  margin-bottom: 0;
  padding-bottom: 0;

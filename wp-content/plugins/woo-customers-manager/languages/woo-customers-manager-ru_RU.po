@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Customers Manager\n"
-"POT-Creation-Date: 2017-11-01 15:13+0200\n"
-"PO-Revision-Date: 2017-11-01 15:13+0200\n"
+"POT-Creation-Date: 2018-08-22 12:20+0300\n"
+"PO-Revision-Date: 2018-08-22 12:21+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -14,86 +14,6 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: build/src/Admin/Admin.php:201 build/views/admin/user-profile.php:5
-#: src/Admin/Admin.php:201 views/admin/user-profile.php:5
-msgid "Registered"
-msgstr "Зарегистрирован"
-
-#: build/src/Admin/Admin.php:202 build/views/admin/user-orders.php:6
-#: src/Admin/Admin.php:202 views/admin/user-orders.php:6
-msgid "Money spent"
-msgstr "Потраченные деньги"
-
-#: build/src/ExtendedUsersPlugin.php:65 src/ExtendedUsersPlugin.php:65
-#, php-format
-msgid "The %s plugin requires %s plugin to be active!"
-msgstr "Для работы плагина %s нужен плагин %s"
-
-#: build/views/admin/filter.php:8 views/admin/filter.php:8
-msgid "Filter by date"
-msgstr "Фильтровать по дате"
-
-#: build/views/admin/filter.php:16 views/admin/filter.php:16
-msgid "Registered from"
-msgstr "Зарегистрирован от"
-
-#: build/views/admin/filter.php:23 views/admin/filter.php:23
-msgid "Registered to"
-msgstr "Зарегистрирован до"
-
-#: build/views/admin/filter.php:30 views/admin/filter.php:30
-msgid "Filter by price"
-msgstr "Фильтровать по цене"
-
-#: build/views/admin/filter.php:39 views/admin/filter.php:39
-msgid "Money spent from"
-msgstr "Потраченные деньги от"
-
-#: build/views/admin/filter.php:48 views/admin/filter.php:48
-msgid "Money spent to"
-msgstr "Потраченные деньги до"
-
-#: build/views/admin/filter.php:56 views/admin/filter.php:56
-msgid "Filter"
-msgstr "Фильтровать"
-
-#: build/views/admin/filter.php:57 views/admin/filter.php:57
-msgid "Reset filter"
-msgstr "Сбросить фильтр"
-
-#: build/views/admin/user-orders.php:1 views/admin/user-orders.php:1
-msgid "Orders"
-msgstr "Заказы"
-
-#: build/views/admin/user-orders.php:18 build/views/admin/user-orders.php:19
-#: views/admin/user-orders.php:18 views/admin/user-orders.php:19
-msgid "Status"
-msgstr "Статус"
-
-#: build/views/admin/user-orders.php:22 views/admin/user-orders.php:22
-msgid "Order"
-msgstr "Заказ"
-
-#: build/views/admin/user-orders.php:23 views/admin/user-orders.php:23
-msgid "Items"
-msgstr "Позиции"
-
-#: build/views/admin/user-orders.php:24 views/admin/user-orders.php:24
-msgid "Date"
-msgstr "Дата"
-
-#: build/views/admin/user-orders.php:25 views/admin/user-orders.php:25
-msgid "Total"
-msgstr "Итого"
-
-#: build/views/admin/user-orders.php:45 views/admin/user-orders.php:45
-msgid "No orders"
-msgstr "Нет заказов"
-
-#: build/views/admin/user-profile.php:1 views/admin/user-profile.php:1
-msgid "Additional information"
-msgstr "Дополнительная информация"
 
 #: custom-strings.php:7
 msgid "WooCommerce Customers Manager"
@@ -119,6 +39,83 @@ msgstr ""
 #: custom-strings.php:11
 msgid "https://premmerce.com/woocommerce-customers-manager/"
 msgstr "https://premmerce.com/woocommerce-customers-manager/"
+
+#: src/Admin/Admin.php:202 views/admin/user-profile.php:11
+msgid "Registered"
+msgstr "Зарегистрирован"
+
+#: src/Admin/Admin.php:203 views/admin/user-orders.php:11
+msgid "Money spent"
+msgstr "Потраченные деньги"
+
+#: src/ExtendedUsersPlugin.php:65
+#, php-format
+msgid "The %s plugin requires %s plugin to be active!"
+msgstr "Для работы плагина %s нужен плагин %s"
+
+#: views/admin/filter.php:13
+msgid "Filter by date"
+msgstr "Фильтровать по дате"
+
+#: views/admin/filter.php:21
+msgid "Registered from"
+msgstr "Зарегистрирован от"
+
+#: views/admin/filter.php:28
+msgid "Registered to"
+msgstr "Зарегистрирован до"
+
+#: views/admin/filter.php:35
+msgid "Filter by price"
+msgstr "Фильтровать по цене"
+
+#: views/admin/filter.php:44
+msgid "Money spent from"
+msgstr "Потраченные деньги от"
+
+#: views/admin/filter.php:53
+msgid "Money spent to"
+msgstr "Потраченные деньги до"
+
+#: views/admin/filter.php:61
+msgid "Filter"
+msgstr "Фильтровать"
+
+#: views/admin/filter.php:62
+msgid "Reset filter"
+msgstr "Сбросить фильтр"
+
+#: views/admin/user-orders.php:6
+msgid "Orders"
+msgstr "Заказы"
+
+#: views/admin/user-orders.php:23
+msgid "Status"
+msgstr "Статус"
+
+#: views/admin/user-orders.php:25
+msgid "Order"
+msgstr "Заказ"
+
+#: views/admin/user-orders.php:26
+msgid "Items"
+msgstr "Позиции"
+
+#: views/admin/user-orders.php:27
+msgid "Date"
+msgstr "Дата"
+
+#: views/admin/user-orders.php:28
+msgid "Total"
+msgstr "Итого"
+
+#: views/admin/user-orders.php:52
+msgid "No orders"
+msgstr "Нет заказов"
+
+#: views/admin/user-profile.php:6
+msgid "Additional information"
+msgstr "Дополнительная информация"
 
 #~ msgid "This plugin requires %s plugin to be active!"
 #~ msgstr "Для этого плагина необходим плагин %s!"

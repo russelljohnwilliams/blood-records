@@ -2,7 +2,7 @@
 Contributors: kaminskym
 Tags: login, registration, register, lost password, modal, popup, ajax, form
 Requires at least: 4.1
-Tested up to: 5.0.2
+Tested up to: 5.2.2
 Requires PHP: 5.5
 Stable tag: trunk
 License: GPLv2 or later
@@ -12,7 +12,7 @@ Easy to integrate modal with Login and Registration features.
 
 == Description ==
 
-Easy to integrate modal with Login and Registration features. Compatible with any theme.
+Easy to integrate modal with Login and Registration features + inline form using shortcode. Compatible with any theme.
 
 [DEMO >>](https://demo.maxim-kaminsky.com/lrm/)
 
@@ -24,11 +24,13 @@ Easy to integrate modal with Login and Registration features. Compatible with an
 4. Beautiful coded
 5. Compatible with other plugins (WooCommerce, BuddyPress, Ultimate Member, WPML, etc)
 6. Tested with latest WP version
-7. Possible to replace wp-login.php with a custom "Login", "Registration" and "Reset password" pages
-8. Skins support (1 default skin + 2 new in PRO version) + possible to customize Skins colors via WP Customizer
-9. Powerful after-login/registration/logout actions (reload, redirects, etc)
-10. Role based redirects (in PRO)
-12. In-build reCaptcha (in PRO)
+7. Compatible with the Gutenberg
+8. Possible to replace wp-login.php with a custom "Login", "Registration" and "Reset password" pages
+9. Skins support (1 default skin + 2 new in PRO version) + possible to customize Skins colors via WP Customizer
+10. Powerful after-login/registration/logout actions (reload, redirects, etc)
+11. Role based redirects (in PRO)
+12. In-build reCaptcha & MatchCaptcha (in PRO)
+12. Google Authenticator plugin support (in PRO)
 13. Developer support (via forums or personal via email for PRO users)
 
 **Customization options:**
@@ -89,6 +91,7 @@ Easy to integrate modal with Login and Registration features. Compatible with an
 13. [Jetpack - SSO login](https://jetpack.com/support/sso/) [Wordpress.com login button >>](https://monosnap.com/file/4Na5FYYONRj79jnLBmQFK3hjnMJQDR)
 14. [WC Vendors & WC Vendors Pro](https://wordpress.org/plugins/wc-vendors/) [Apply to become vendor checkbox >>](https://monosnap.com/file/TmpY4bYTHwF36ouN6fGpdjKZi5k3jz)
 15. [MailChimp for WordPress](https://wordpress.org/plugins/mailchimp-for-wp/) [Subscribe to newsletter checkbox >>](https://monosnap.com/file/sVpsvTnIzQoplRA7ap3IBPfb81kPuV)
+15. [Google Authenticator](https://wordpress.org/plugins/google-authenticator/) [Google Authenticator field during the login](https://docs.maxim-kaminsky.com/lrm/kb/2-factor-login-otp-verification/)
 16. Math Captcha - soon
 17. Easy Digital Downloads - soon
 18. [Request other plugin >>](https://maxim-kaminsky.com/shop/contact-me/)
@@ -195,6 +198,18 @@ If you have login issue with Adminize plugin - go to Adminize plugin settings an
 - With Theme my login (TML) plugin (3 Password fields on the Create Account tab, if enable password field in LRM and TML)
 
 == Changelog ==
+
+= VER 2.05 - 26/04/2019 =
+
+- Fixed issues with "<>" characters in the user password
+- Removed deprecated function screen_icon()
+- Updated WC form template to the WooCommerce 3.6
+- Small fix for the Admin Redirects configurator
+
+= VER 2.04 - 26/04/2019 =
+
+- Stop executing wp_redirect during login process instead of showing error
+- Fix for WooCommerce 3.6.2 (WC emails style broke the registration process)
 
 = VER 2.03 - 07/04/2019 =
 

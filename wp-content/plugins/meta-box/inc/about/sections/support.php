@@ -7,8 +7,18 @@
 
 ?>
 <div id="support" class="gt-tab-pane">
-	<p class="about-description">Still need help with Meta Box? We offer excellent support for you. But don't forget to check our <a href="https://docs.metabox.io?utm_source=WordPress&utm_medium=link&utm_campaign=plugin">documentation</a> first.</p>
-	<div class="feature-section two-col">
+	<p class="about-description">
+		<?php
+		$allowed_html = array(
+			'a' => array(
+				'href' => array(),
+			),
+		);
+		// Translators: %s - link to documentation.
+		echo wp_kses( sprintf( __( 'Still need help with Meta Box? We offer excellent support for you. But don\'t forget to check our <a href="%s">documentation</a> first.', 'meta-box' ), 'https://docs.metabox.io?utm_source=WordPress&utm_medium=link&utm_campaign=plugin' ), $allowed_html );
+		?>
+	</p>
+	<div class="two">
 		<div class="col">
 			<h3><?php esc_html_e( 'Free Support', 'meta-box' ); ?></h3>
 			<p><?php esc_html_e( 'If you have any question about how to use the plugin, please open a new topic on WordPress.org support forum or open a new issue on Github (preferable). We will try to answer as soon as we can.', 'meta-box' ); ?><p>

@@ -14,13 +14,15 @@ class WOE_Formatter_Csv extends WOE_Formatter_sv {
 		// show linebreaks as literals
 		$value = str_replace( "\n", '\n', $value );
 		$value = str_replace( "\r", '\r', $value );
+
 		return $value;
 	}
 
 	protected function prepare_array( &$arr ) {
-		if( $this->settings['delete_linebreaks'] )
+		if ( ! empty( $this->settings['delete_linebreaks'] ) ) {
 			$this->delete_linebreaks_from_array( $arr );
+		}
 		parent::prepare_array( $arr );
 	}
-	
+
 }

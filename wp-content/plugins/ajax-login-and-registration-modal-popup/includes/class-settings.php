@@ -53,6 +53,13 @@ class LRM_Settings {
             );
         }
 
+	    lrm_dismissible_notice( 'font-icons',
+		    sprintf(
+			    '<strong>AJAX Login & registration modal notice:</strong> since the Free version 2.04 you are able to use the Font Icons instead of the default SVG. Find the settings at a <a href="%s">Skins tab</a>!',
+			    admin_url('options-general.php?page=login-and-register-popup&section=skins')
+		    )
+	    );
+
         $latest_pro_version = '1.50';
 
         if ( lrm_is_pro() && ! lrm_is_pro( $latest_pro_version ) && !defined("LRM_HIDE_PRO_UPDATE_NOTICE") ) {
@@ -300,6 +307,23 @@ class LRM_Settings {
                 ),
                 'default'     => 'default',
                 'description' => sprintf( __('In a PRO version you will have <a href="%s" target="_blank">more skins</a>', 'ajax-login-and-registration-modal-popup' ), 'https://maxim-kaminsky.com/shop/product/ajax-login-and-registration-modal-popup-pro/' ),
+                'render'      => array( new CoreFields\Select(), 'input' ),
+                'sanitize'    => array( new CoreFields\Select(), 'sanitize' ),
+            ) )
+            ->add_field( array(
+                'slug'        => 'icons',
+                'name'        => __('Select icons type', 'ajax-login-and-registration-modal-popup'),
+                'addons'      => array(
+                    'options'     => [
+                    	'svg'       => 'Default SVG Icons',
+                    	'icomoon'   => 'Icomoon font icons',
+                    	'material'  => 'Material font icons',
+                    	'fa4'       => 'Font awesome 4 font icons',
+                    	'fa5-free'  => 'Font awesome 5 font icons',
+                    ],
+                ),
+                'default'     => 'svg',
+                'description' => '"Font awesome 5" is loading a full icons pack (bigger size), all other very minimal icons packs',
                 'render'      => array( new CoreFields\Select(), 'input' ),
                 'sanitize'    => array( new CoreFields\Select(), 'sanitize' ),
             ) )
@@ -564,6 +588,13 @@ class LRM_Settings {
                 'sanitize'    => array( new LRM_Field_Text(), 'sanitize' ),
             ) )
             ->add_field( array(
+                'slug'        => 'invalid_login',
+                'name'        => __('Message: Invalid username (not exists)', 'ajax-login-and-registration-modal-popup' ),
+                'default'        => 'Invalid username!',
+                'render'      => array( new LRM_Field_Text(), 'input' ),
+                'sanitize'    => array( new LRM_Field_Text(), 'sanitize' ),
+            ) )
+            ->add_field( array(
                 'slug'        => 'no_pass',
                 'name'        => __('Message: No Password', 'ajax-login-and-registration-modal-popup' ),
                 'default'        => 'Please enter your password!',
@@ -620,6 +651,20 @@ class LRM_Settings {
                 'slug'        => 'email',
                 'name'        => __('Form: Email', 'ajax-login-and-registration-modal-popup' ),
                 'default'        => 'Email*',
+                'render'      => array( new LRM_Field_Text(), 'input' ),
+                'sanitize'    => array( new LRM_Field_Text(), 'sanitize' ),
+            ) )
+            ->add_field( array(
+                'slug'        => 'user_role',
+                'name'        => __('Form: User Role', 'ajax-login-and-registration-modal-popup' ),
+                'default'        => 'Select a Role',
+                'render'      => array( new LRM_Field_Text(), 'input' ),
+                'sanitize'    => array( new LRM_Field_Text(), 'sanitize' ),
+            ) )
+            ->add_field( array(
+                'slug'        => 'no_user_role',
+                'name'        => __('Form: User Role is missing', 'ajax-login-and-registration-modal-popup' ),
+                'default'        => 'Please select a Role',
                 'render'      => array( new LRM_Field_Text(), 'input' ),
                 'sanitize'    => array( new LRM_Field_Text(), 'sanitize' ),
             ) )
@@ -881,7 +926,7 @@ class LRM_Settings {
                     'options'     => array(
                         ''               => '= Please select =',
                         'reCaptcha'      => 'reCaptcha (api keys are required) [PRO]',
-                        'MatchCaptcha'    => 'MatchCaptcha (soon) [PRO]',
+                        'MatchCaptcha'    => 'MatchCaptcha (less secure but faster) [PRO]',
                     ),
                 ),
                 'default'     => '',
@@ -925,7 +970,7 @@ class LRM_Settings {
                 'addons'      => array(
                     'options'     => array(
                         'inline'        => 'Inline',
-                        'invisible'     => 'Invisible - soon',
+                        'invisible'     => 'Invisible',
                     ),
                 ),
                 'default'     => '',
@@ -949,10 +994,13 @@ class LRM_Settings {
             ) )
             ->description( __('Find them here: https://www.google.com/recaptcha/admin', 'ajax-login-and-registration-modal-popup' ) );
 
+	    $SECURITY_SECTION->add_group( __( 'Match Captcha', 'ajax-login-and-registration-modal-popup' ), 'match_captcha' )
+		    ->description('Label/error messages can be changed on the Expressions > PRO tab');
+
 
         if ( !lrm_is_pro() ) {
 
-            $MESSAGES_SECTION = $this->settings->add_section( 'GET PRO >>',  'get_a_pro' );
+            $MESSAGES_SECTION = $this->settings->add_section( 'GET PRO >>',  'get_a_pro', false );
 
             $MESSAGES_SECTION->add_group( 'Why get PRO version?', 'main' )
                              ->add_field( array(
@@ -970,7 +1018,8 @@ class LRM_Settings {
         //$this->register_wpml_strings();
         LRM_WPML_Integration::register_strings();
 
-        //LRM_Import_Export_Manager::register_settings( $this->settings );
+	    LRM_Roles_Manager::register_settings( $this->settings );
+        LRM_Import_Export_Manager::register_settings( $this->settings );
     }
 
 
@@ -987,6 +1036,10 @@ class LRM_Settings {
 
     public function settings_enqueue_scripts() {
         wp_enqueue_script( 'lrm-admin', LRM_URL . 'assets/lrm-admin.js', array( 'jquery', 'jquery-ui-sortable' ), LRM_VERSION, true );
+	    wp_localize_script('lrm-admin', 'LRM_ADMIN', array(
+	    	'ajax_url' => admin_url('admin-ajax.php'),
+	    ));
+
         wp_enqueue_style('lrm-admin-css', LRM_URL . '/assets/lrm-core-settings.css', false, LRM_ASSETS_VER);
     }
 

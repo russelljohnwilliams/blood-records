@@ -79,32 +79,39 @@
     text-align: center;
     width: 25em;
     opacity: 0;
-    display: inline-block;
+    display: none;
     width: 100%;
+
+    &[data-status] {
+        display: inline-block;
+    }
 }
 
-.lrm-pass-strength-result.short {
+.lrm-pass-strength-result[data-status="short"] {
     background-color: #f1adad;
     border-color: #e35b5b;
     opacity: 1
 }
 
-.lrm-pass-strength-result.bad {
+.lrm-pass-strength-result[data-status="bad"] {
     background-color: #fbc5a9;
     border-color: #f78b53;
     opacity: 1
 }
 
-.lrm-pass-strength-result.good {
+.lrm-pass-strength-result[data-status="good"] {
     background-color: #ffe399;
     border-color: #ffc733;
     opacity: 1
 }
 
-.lrm-pass-strength-result.strong {
+.lrm-pass-strength-result[data-status="strong"] {
     background-color: #c1e1b9;
     border-color: #83c373;
     opacity: 1
+}
+.lrm-pass-strength-result[data-status="empty"] {
+    display: none;
 }
 
 /* Catcha PLUGIN */
@@ -217,3 +224,26 @@ a.jetpack-sso {
 .lrm-grecaptcha > div {
     margin: auto;
 }
+
+
+.lrm-math-captcha-wrap {
+    padding: 5px 0;
+    text-align: center;
+
+    input.has-padding.has-border {
+        width: 64px !important;
+        text-align: center;
+    }
+    input.has-padding.has-border[disabled] {
+        color: gray;
+    }
+    .lrm-user-modal-container & input.lrm-match-value {
+        font-weight: bold;
+    }
+
+    .lrm-math-captcha-label{
+        font-weight: bold;
+    }
+}
+
+

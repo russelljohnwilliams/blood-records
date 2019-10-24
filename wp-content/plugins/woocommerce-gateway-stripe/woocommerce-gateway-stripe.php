@@ -5,19 +5,21 @@
  * Description: Take credit card payments on your store using Stripe.
  * Author: WooCommerce
  * Author URI: https://woocommerce.com/
- * Version: 4.1.7
+ * Version: 4.3.0
  * Requires at least: 4.4
- * Tested up to: 4.9
+ * Tested up to: 5.2.4
  * WC requires at least: 2.6
- * WC tested up to: 3.4
+ * WC tested up to: 3.7.1
  * Text Domain: woocommerce-gateway-stripe
- * Domain Path: /languages/
+ * Domain Path: /languages
  *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+// phpcs:disable WordPress.Files.FileName
 
 /**
  * WooCommerce fallback notice.
@@ -44,7 +46,7 @@ function woocommerce_gateway_stripe_init() {
 		/**
 		 * Required minimums and constants
 		 */
-		define( 'WC_STRIPE_VERSION', '4.1.7' );
+		define( 'WC_STRIPE_VERSION', '4.3.0' );
 		define( 'WC_STRIPE_MIN_PHP_VER', '5.6.0' );
 		define( 'WC_STRIPE_MIN_WC_VER', '2.6.0' );
 		define( 'WC_STRIPE_MAIN_FILE', __FILE__ );
@@ -57,11 +59,6 @@ function woocommerce_gateway_stripe_init() {
 			 * @var Singleton The reference the *Singleton* instance of this class
 			 */
 			private static $instance;
-
-			/**
-			 * @var Reference to logging class.
-			 */
-			private static $log;
 
 			/**
 			 * Returns the *Singleton* instance of this class.
@@ -108,44 +105,48 @@ function woocommerce_gateway_stripe_init() {
 			 */
 			public function init() {
 				if ( is_admin() ) {
-					require_once( dirname( __FILE__ ) . '/includes/admin/class-wc-stripe-privacy.php' );
+					require_once dirname( __FILE__ ) . '/includes/admin/class-wc-stripe-privacy.php';
 				}
 
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-exception.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-logger.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-helper.php' );
-				include_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-api.php' );
-				require_once( dirname( __FILE__ ) . '/includes/abstracts/abstract-wc-stripe-payment-gateway.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-webhook-handler.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-sepa-payment-token.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-apple-pay-registration.php' );
-				require_once( dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-pre-orders-compat.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-gateway-stripe.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-bancontact.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-sofort.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-giropay.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-eps.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-ideal.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-p24.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-alipay.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-sepa.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-multibanco.php' );
-				require_once( dirname( __FILE__ ) . '/includes/payment-methods/class-wc-stripe-payment-request.php' );
-				require_once( dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-subs-compat.php' );
-				require_once( dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-sepa-subs-compat.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-order-handler.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-payment-tokens.php' );
-				require_once( dirname( __FILE__ ) . '/includes/class-wc-stripe-customer.php' );
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-exception.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-logger.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-helper.php';
+				include_once dirname( __FILE__ ) . '/includes/class-wc-stripe-api.php';
+				require_once dirname( __FILE__ ) . '/includes/abstracts/abstract-wc-stripe-payment-gateway.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-webhook-handler.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-sepa-payment-token.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-apple-pay-registration.php';
+				require_once dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-pre-orders-compat.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-gateway-stripe.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-bancontact.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-sofort.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-giropay.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-eps.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-ideal.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-p24.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-alipay.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-sepa.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-gateway-stripe-multibanco.php';
+				require_once dirname( __FILE__ ) . '/includes/payment-methods/class-wc-stripe-payment-request.php';
+				require_once dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-subs-compat.php';
+				require_once dirname( __FILE__ ) . '/includes/compat/class-wc-stripe-sepa-subs-compat.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-order-handler.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-payment-tokens.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-customer.php';
+				require_once dirname( __FILE__ ) . '/includes/class-wc-stripe-intent-controller.php';
 
 				if ( is_admin() ) {
-					require_once( dirname( __FILE__ ) . '/includes/admin/class-wc-stripe-admin-notices.php' );
+					require_once dirname( __FILE__ ) . '/includes/admin/class-wc-stripe-admin-notices.php';
 				}
 
 				// REMOVE IN THE FUTURE.
-				require_once( dirname( __FILE__ ) . '/includes/deprecated/class-wc-stripe-apple-pay.php' );
+				require_once dirname( __FILE__ ) . '/includes/deprecated/class-wc-stripe-apple-pay.php';
 
 				add_filter( 'woocommerce_payment_gateways', array( $this, 'add_gateways' ) );
 				add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
+
+				// Modify emails emails.
+				add_filter( 'woocommerce_email_classes', array( $this, 'add_emails' ), 20 );
 
 				if ( version_compare( WC_VERSION, '3.4', '<' ) ) {
 					add_filter( 'woocommerce_get_sections_checkout', array( $this, 'filter_gateway_order_admin' ) );
@@ -195,7 +196,7 @@ function woocommerce_gateway_stripe_init() {
 				$plugin_links = array(
 					'<a href="admin.php?page=wc-settings&tab=checkout&section=stripe">' . esc_html__( 'Settings', 'woocommerce-gateway-stripe' ) . '</a>',
 					'<a href="https://docs.woocommerce.com/document/stripe/">' . esc_html__( 'Docs', 'woocommerce-gateway-stripe' ) . '</a>',
-					'<a href="https://woocommerce.com/contact-us/">' . esc_html__( 'Support', 'woocommerce-gateway-stripe' ) . '</a>',
+					'<a href="https://woocommerce.com/my-account/create-a-ticket?broken=primary&select=18627">' . esc_html__( 'Support', 'woocommerce-gateway-stripe' ) . '</a>',
 				);
 				return array_merge( $plugin_links, $links );
 			}
@@ -257,6 +258,26 @@ function woocommerce_gateway_stripe_init() {
 				$sections['stripe_multibanco'] = __( 'Stripe Multibanco', 'woocommerce-gateway-stripe' );
 
 				return $sections;
+			}
+
+			/**
+			 * Adds the failed SCA auth email to WooCommerce.
+			 *
+			 * @param WC_Email[] $email_classes All existing emails.
+			 * @return WC_Email[]
+			 */
+			public function add_emails( $email_classes ) {
+				require_once WC_STRIPE_PLUGIN_PATH . '/includes/compat/class-wc-stripe-email-failed-authentication.php';
+				require_once WC_STRIPE_PLUGIN_PATH . '/includes/compat/class-wc-stripe-email-failed-renewal-authentication.php';
+				require_once WC_STRIPE_PLUGIN_PATH . '/includes/compat/class-wc-stripe-email-failed-preorder-authentication.php';
+				require_once WC_STRIPE_PLUGIN_PATH . '/includes/compat/class-wc-stripe-email-failed-authentication-retry.php';
+
+				// Add all emails, generated by the gateway.
+				$email_classes['WC_Stripe_Email_Failed_Renewal_Authentication']  = new WC_Stripe_Email_Failed_Renewal_Authentication( $email_classes );
+				$email_classes['WC_Stripe_Email_Failed_Preorder_Authentication'] = new WC_Stripe_Email_Failed_Preorder_Authentication( $email_classes );
+				$email_classes['WC_Stripe_Email_Failed_Authentication_Retry'] = new WC_Stripe_Email_Failed_Authentication_Retry( $email_classes );
+
+				return $email_classes;
 			}
 		}
 

@@ -1,119 +1,122 @@
 <?php namespace Premmerce\ExtendedUsers;
 
 use Premmerce\ExtendedUsers\Admin\Admin;
-use Premmerce\ExtendedUsers\WordpressSDK\FileManager\FileManager;
-use Premmerce\ExtendedUsers\WordpressSDK\Notifications\AdminNotifier;
-use Premmerce\ExtendedUsers\WordpressSDK\Plugin\PluginInterface;
+use Premmerce\SDK\V2\FileManager\FileManager;
+use Premmerce\SDK\V2\Notifications\AdminNotifier;
+use Premmerce\SDK\V2\Plugin\PluginInterface;
 
 /**
  * Class ExtendedUsersPlugin
  *
  * @package Premmerce\ExtendedUsers
  */
-class ExtendedUsersPlugin implements PluginInterface{
+class ExtendedUsersPlugin implements PluginInterface
+{
+    const DOMAIN = 'woo-customers-manager';
 
-	const DOMAIN = 'woo-customers-manager';
+    /**
+     * @var FileManager
+     */
+    private $fileManager;
 
-	/**
-	 * @var FileManager
-	 */
-	private $fileManager;
+    /**
+     * @var AdminNotifier
+     */
+    private $notifier;
 
-	/**
-	 * @var AdminNotifier
-	 */
-	private $notifier;
+    /**
+     * PluginManager constructor.
+     *
+     * @param $mainFile
+     */
+    public function __construct($mainFile)
+    {
+        $this->fileManager = new FileManager($mainFile);
+        $this->notifier    = new AdminNotifier();
 
-	/**
-	 * PluginManager constructor.
-	 *
-	 * @param $mainFile
-	 */
-	public function __construct($mainFile){
-		$this->fileManager = new FileManager($mainFile);
-		$this->notifier    = new AdminNotifier();
+        add_action('init', array($this, 'loadTextDomain'));
+        add_action('admin_init', array($this, 'checkRequirePlugins'));
+    }
 
-		add_action('init', [$this, 'loadTextDomain']);
-		add_action('admin_init', [$this, 'checkRequirePlugins']);
+    /**
+     * Run plugin part
+     */
+    public function run()
+    {
+        $valid = count($this->validateRequiredPlugins()) === 0;
 
-	}
+        if (is_admin() && $valid) {
+            new Admin($this->fileManager);
+        }
+    }
 
-	/**
-	 * Run plugin part
-	 */
-	public function run(){
-		$valid = count($this->validateRequiredPlugins()) === 0;
+    /**
+     * Load plugin translations
+     */
+    public function loadTextDomain()
+    {
+        $name = $this->fileManager->getPluginName();
+        load_plugin_textdomain('woo-customers-manager', false, $name . '/languages/');
+    }
 
-		if(is_admin() && $valid){
-			new Admin($this->fileManager);
-		}
-	}
+    /**
+     * Check required plugins and push notifications
+     */
+    public function checkRequirePlugins()
+    {
+        $message = __('The %s plugin requires %s plugin to be active!', 'woo-customers-manager');
 
-	/**
-	 * Load plugin translations
-	 */
-	public function loadTextDomain(){
-		$name = $this->fileManager->getPluginName();
-		load_plugin_textdomain('woo-customers-manager', false, $name . '/languages/');
-	}
+        $plugins = $this->validateRequiredPlugins();
 
+        if (count($plugins)) {
+            foreach ($plugins as $plugin) {
+                $error = sprintf($message, 'WooCommerce Customers Manager', $plugin);
+                $this->notifier->push($error, AdminNotifier::ERROR, false);
+            }
+        }
+    }
 
-	/**
-	 * Check required plugins and push notifications
-	 */
-	public function checkRequirePlugins(){
-		$message = __('The %s plugin requires %s plugin to be active!', 'woo-customers-manager');
+    /**
+     * Validate required plugins
+     *
+     * @return array
+     */
+    private function validateRequiredPlugins()
+    {
+        $plugins = array();
 
-		$plugins = $this->validateRequiredPlugins();
+        if (!function_exists('is_plugin_active')) {
+            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        }
 
-		if(count($plugins)){
-			foreach($plugins as $plugin){
-				$error = sprintf($message, 'WooCommerce Customers Manager', $plugin);
-				$this->notifier->push($error, AdminNotifier::ERROR, false);
-			}
-		}
+        /**
+         * Check if WooCommerce is active
+         **/
+        if (!(is_plugin_active('woocommerce/woocommerce.php') || is_plugin_active_for_network('woocommerce/woocommerce.php'))) {
+            $plugins[] = '<a target="_blank" href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a>';
+        }
 
-	}
+        return $plugins;
+    }
 
-	/**
-	 * Validate required plugins
-	 *
-	 * @return array
-	 */
-	private function validateRequiredPlugins(){
+    /**
+     * Fired when the plugin is activated
+     */
+    public function activate()
+    {
+    }
 
-		$plugins = [];
+    /**
+     * Fired when the plugin is deactivated
+     */
+    public function deactivate()
+    {
+    }
 
-		if(!function_exists('is_plugin_active')){
-			include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-		}
-
-		/**
-		 * Check if WooCommerce is active
-		 **/
-		if(!(is_plugin_active('woocommerce/woocommerce.php') || is_plugin_active_for_network('woocommerce/woocommerce.php'))){
-			$plugins[] = '<a target="_blank" href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a>';
-		}
-
-		return $plugins;
-	}
-
-	/**
-	 * Fired when the plugin is activated
-	 */
-	public function activate(){
-	}
-
-
-	/**
-	 * Fired when the plugin is deactivated
-	 */
-	public function deactivate(){
-	}
-
-	/**
-	 * Fired when the plugin is uninstalled
-	 */
-	public static function uninstall(){
-	}
+    /**
+     * Fired when the plugin is uninstalled
+     */
+    public static function uninstall()
+    {
+    }
 }

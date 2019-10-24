@@ -37,5 +37,60 @@ jQuery(document).ready(function ($) {
         }
         
     });
+    bd_get_boxy_clean_height();
+});
+jQuery(window).resize(function () { 
+    bd_get_boxy_clean_height();
 });
 
+function bd_get_boxy_clean_height() {
+    var divs = jQuery(".boxy-clean li.blog_wrap").not('.first_post');
+    if (jQuery(window).width() > 980) {
+        var column = 4;
+        if (divs.hasClass('three_column')) {
+            column = 3;
+        } else if (divs.hasClass('two_column')) {
+            column = 2;
+        } else if (divs.hasClass('one_column')) {
+            column = 1;
+        }
+    } else if (jQuery(window).width() <= 980 && jQuery(window).width() > 720) {
+        var column = 4;
+        if (divs.hasClass('three_column_ipad')) {
+            column = 3;
+        } else if (divs.hasClass('two_column_ipad')) {
+            column = 2;
+        } else if (divs.hasClass('one_column_ipad')) {
+            column = 1;
+        }
+    } else if (jQuery(window).width() <= 720 && jQuery(window).width() > 480) {
+        var column = 4;
+        if (divs.hasClass('three_column_tablet')) {
+            column = 3;
+        } else if (divs.hasClass('two_column_tablet')) {
+            column = 2;
+        } else if (divs.hasClass('one_column_tablet')) {
+            column = 1;
+        }
+    } else if (jQuery(window).width() <= 480) {
+        var column = 4;
+        if (divs.hasClass('one_column_mobile')) {
+            column = 3;
+        } else if (divs.hasClass('two_column_mobile')) {
+            column = 2;
+        } else if (divs.hasClass('three_column_mobile')) {
+            column = 1;
+        }
+    }
+    jQuery(".boxy-clean li.blog_wrap").removeAttr('style');
+
+    for (var i = 0; i < divs.length; i += column) {
+        var heights = jQuery(".boxy-clean li.blog_wrap").not('.first_post').slice(i, i + column).map(function () {
+            return jQuery(this).height();
+        }).get();
+        var maxHeight = Math.max.apply(null, heights);
+        if (screen.width > 640) {
+            jQuery(".boxy-clean li.blog_wrap").not('.first_post').slice(i, i + column).css('height', maxHeight + 150);
+        }
+    }
+}

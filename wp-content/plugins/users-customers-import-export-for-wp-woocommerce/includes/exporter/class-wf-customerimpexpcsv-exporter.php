@@ -15,20 +15,17 @@ class WF_CustomerImpExpCsv_Exporter {
         $export_limit = !empty($_POST['limit']) ? intval($_POST['limit']) : 999999999;
         $export_offset = !empty($_POST['offset']) ? intval($_POST['offset']) : 0;
         $csv_columns = include( 'data/data-wf-post-columns.php' );
-
         $user_columns_name = !empty($_POST['columns_name']) ? $_POST['columns_name'] : $csv_columns;
         $export_columns = !empty($_POST['columns']) ? $_POST['columns'] : array();
-
         $export_user_roles = !empty($_POST['user_roles']) ? $_POST['user_roles'] : array();
         $delimiter = !empty($_POST['delimiter']) ? $_POST['delimiter'] : ',';
-
 
         $wpdb->hide_errors();
         @set_time_limit(0);
         if (function_exists('apache_setenv'))
             @apache_setenv('no-gzip', 1);
         @ini_set('zlib.output_compression', 0);
-        @ob_clean();
+        @ob_end_clean();
 
         header('Content-Type: text/csv; charset=UTF-8');
         header('Content-Disposition: attachment; filename=Customer-Export-' . date('Y_m_d_H_i_s', current_time('timestamp')) . ".csv");
@@ -36,8 +33,6 @@ class WF_CustomerImpExpCsv_Exporter {
         header('Expires: 0');
 
         $fp = fopen('php://output', 'w');
-
-
 
         $args = array(
             'fields' => 'ID', // exclude standard wp_users fields from get_users query -> get Only ID##
@@ -58,13 +53,12 @@ class WF_CustomerImpExpCsv_Exporter {
                 $row[] = $temp_head;
         }
 
-
-
-
         $row = array_map('WF_CustomerImpExpCsv_Exporter::wrap_column', $row);
         fwrite($fp, implode($delimiter, $row) . "\n");
         unset($row);
 
+        ini_set('max_execution_time', -1);
+        ini_set('memory_limit', -1);
         // Loop users
         foreach ($users as $user) {
             //$row = array();   
@@ -79,7 +73,22 @@ class WF_CustomerImpExpCsv_Exporter {
         exit;
     }
 
-    public static function format_data($data) {
+    public static function format_data($data, $key) {
+
+        switch ($key) { 
+            case "user_login":
+            case "user_pass":
+            case "roles":
+                break;
+            default:
+                if(is_string($data) && in_array($data[0], array('=','+','-','@')) ){ // for avoid vulnerable to Remote Command Execution
+                    $data = ' '.$data;
+                }
+              
+        }
+        return $data;  
+        
+        
         //if (!is_array($data));
         //$data = (string) urldecode($data);
         $enc = mb_detect_encoding($data, 'UTF-8, ISO-8859-1', true);
@@ -104,15 +113,13 @@ class WF_CustomerImpExpCsv_Exporter {
      * @return array $meta_keys customer/user meta data
      */
     public static function get_customers_csv_row($id, $export_columns, $csv_columns) {
-
-        $user = get_user_by('ID', $id);
-
+        $user = get_user_by('id', $id);
         $customer_data = array();
         foreach ($csv_columns as $key) {
-
-            $customer_data[$key] = !empty($user->{$key}) ? maybe_serialize($user->{$key}) : '';
+            $customer_data[$key] = !empty($user->{$key}) ? self::format_data(maybe_serialize($user->{$key}),$key) : '';
         }
-        $customer_data['roles'] = implode(', ', $user->roles);
+        $user_roles = (!empty($user->roles)) ? $user->roles : array();
+        $customer_data['roles'] = implode(',', $user_roles);
 
         foreach ($customer_data as $key => $value) {
             if (!$export_columns || in_array($key, $export_columns)) {

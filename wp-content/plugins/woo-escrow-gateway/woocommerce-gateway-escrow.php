@@ -3,7 +3,7 @@
  * Plugin Name: Escrow.com Payments for WooCommerce
  * Plugin URI: https://www.escrow.com/plugins/woocommerce
  * Description: Take secure escrow payments on your store using Escrow.com.
- * Version: 1.4.1
+ * Version: 2.3.0
  * Author: Escrow.com
  * Author URI: https://www.escrow.com/
  * Developer: Michael Liedtke
@@ -11,9 +11,9 @@
  * Domain Path: /languages
  *
  * WC requires at least: 3.0
- * WC tested up to: 3.4.0
+ * WC tested up to: 3.6.4
  *
- * Copyright: @ 2018 Escrow.com
+ * Copyright: @ 2019 Escrow.com
  * License: GNU General Public License v2.0 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -89,13 +89,7 @@ function wc_escrow_gateway_change_order_received_text($str, $order) {
     $order_name              = get_bloginfo('title') . ' order ' . $order->get_order_number();
     $escrow_trx_ids          = get_post_meta($order->get_id(), 'EscrowTrxIds', true);
     $escrow_buyer_next_steps = get_post_meta($order->get_id(), 'EscrowBuyerNextSteps', true);
-    $escrow_www_url          = "";
-    if (false !== strpos($escrow_api_url, 'sandbox')) {
-        $escrow_www_url = "https://www.escrow-sandbox.com/";
-    } else {
-        $escrow_www_url = "https://www.escrow.com/";
-    }
-    $escrow_trx_links = '<div id="escrow-trx-links">';
+    $escrow_trx_links        = '<div id="escrow-trx-links">';
     $index = 0;
     $escrow_trx_ids_arr = explode(',', $escrow_trx_ids);
     foreach(explode(',', $escrow_buyer_next_steps) as $escrow_buyer_next_step) {
@@ -118,9 +112,7 @@ function wc_escrow_gateway_change_order_received_text($str, $order) {
     }
     $escrow_trx_links .= '</div>';
     $trx_text = $index > 1 ? 'buttons for each of the transactions' : '<b>Make Payment</b> button';
-    $new_str = $str . ' Your next step in this process is to submit payment to <a href="'
-        . $escrow_www_url
-        . '" target="_blank" style="font-weight:bold;">Escrow.com</a>.'
+    $new_str = $str . ' Your next step in this process is to submit payment to <b>Escrow.com</b>.'
         . $escrow_trx_links
         . 'Please click on the '
         . $trx_text
@@ -168,7 +160,7 @@ function customer_service_notification($event) {
         $current_user = wp_get_current_user();
         
         // Get the user agent for this plugin.
-        $user_agent = "EscrowPlugin/WooCommerce/1.4.1 WooCommerce/" . WC()->version . " WordPress/" . get_bloginfo('version') . " PHP/" . PHP_VERSION;
+        $user_agent = "EscrowPlugin/WooCommerce/2.3.0 WooCommerce/" . WC()->version . " WordPress/" . get_bloginfo('version') . " PHP/" . PHP_VERSION;
         
         // Build request.
         $request = array(
@@ -327,11 +319,11 @@ function wc_escrow_gateway_init() {
                     'type' => 'select',
                     'class' => 'wc-enhanced-select',
                     'description' => __('Select the version of the Escrow.com API that you wish to use. URLs with api.escrow.com are for production use. URLs with api.escrow-sandbox.com are for testing. Make sure you update the Escrow Email and Escrow API Key to match the selected environment.', 'wc-gateway-escrow'),
-                    'default' => __('https://api.escrow.com/2017-09-01/', 'wc-gateway-escrow'),
+                    'default' => __('https://api.escrow.com/', 'wc-gateway-escrow'),
                     'desc_tip' => true,
                     'options' => array(
-                        'https://api.escrow.com/2017-09-01/' => 'https://api.escrow.com/2017-09-01/',
-                        'https://api.escrow-sandbox.com/2017-09-01/' => 'https://api.escrow-sandbox.com/2017-09-01/'
+                        'https://api.escrow.com/' => 'https://api.escrow.com/',
+                        'https://api.escrow-sandbox.com/' => 'https://api.escrow-sandbox.com/'
                     )
                 ),
                 'cs_heading' => array(
@@ -388,7 +380,9 @@ function wc_escrow_gateway_init() {
                     'desc_tip' => true,
                     'options' => array(
                         'usd' => 'USD',
-                        'euro' => 'EUR'
+                        'euro' => 'EUR',
+                        'aud' => 'AUD',
+                        'gbp' => 'GBP'
                     )
                 ),
                 'ts_escrow_fee_payer' => array(
@@ -455,7 +449,8 @@ function wc_escrow_gateway_init() {
                     'desc_tip' => true,
                     'options' => array(
                         'domain_name' => 'Domain Name',
-                        'general_merchandise' => 'General Merchandise'
+                        'general_merchandise' => 'General Merchandise',
+                        'milestone' => 'Milestone'
                     )
                 ),
                 'vs_heading' => array(
@@ -514,14 +509,8 @@ function wc_escrow_gateway_init() {
             
             // Get the order from the given ID.
             $order = wc_get_order($order_id);
-            
-            // Build customer request.
-            $customer_request = $this->get_customer($order);
-            
-            // Create customer account on Escrow.com with details from order.
-            $this->call_escrow_api($customer_request, 'customer');
-            
-            // We support two workflows: a standard one and a multi-vendor one when the WC Vendors extension is enabled.
+
+            // Process either the multi-vendor workflow or the single-vendor workflow.
             if ('none' !== $this->vs_option) {
 
                 // Get an array of vendor IDs in the order.
@@ -533,48 +522,69 @@ function wc_escrow_gateway_init() {
                     // Get the broker configured request for the order.
                     $request = $this->get_order_marketplace_scenario($order, $vendor_id);
                     
-                    // Call the Escrow.com API to create an Escrow.com transaction.
-                    $escrow_transaction = $this->call_escrow_api($request, 'transaction');
+                    // Call the Escrow.com pay endpoint to create an Escrow.com draft transaction.
+                    $response = $this->call_escrow_api($request, 'integration/pay/2018-03-31');
                     
                     // If we did not successfully call the API and retrieve the resulting Escrow.com transaction,
                     // then return so that the stand "Error processing cart." message is shown to the user.
-                    if ($escrow_transaction == null) {
+                    if ($response == null) {
                         return [];
                     }
                     
                     // Post process the order to store Escrow.com specific properties on it and to update the order status.
-                    $this->post_process_order($order, $escrow_transaction);
+                    $this->post_process_order($order, $response);
                 }
 
                 // Reduce the stock levels and clear the cart.
                 $this->post_process_cart($order_id);
                 
+                // If only one vendor is represented in the shopping cart, we can redirect the user directly to the
+                // Escrow.com pay workflow. Otherwise, we need to show the intermediate order receipt page as the
+                // user will need to pay once for each vendor.
+                if (count($vendors) > 1) {
+                    
+                    // Redirect the user to the order receipt page where we will display an Escrow.com pay button
+                    // for each vendor.
+                    return array(
+                        'result' => 'success',
+                        'redirect' => $this->get_return_url($order)
+                    );
+                    
+                } else {
+
+                    // Redirect the user to the Escrow.com pay page.
+                    return array(
+                        'result' => 'success',
+                        'redirect' => $response->landing_page
+                    );
+                }
+
             } else {
-                
-                // Get the normal request for the order.
+
+                // Get the single-vendor non-broker request for the order.
                 $request = $this->get_order_store_scenario($order);
                 
-                // Call the Escrow.com API to create an Escrow.com transaction.
-                $escrow_transaction = $this->call_escrow_api($request, 'transaction');
+                // Call the Escrow.com pay endpoint to create an Escrow.com draft transaction.
+                $response = $this->call_escrow_api($request, 'integration/pay/2018-03-31');
                 
-                // If we did not successfully call the API and retrieve the resulting Escrow.com transaction,
-                // then return so that the stand "Error processing cart." message is shown to the user.
-                if ($escrow_transaction == null) {
+                // If we did not successfully call the API, return so that the standard
+                // "Error processing cart." message is shown to the user.
+                if ($response == null) {
                     return [];
                 }
                 
                 // Post process the order to store Escrow.com specific properties on it and to update the order status.
-                $this->post_process_order($order, $escrow_transaction);
+                $this->post_process_order($order, $response);
                 
                 // Reduce the stock levels and clear the cart.
                 $this->post_process_cart($order_id);
+                
+                // Return redirect to the Escrow.com pay page.
+                return array(
+                    'result' => 'success',
+                    'redirect' => $response->landing_page
+                );
             }
-            
-            // Return redirect to the order receipt page.
-            return array(
-                'result' => 'success',
-                'redirect' => $this->get_return_url($order)
-            );
         }
         
         /**
@@ -634,9 +644,12 @@ function wc_escrow_gateway_init() {
             $escrow_email   = $this->as_escrow_email;
             $escrow_api_key = $this->as_escrow_api_key;
             $escrow_api_url = $this->as_escrow_api_url;
+
+            // Remove old path if present.
+            $escrow_api_url = str_replace("2017-09-01/", "", $escrow_api_url);
             
             // Build user agent.
-            $user_agent = "EscrowPlugin/WooCommerce/1.4.1 WooCommerce/" . WC()->version . " WordPress/" . get_bloginfo('version') . " PHP/" . PHP_VERSION;
+            $user_agent = "EscrowPlugin/WooCommerce/2.3.0 WooCommerce/" . WC()->version . " WordPress/" . get_bloginfo('version') . " PHP/" . PHP_VERSION;
 
             // Initialize curl request with relevant properties and JSON representing complete transaction.
             $curl = curl_init();
@@ -668,22 +681,17 @@ function wc_escrow_gateway_init() {
             
             // If we are in debug mode, write the response returned by the Escrow.com API to the default error log.
             if (true === WP_DEBUG) {
-                $logger->debug("Escrow.com API " . $endpoint . " creation request url: " . $escrow_api_url . $endpoint);
-                $logger->debug("Escrow.com API " . $endpoint . " creation request: " . PHP_EOL . json_encode($request, JSON_PRETTY_PRINT));
-                $logger->debug("Escrow.com API " . $endpoint . " creation response status: " . $status);
-                $logger->debug("Escrow.com API " . $endpoint . " creation response: " . PHP_EOL . $output);
+                $logger->debug("Escrow.com API request url: " . $escrow_api_url . $endpoint);
+                $logger->debug("Escrow.com API request: " . PHP_EOL . json_encode($request, JSON_PRETTY_PRINT));
+                $logger->debug("Escrow.com API response status: " . $status);
+                $logger->debug("Escrow.com API response: " . PHP_EOL . $output);
             }
             
             // Decode JSON returned by Escrow.com API.
             $response = json_decode($output);
-            
-            // Do not log error message when we get a 403 when creating a customer, as that means the customer already exists, which is fine and does not need to be logged.
-            if ('customer' == $endpoint and 403 == $status) {
-                return null;
-            }
-            
+
             // Log an error if we did not create a transaction successfully and return -1 to indicate that the API call failed;
-            if (is_null($response) or !isset($response->id)) {
+            if (is_null($response)) {
                 $logger->critical('Escrow.com API call failed to ' . $escrow_api_url . $endpoint . PHP_EOL . 'Status: ' . $status . PHP_EOL . 'Request:' . PHP_EOL . json_encode($request, JSON_PRETTY_PRINT));
                 return null;
             }
@@ -696,21 +704,15 @@ function wc_escrow_gateway_init() {
          * Persists relevant results from API call to WC order and updates order status to processing.
          *
          * @param WC_Order $order - Order represented on checkout page.
-         * @param object $escrow_transaction - newly created Escrow.com transaction.
+         * @param object $pay_response - info to allow buyer to pay for transaction.
          */
-        private function post_process_order($order, $escrow_transaction) {
+        private function post_process_order($order, $pay_response) {
             
-            // Extract id of the newly created transaction response.
-            $escrow_trx_id = $escrow_transaction->id;
+            // Extract id of the newly created transaction.
+            $escrow_trx_id = $pay_response->transaction_id;
 
             // Get the next step for the buyer in the transaction.
-            $escrow_buyer_next_step = '';
-            foreach($escrow_transaction->parties as $party) {
-                if ('buyer' === $party->role) {
-                    $escrow_buyer_next_step = $party->next_step;
-                    break;
-                }
-            }
+            $escrow_buyer_next_step = $pay_response->landing_page;
 
             // Update the order with the results of the API call. This information is useful both to the store administrator via the
             // order detail view in the admin panel and on the order receipt page (so the buyer may click through to the transaction
@@ -738,37 +740,7 @@ function wc_escrow_gateway_init() {
             // Empty the cart.
             WC()->cart->empty_cart();
         }
-        
-        /**
-         * Gets customer request that will be posted to the Escrow.com API.
-         *
-         * @param WC_Order $order - Order represented on checkout page.
-         * @return array $json_request - JSON encoded data to post to Escrow.com API.
-         *
-         * @since 1.3.0
-         */
-        private function get_customer($order) {
-        
-            // Build request.
-            $request = array(
-                'email'         => $order->get_billing_email(),
-                'first_name'    => $order->get_billing_first_name(),
-                'last_name'     => $order->get_billing_last_name(),
-                'phone_number'  => $order->get_billing_phone(),
-                'address'       => array(
-                    'line1'     => $order->get_billing_address_1(),
-                    'line2'     => $order->get_billing_address_2(),
-                    'city'      => $order->get_billing_city(),
-                    'state'     => $order->get_billing_state(),
-                    'country'   => $order->get_billing_country(),
-                    'post_code' => $order->get_billing_postcode()
-                )
-            );
-            
-            // Return populated request.
-            return $request;
-        }
-        
+
         /**
          * Gets transaction request that will be posted to the Escrow.com API.
          *
@@ -812,7 +784,7 @@ function wc_escrow_gateway_init() {
             }
             
             // Add taxes to the transaction if applicable.
-            if ($this->ts_tax_options == 'include_tax' and $this->ts_transaction_type == 'general_merchandise') {
+            if ($this->ts_tax_options == 'include_tax' and ($this->ts_transaction_type == 'general_merchandise' or $this->ts_transaction_type == 'milestone')) {
                 $tax_items = $this->get_tax_items($order_email, 'me', 1);
                 array_push($item_array, $tax_items);
             }
@@ -833,24 +805,50 @@ function wc_escrow_gateway_init() {
                 );
             }
 
-            // Build parties array for the transaction.
-            $parties = array(
-                array(
-                    'customer' => $order_email,
-                    'role' => 'buyer',
-                ),
-                array(
-                    'customer' => 'me',
-                    'role' => 'seller',
-                )
+            // Configure buyer.
+            $buyer = array(
+                'agreed' => true,
+                'customer' => $order_email,
+                'initiator' => false,
+                'role' => 'buyer',
+                'first_name'    => $order->get_billing_first_name(),
+                'last_name'     => $order->get_billing_last_name(),
+                'phone_number'  => $order->get_billing_phone()
             );
+
+            // Add address to buyer when appropriate.
+            if (!empty($order->get_billing_address_1()) and
+                !empty($order->get_billing_city()) and
+                !empty($order->get_billing_state()) and
+                !empty($order->get_billing_country())) {
+                $buyer['address'] = array(
+                    'line1'     => $order->get_billing_address_1(),
+                    'line2'     => $order->get_billing_address_2(),
+                    'city'      => $order->get_billing_city(),
+                    'state'     => $order->get_billing_state(),
+                    'country'   => $order->get_billing_country(),
+                    'post_code' => $order->get_billing_postcode()
+                );
+            }
+            
+            // Configure seller.
+            $seller = array(
+                'agreed' => 'true',
+                'customer' => 'me',
+                'initiator' => 'true',
+                'role' => 'seller'
+            );
+
+            // Build parties array for the transaction.
+            $parties = array($buyer, $seller);
 
             // Build request.
             $request = array(
                 'currency' => $this->ts_currency,
                 'items' => $item_array,
                 'description' => $order_name,
-                'parties' => $parties
+                'parties' => $parties,
+                'return_url' => $order->get_view_order_url()
             );
             
             // Return populated request.
@@ -1007,7 +1005,7 @@ function wc_escrow_gateway_init() {
             $vendor_percent = $vendor_total / $order_subtotal;
             
             // Add taxes to the transaction if applicable.
-            if ($this->ts_tax_options == 'include_tax' and $this->ts_transaction_type == 'general_merchandise') {
+            if ($this->ts_tax_options == 'include_tax' and ($this->ts_transaction_type == 'general_merchandise' or $this->ts_transaction_type == 'milestone')) {
                 $tax_items = $this->get_tax_items($order_email, $vendor_email, $vendor_percent);
                 array_push($item_array, $tax_items);
             }
@@ -1052,49 +1050,71 @@ function wc_escrow_gateway_init() {
                 );
             }
 
+            // Configure buyer.
+            $buyer = array(
+                'agreed' => true,
+                'customer' => $order_email,
+                'initiator' => false,
+                'role' => 'buyer',
+                'first_name'    => $order->get_billing_first_name(),
+                'last_name'     => $order->get_billing_last_name(),
+                'phone_number'  => $order->get_billing_phone()
+            );
+
+            // Add address to buyer when appropriate.
+            if (!empty($order->get_billing_address_1()) and
+                !empty($order->get_billing_city()) and
+                !empty($order->get_billing_state()) and
+                !empty($order->get_billing_country())) {
+                $buyer['address'] = array(
+                    'line1'     => $order->get_billing_address_1(),
+                    'line2'     => $order->get_billing_address_2(),
+                    'city'      => $order->get_billing_city(),
+                    'state'     => $order->get_billing_state(),
+                    'country'   => $order->get_billing_country(),
+                    'post_code' => $order->get_billing_postcode()
+                );
+            }
+
+            // Configure seller.
+            $seller = array(
+                'agreed' => 'true',
+                'customer' => $vendor_email,
+                'initiator' => 'false',
+                'role' => 'seller'
+            );
+
             // Build parties array for the transaction.
             $parties = [];
             if ($vendor_commission_total > 0) {
                 array_push($parties,
+                    $buyer,
+                    $seller,
                     array(
-                        'customer' => $order_email,
-                        'role' => 'buyer'
-                    ),
-                    array(
-                        'customer' => $vendor_email,
-                        'role' => 'seller',
-                        'agreed' => 'true'
-                    ),
-                    array(
+                        'agreed' => true,
                         'customer' => 'me',
                         'role' => 'broker'
                     )
                 );
             } else {
                 array_push($parties,
+                    $buyer,
+                    $seller,
                     array(
-                        'customer' => $order_email,
-                        'role' => 'buyer'
-                    ),
-                    array(
-                        'customer' => $vendor_email,
-                        'role' => 'seller',
-                        'initiator' => 'true'
-                    ),
-                    array(
+                        'agreed' => true,
                         'customer' => 'me',
                         'role' => 'partner'
                     )
                 );
             }
 
-
             // Build request.
             $request = array(
                 'currency' => $this->ts_currency,
                 'items' => $item_array,
                 'description' => $order_name,
-                'parties' => $parties
+                'parties' => $parties,
+                'return_url' => $order->get_view_order_url()
             );
             
             // Return populated request.
@@ -1147,6 +1167,7 @@ function wc_escrow_gateway_init() {
         
         /**
          * Gets an item representing the tax to be paid by the buyer for the given transaction.
+         * The inspection period for the tax item defaults to a single day.
          *
          * @param string $buyer_email - The email address of the buyer in the transaction.
          * @param string $seller_email - The email address of the seller in the transaction.
@@ -1158,10 +1179,10 @@ function wc_escrow_gateway_init() {
 
             // Get total tax from shopping cart.
             $total_tax = WC()->cart->get_taxes_total();
-            
+
             // Calculate amount of total tax applicable to current vendor.
             $total_tax_applicable = round($total_tax * $vendor_percent, 2);
-            
+
             // Return new item representing applicable tax on given transaction.
             return array(
                 'description' => 'Tax amount paid by buyer and remitted by seller',
@@ -1176,9 +1197,8 @@ function wc_escrow_gateway_init() {
                     )
                 ),
                 'title' => 'Tax collected by seller',
-                'type' => 'general_merchandise'
+                'type' => $this->ts_transaction_type
             );
         }
     }
 }
-

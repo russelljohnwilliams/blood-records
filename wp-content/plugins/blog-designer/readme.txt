@@ -3,9 +3,9 @@ Contributors: solwininfotech, sanjaydabhoya, khushbupadalia
 Donate link: https://www.solwininfotech.com/product/wordpress-plugins/blog-designer/
 Tags: Wordpress Blog, Blog Design, Blog layout, blog template, custom blog template, blog layout design, responsive blog, custom blog layout, modify blog design, responsive blog layout, blog, design, site design, posts in page, blog in page, timeline blog template, classical blog template, light breeze blog template, spektrum blog template, evolution blog template
 Requires at least: 4.0
-Tested up to: 5.2
+Tested up to: 5.2.2
 Requires PHP: 5.6
-Stable tag: 1.8.14
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Allows you to create and modify your blog page with 6 unique blog layouts. A qui
 
 == Description ==
 
-Blog Designer is a good handy and free solution for everyone who is looking for a responsive blog page with the website. Blog Designer provides you with a variety of 6 different blog templates to setup your blog page for any WordPress websites. Sometimes, we always stick with one blog layout as per theme, but it's not easy to change or modify only blog layout very easily, only you can do it by modifying code and css files.
+Blog Designer is a good handy and free solution for everyone who is looking for a responsive blog page with the website. Blog Designer provides you with a variety of 8 different blog templates to setup your blog page for any WordPress websites. Sometimes, we always stick with one blog layout as per theme, but it's not easy to change or modify only blog layout very easily, only you can do it by modifying code and css files.
 
 However, using Blog Designer plugin you can design your blog page as per your choice to give it a *WOW* factor. Also you can modify various settings very quickly from admin side as Blog Designer plugin has User Friendly Admin Panel. So, beginners can start blogging within 5 minutes, no coding skill required.
 
@@ -43,7 +43,7 @@ Check our new [WordPress Portfolio Plugin](https://wordpress.org/plugins/portfol
 > * Easily manage number of posts per page
 > * Show/Hide Post category, tags, author, comment counts, etc.
 > * Multiple Post Category Selection
-> * 6 Default Blog Templates - Classical, Light Breeze, Spektrum, Evolution, Timeline and News
+> * 8 Default Blog Templates - Boxy-Clean, Classical, Crayon-Slider, Light Breeze, Spektrum, Evolution, Timeline and News
 > * Alternative Background color selection for posts
 > * Style your content with wide variety of options like text color, background color, font size, etc.
 > * Maintain post content length with summary text
@@ -107,6 +107,7 @@ Pro version overcomes your limitations with lite version of blog designer.
 > * Import/Export Blog, Archive and Single Layouts
 > * Isotop Filter Option on category and tags
 > * Woocommerce Supported
+> * Woocommerce single & archive page Supported
 > * Action and filters for developers
 
 
@@ -152,7 +153,7 @@ Yes, Blog Designer gives you total control of your blog page. You need to just s
 No, this featured not covered with free version plugin but you can design your single post pages with the help of 'Single Post Layouts' in [PRO](https://codecanyon.net/item/blog-designer-pro-for-wordpress/17069678?ref=solwin) version plugin.
 
 = Does Blog designer provide some default blog templates? =
-Yes, Blog designer provides 6 default blog templates - [Classical](https://wpblogdesigner.net/demo/blog-classical-blog-template/), [Light Breeze](https://wpblogdesigner.net/demo/blog-light-breeze-blog-template/), [Spektrum](https://wpblogdesigner.net/demo/blog-spektrum-blog-template/), [Evolution](https://wpblogdesigner.net/demo/blog-evolution-blog-template/), [Timeline](https://wpblogdesigner.net/demo/blog-timeline-blog-template/) and [News](https://wpblogdesigner.net/demo/blog-news-blog-template/).
+Yes, Blog designer provides 8 default blog templates - [Boxy Clean](https://wpblogdesigner.net/demo/blog-boxy-clean-blog-template/), [Classical](https://wpblogdesigner.net/demo/blog-classical-blog-template/), [Crayon Slider](https://wpblogdesigner.net/demo/blog-crayon-slider-blog-template/), [Light Breeze](https://wpblogdesigner.net/demo/blog-light-breeze-blog-template/), [Spektrum](https://wpblogdesigner.net/demo/blog-spektrum-blog-template/), [Evolution](https://wpblogdesigner.net/demo/blog-evolution-blog-template/), [Timeline](https://wpblogdesigner.net/demo/blog-timeline-blog-template/) and [News](https://wpblogdesigner.net/demo/blog-news-blog-template/).
 
 And in [Blog Designer PRO](https://codecanyon.net/item/blog-designer-pro-for-wordpress/17069678?ref=solwin) version, there are **40+** unique blog templates available for category, tag, date and author archive pages. Those same blog templates compatible with single post pages also.
 
@@ -197,15 +198,39 @@ Yes, Blog Designer will work with any WordPress themes, but may require some sty
 == Screenshots ==
 
 1. Blog Designer Panel - Admin Interface
-2. Blog Designer with 'Classical' Blog Template Layout
-3. Blog Designer with 'Light Breeze' Blog Template Layout
-4. Blog Designer with 'Spektrum' Blog Template Layout
-5. Blog Designer with 'Evolution' Blog Template Layout
-6. Blog Designer with 'Timeline' Blog Template Layout
-7. Blog Designer with 'News' Blog Template Layout
+2. Blog Designer with 'Boxy-clean' Blog Template Layout
+3. Blog Designer with 'Classical' Blog Template Layout
+4. Blog Designer with 'Crayon-Slider' Blog Template Layout
+5. Blog Designer with 'Light Breeze' Blog Template Layout
+6. Blog Designer with 'Spektrum' Blog Template Layout
+7. Blog Designer with 'Evolution' Blog Template Layout
+8. Blog Designer with 'Timeline' Blog Template Layout
+9. Blog Designer with 'News' Blog Template Layout
 
 
 == Changelog ==
+
+= 2.0.1 =
+Release date: September 3rd, 2019
+
+* Updated: Optimize code of plugin
+* Fixed: minor bug fix with timeline layout
+
+= 2.0 =
+Release date: August 5th, 2019
+
+* Added: New Blog Template - "Boxy-Clean" in Grid Blog Template Category
+* Added: New Blog Template - "Crayon-Slider" in Slider Blog Template Category
+
+= 1.8.16 =
+Release date: July 9th, 2019
+
+* Fixed: minor bug fix
+
+= 1.8.15 =
+Release date: July 5th, 2019
+
+* Fixed: minor bug fix
 
 = 1.8.14 =
 Release date: May 10th, 2019

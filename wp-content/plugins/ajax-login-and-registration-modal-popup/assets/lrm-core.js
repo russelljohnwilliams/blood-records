@@ -89,12 +89,16 @@ var LRM = LRM ? LRM : {};
 		$('.lrm-user-modal').on('click', function (event) {
 			if ($(event.target).is('.lrm-user-modal') || $(event.target).is('.lrm-close-form')) {
 				$(this).removeClass('is-visible');
+				auto_selected_role = false;
+				$(document).triggerHandler("lrm/close_modal", this, event, "click");
 			}
 		});
 		//close modal when clicking the esc keyboard button
 		$(document).keyup(function (event) {
 			if (event.which == '27') {
 				$(".lrm-user-modal").removeClass('is-visible');
+				auto_selected_role = false;
+				$(document).triggerHandler("lrm/close_modal", this, event, "esc");
 			}
 		});
 
@@ -105,7 +109,7 @@ var LRM = LRM ? LRM : {};
 		// });
 
 		//hide or show password
-		$('.hide-password').on('click', function () {
+		$(document).on('click', '.lrm-user-modal-container .hide-password', function () {
 			var togglePass = $(this),
 				  passwordField = togglePass.parent().find('input');
 
@@ -134,6 +138,24 @@ var LRM = LRM ? LRM : {};
 		// 	login_selected(event, true);
 		// });
 
+		var auto_selected_role = false;
+		var hidden_role = false;
+
+		function _save_auto_role(event) {
+			if ( !event.target || $(event.target).hasClass("lrm-switch-to-link") ) {
+			 	return;
+			}
+			var role = $(event.target).data("lrm-role");
+			if ( role !== undefined ) {
+				auto_selected_role = role;
+			}
+
+			hidden_role = false;
+			if ( $(event.target).data("lrm-role-silent") !== undefined ) {
+				hidden_role = true;
+			}
+		}
+
 		function login_selected(event, event_orig) {
 			// if (LRM.is_user_logged_in) {
 			// 	return true;
@@ -144,6 +166,8 @@ var LRM = LRM ? LRM : {};
 			 * this - clicked element
 			 */
 			$(document).triggerHandler("lrm/before_display/login", this, event);
+
+			_save_auto_role(event);
 
 			var $formModal = $(event.target).closest(".lrm-main");
 
@@ -203,6 +227,8 @@ var LRM = LRM ? LRM : {};
 			 */
 			$(document).triggerHandler("lrm/before_display/registration", this, event);
 
+			_save_auto_role(event);
+
 			// $formModal.addClass('is-visible');
 			// $formLogin.removeClass('is-selected');
 			// $formSignup.addClass('is-selected');
@@ -235,6 +261,32 @@ var LRM = LRM ? LRM : {};
 			$formModal.find('.lrm-reset-password-section').removeClass('is-selected');
 			$formModal.find('.lrm-switcher').children('li').eq(0).children('a').removeClass('selected');
 			$formModal.find('.lrm-switcher').children('li').eq(1).children('a').addClass('selected');
+
+			// User Role selector!
+			if ( $formModal.find(".fieldset--user_role") ) {
+				var $user_role_wrap = $formModal.find(".fieldset--user_role");
+				var $role_option = null, role_id;
+
+				if (auto_selected_role) {
+					$role_option = $user_role_wrap.find("option[data-label='" + auto_selected_role + "']");
+					if ( $role_option.length ) {
+						var role_id = $role_option.val();
+					}
+					if ( role_id ) {
+						$user_role_wrap.find("select[name='user_role']").val(role_id); // aa
+					} else {
+						console.warn( "LRM user role selector: no Role was found with a label:", auto_selected_role );
+					}
+				} else {
+					$user_role_wrap.find("select[name='user_role']").val("");
+				}
+
+				if (hidden_role && ( !auto_selected_role || (auto_selected_role && role_id) )) {
+					$user_role_wrap.hide();
+				} else {
+					$user_role_wrap.show();
+				}
+			}
 
 			setTimeout(function() {
 				if ( $(window).width() > 600 ) {
@@ -304,7 +356,8 @@ var LRM = LRM ? LRM : {};
 			}
 
 
-			if ($(document).triggerHandler('lrm/do_not_submit_form', $form)) {
+			// Check reCaptha, etc
+			if ( $(document).triggerHandler('lrm/do_not_submit_form', $form) ) {
 				return false;
 			}
 
@@ -357,10 +410,19 @@ var LRM = LRM ? LRM : {};
 
 							}
 						}
+
+						if (response.data.custom_html && response.data.custom_html_selector) {
+							$(response.data.custom_html_selector).html(response.data.custom_html);
+						}
 					}
 
 					// $form.data("action") for get
 					$(document).triggerHandler('lrm/ajax_response', [response, $form, $form.data("action")]);
+
+					if ( window.is_lrm_testing ) {
+						window.lrm_response = response;
+						return;
+					}
 
 					//console.log(response);
 
@@ -371,7 +433,7 @@ var LRM = LRM ? LRM : {};
 						$(document).triggerHandler('lrm_user_logged_in', [response, $form, $form.data("action")]);
 
 						if ("reload" == response.data.action) {
-							window.location.reload();
+							window.location.reload( true );
 						}
 					}
 
@@ -400,11 +462,15 @@ var LRM = LRM ? LRM : {};
 		 * @since 1.51
 		 */
 		$( 'body' ).on( 'keyup', '#lrm-password1,#lrm-password2', function( event ) {
-			var passwordStrength = checkPasswordStrength(
+			var passwordStrength = LRM.checkPasswordStrength(
 				  $( "#lrm-password1" ),         // First password field
 				  null,         // First password field
 				  $( "#lrm-password1" ).parent().parent().find(".lrm-pass-strength-result")           // Strength meter
 			);
+
+			if ( typeof passwordStrength == "undefined" ) {
+				return;
+			}
 
 			if ( !passwordStrength || passwordStrength == 2 ) {
 				$(".pw-weak").show()
@@ -497,16 +563,21 @@ var LRM = LRM ? LRM : {};
 	 * @param $strengthResult
 	 * @returns {*}
 	 */
-	function checkPasswordStrength( $pass1, $pass2, $strengthResult ) {
-		LRM.loadPasswordMeter(function() {
+	LRM.checkPasswordStrength = function( $pass1, $pass2, $strengthResult ) {
+
+		return LRM.loadPasswordMeter(function() {
 			var pass1 = $pass1.val();
+			if ( !pass1 ) {
+				$strengthResult.data('status','empty');
+				return;
+			}
 			if (!$pass2) {
 				var pass2 = pass1;
 			} else {
 				var pass2 = $pass2.val();
 			}
 
-			$strengthResult.removeClass('short bad good strong');
+			//$strengthResult.removeClass('short bad good strong');
 
 			// Extend our blacklist array with those from the inputs & site data
 			var blacklistArray = ["querty", "password", "132", "123"].concat(wp.passwordStrength.userInputBlacklist())
@@ -518,25 +589,25 @@ var LRM = LRM ? LRM : {};
 			switch (strength) {
 
 				case 2:
-					$strengthResult.addClass('bad').html(LRM.l10n.password_is_bad);
+					$strengthResult.attr('data-status','bad').html(LRM.l10n.password_is_bad);
 					break;
 
 				case 3:
-					$strengthResult.addClass('good').html(LRM.l10n.password_is_good);
+					$strengthResult.attr('data-status','good').html(LRM.l10n.password_is_good);
 					break;
 
 				case 4:
-					$strengthResult.addClass('strong').html(LRM.l10n.password_is_strong);
+					$strengthResult.attr('data-status','strong').html(LRM.l10n.password_is_strong);
 					break;
 
 				case 5:
 					if ($pass2) {
-						$strengthResult.addClass('short').html(LRM.l10n.passwords_is_mismatch);
+						$strengthResult.attr('data-status','short').html(LRM.l10n.passwords_is_mismatch);
 						break;
 					}
 
 				default:
-					$strengthResult.addClass('short').html(LRM.l10n.password_is_short);
+					$strengthResult.attr('data-status','short').html(LRM.l10n.password_is_short);
 
 			}
 
@@ -550,8 +621,7 @@ var LRM = LRM ? LRM : {};
 	LRM.passwordMeterIsLoading = false;
 	LRM.loadPasswordMeter = function ( callback ) {
 		if ( LRM.passwordMeterIsLoaded ) {
-			callback();
-			return;
+			return callback();
 		}
 		// From "wp-admin/js/password-strength-meter.min.js?ver=5.0.4"
 		window.wp=window.wp||{};var passwordStrength;!function(a){wp.passwordStrength={meter:function(b,c,d){if(a.isArray(c)||(c=[c.toString()]),b!=d&&d&&d.length>0)return 5;if("undefined"==typeof window.zxcvbn)return-1;var e=zxcvbn(b,c);return e.score},userInputBlacklist:function(){var b,c,d,e,f=[],g=[],h=["user_login","first_name","last_name","nickname","display_name","email","url","description","weblog_title","admin_email"];for(f.push(document.title),f.push(document.URL),c=h.length,b=0;b<c;b++)e=a("#"+h[b]),0!==e.length&&(f.push(e[0].defaultValue),f.push(e.val()));for(d=f.length,b=0;b<d;b++)f[b]&&(g=g.concat(f[b].replace(/\W/g," ").split(" ")));return g=a.grep(g,function(b,c){return!(""===b||4>b.length)&&a.inArray(b,g)===c})}},passwordStrength=wp.passwordStrength.meter}(jQuery);
@@ -606,3 +676,26 @@ jQuery.cachedScript = function( url, options ) {
 	// Return the jqXHR object so we can chain callbacks
 	return jQuery.ajax( options );
 };
+
+var LRM_Helper= {};
+
+LRM_Helper.setCookie = function(name,value,days) {
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days*24*60*60*1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+LRM_Helper.getCookie = function(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
