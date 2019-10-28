@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Helvetica Condensed';
+    src: url('Helvetica-Condensed-Bold.woff2') format('woff2'),
+        url('Helvetica-Condensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Condensed';
+    src: url('Helvetica-Condensed.woff2') format('woff2'),
+        url('Helvetica-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

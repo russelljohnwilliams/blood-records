@@ -1,0 +1,12 @@
+2019-10-27T11:18:23+00:00 CRITICAL syntax error, unexpected '', 1 ); ' (T_ENCAPSED_AND_WHITESPACE), expecting ',' or ')' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 93
+
+2019-10-27T11:42:32+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo/D in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+

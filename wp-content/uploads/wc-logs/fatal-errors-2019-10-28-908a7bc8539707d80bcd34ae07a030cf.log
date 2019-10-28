@@ -1,0 +1,80 @@
+2019-10-28T18:51:30+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:51:38+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:51:44+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:51:54+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:51:57+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:51:59+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:52:11+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:52:19+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:52:22+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:52:25+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 91
+
+2019-10-28T18:52:58+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 90
+
+2019-10-28T18:53:53+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:53:54+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:53:59+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:54:00+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:54:10+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:54:15+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 67
+
+2019-10-28T18:55:09+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 68
+
+2019-10-28T18:55:12+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 68
+
+2019-10-28T18:55:13+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 68
+
+2019-10-28T18:55:18+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 68
+
+2019-10-28T19:09:48+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 69
+
+2019-10-28T19:10:03+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 69
+
+2019-10-28T19:10:21+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 69
+
+2019-10-28T19:10:35+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 69
+
+2019-10-28T19:10:41+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 69
+
+2019-10-28T19:11:38+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 71
+
+2019-10-28T19:11:45+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 70
+
+2019-10-28T19:12:32+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 71
+
+2019-10-28T19:12:42+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 71
+
+2019-10-28T19:12:45+00:00 CRITICAL syntax error, unexpected '.' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 71
+
+2019-10-28T19:14:01+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 66
+
+2019-10-28T19:14:04+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 66
+
+2019-10-28T19:16:51+00:00 CRITICAL syntax error, unexpected 'global' (T_GLOBAL), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 65
+
+2019-10-28T19:20:08+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_field() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:65
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woo_show_excerpt_shop_page('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-product.php(65): do_action('woocommerce_aft...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo/Desktop/sites/blood_test/wp-conte in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 65
+
+2019-10-28T19:23:30+00:00 CRITICAL syntax error, unexpected ''/../storefront-child-theme-ma' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 85
+

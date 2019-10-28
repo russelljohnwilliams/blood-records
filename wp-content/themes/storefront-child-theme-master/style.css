@@ -36,6 +36,22 @@ Images License: GNU General Public License v2 or later
     src: local('Renogare Regular'), url('fonts/renogare-cufonfonts-webfont/Renogare-Regular.woff') format('woff');
   }
 
+  @font-face {
+    font-family: 'Helvetica Condensed';
+    src: url('fonts/helvetica/Helvetica-Condensed.woff2') format('woff2'),
+    url('fonts/helvetica/Helvetica-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Condensed';
+    src: url('fonts/helvetica/Helvetica-Condensed-Bold.woff2') format('woff2'),
+    url('fonts/helvetica/Helvetica-Condensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
   body{
    background-color: #2B2B2B;
  }
@@ -48,9 +64,9 @@ Images License: GNU General Public License v2 or later
 }
 
 
-.site-branding{
+.woocommerce-active .site-header .site-branding{
  font-family:'Renogare Regular';
- width: 30%;
+ width: 90%;
  float: left;
  margin-bottom: 1em;
  padding: 15px 0;
@@ -73,9 +89,9 @@ Images License: GNU General Public License v2 or later
 }
 
 #menu-master-menu{
-  /*text-align: right;*/
+  text-align: right;
   float: right;
-  /*width: 40%;*/
+  width: 100%;
 }
 
 #site-branding-and-nav-wrapper{
@@ -109,6 +125,8 @@ Images License: GNU General Public License v2 or later
   color: black;
   
 }
+
+
 
 /*- - cart - -*/
 
@@ -178,6 +196,21 @@ Images License: GNU General Public License v2 or later
 
 /*- - - - - -  campaigns - - - - - -*/
 
+.columns-1 .product-details-wrapper{
+  top: -400px;
+  position: relative;
+}
+
+.loop-product-details{
+  float: left;
+  background-color: yellow;
+  clear:both;
+
+}
+
+.columns-1 .product-intro{
+  display: none;
+}
 
 .pre-text{
   color: white;
@@ -210,52 +243,114 @@ ul.products li.product img{
   top: -99px;
   height: auto;
   font-size: 2em;
-  background: yellow;
+  background: rgb(240, 2445, 50);
   padding: 0 5px;
   text-transform: lowercase;
 }
 
 .groupbuy-time{
-  background-color: yellow;
-  position: relative;
-  left: 0;
-  top: -240%;
-  color: black;
-  font-size: 1.4em;
-  text-transform: lowercase;
+
   display: none;
 }
 
-.columns-1 .product p, .columns-1 .product .amount, .get-price-and-date, .get-date{
+.columns-1 .product p, .columns-1 .product .amount, .columns-1 .get-price-and-date,
+.loop-product-details{
   text-align: left;
   font-size: 5em;
-  background-color: yellow;
+  background-color: rgb(240, 2445, 50);
   color: black;
   text-transform: uppercase;
   position: relative;
-  top: -400px;
   clear:both;
   float:left;
   width: auto;
   margin: 25px 0 0 50px;
   font-weight: bold;
   padding: 0 10px;
+  font-family: 'Helvetica Condensed';
 }
 
-.columns-1 .product .price{
-  top: -950px;
-  font-size: 2em;
+.product .button{
+  font-family: 'Helvetica Condensed';
+  font-weight: 800;
+  background-color: rgb(240, 2445, 50);
+  /*display: none;*/
+  color: black;
 }
-  
-.get-price-and-date{
-  font-size: 2em;
-  text-transform: lowercase;
+
+.products .product .button{
+  display: none;
+}
+
+
+.columns-3 .product p:nth-child(-n + 3) {
+  font-size: 1.5em;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 5px;}
+
+  .columns-3 .product p:nth-child(-n + 3), .columns-3 .get-price-and-date{
+    font-weight: bold;
+  }
+
+  .columns-3 .product p, .columns-3 .product .amount, .columns-3 .get-price-and-date{
+    font-size: 0.9em;
+    background-color: rgb(240, 2445, 50);
+    color: black;
+    text-transform: uppercase;
+    clear:both;
+    float:none;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    padding: 0;
+    width: 90%;
+    font-family: 'Helvetica Condensed';
+  }
+
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .columns-1 .product .price{
+    top: -950px;
+    font-size: 2em;
+  }
+
+  .columns-1 .get-price-and-date, .columns-3 .get-price-and-date{
+    font-size: 2em;
+    text-transform: lowercase;
+    padding: 0;
+  }
+
+  .get-price-and-date span{
+    padding: 0 15px 0 0;
+  }
+
+  .columns-3 .product{
+    background-color: rgb(240, 2445, 50);
+  }
+
+  .columns-3 .get-price-and-date{
+  /*float: left;
+  clear: both;*/
+  display: inline-block;
+  text-align: left;
+  font-size: 1.4em;
+  padding-bottom: 20px;
 }
 
-.get-price-and-date span{
-  padding: 0 10px;
+.woocommerce-loop-product__title{
+  display: none;
 }
+
+/*- - - - - -  product page - - - - - -*/
+
+
+  
+
 
 /*- - - - - -  footer - - - - - -*/
 

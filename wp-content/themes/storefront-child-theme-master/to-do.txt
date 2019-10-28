@@ -1,0 +1,12 @@
+to do list
+
+Front page
+
+flex box columns-3 products vertically so all are the same height.
+
+make sure text stays within box.
+
+style and size text
+
+check all product images for landscape and portrait layout, make them square (ask craig)
+

@@ -589,7 +589,7 @@ function rest_send_cors_headers( $value ) {
 		header( 'Access-Control-Allow-Credentials: true' );
 		header( 'Vary: Origin', false );
 	} elseif ( ! headers_sent() && 'GET' === $_SERVER['REQUEST_METHOD'] && ! is_user_logged_in() ) {
-		header( 'Vary: Origin', false );
+		header( 'Vary: Origin' );
 	}
 
 	return $value;
@@ -617,10 +617,25 @@ function rest_handle_options_request( $response, $handler, $request ) {
 	$data     = array();
 
 	foreach ( $handler->get_routes() as $route => $endpoints ) {
-		$match = preg_match( '@^' . $route . '$@i', $request->get_route() );
+		$match = preg_match( '@^' . $route . '$@i', $request->get_route(), $matches );
 
 		if ( ! $match ) {
 			continue;
+		}
+
+		$args = array();
+		foreach ( $matches as $param => $value ) {
+			if ( ! is_int( $param ) ) {
+				$args[ $param ] = $value;
+			}
+		}
+
+		foreach ( $endpoints as $endpoint ) {
+			// Remove the redundant preg_match argument.
+			unset( $args[0] );
+
+			$request->set_url_params( $args );
+			$request->set_attributes( $endpoint );
 		}
 
 		$data = $handler->get_data_for_route( $route, $endpoints, 'help' );
