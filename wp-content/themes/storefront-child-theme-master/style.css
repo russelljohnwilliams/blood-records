@@ -58,6 +58,10 @@ Images License: GNU General Public License v2 or later
 
  /*- - - - - -  header - - - - - -*/
 
+#masthead{
+  width: 100vw;
+  position: fixed;
+}
 
  .site-header, .site-branding-and-nav-wrapper, .site-branding-and-search-wrapper, .storefront-primary-navigation, .main-navigation{
   height: 55px;
@@ -358,7 +362,11 @@ ul.products li.product img{
 }
 
 /*- - - - - -  product page - - - - - -*/
-
+hr{
+  width: 100%;
+  left: 0;
+  position: absolute;
+}
 
 .single-product-details ul {
   margin: 0;
@@ -462,21 +470,30 @@ ul.products li.product img{
   margin-bottom: 40px;
 }
 
+/*.above-the-fold-image{
+  max-height: 100vh;
+  overflow: hidden;
+  margin-bottom: 40px;
+}*/
+
 .single-product-main-image img{
-  min-width: 100%;
-  min-height: auto;
+  min-width: 100vw;
+  min-height: 130vh;
+  object-fit: cover;
 }
 
 .single-product-title-wrapper{
- position: relative;
- top: -500px;
+ position: absolute;
+ height: 130vh;
+ width: 50%;
+ top: -0;
 }
 
 .single-product-title-wrapper div{
   float: left;
   clear: both;
   text-align: left;
-  font-size: 4em;
+  font-size: 3em;
   background-color: rgb(240, 2445, 50);
   text-transform: uppercase;
   margin: 25px 0 0 50px;
@@ -484,6 +501,20 @@ ul.products li.product img{
   padding: 0 10px;
   font-family: 'Helvetica Condensed';
   color: black;
+}
+
+.product-artist{
+  position: inherit;
+  bottom: 200px;
+}
+
+.product-title{
+  position: inherit;
+  bottom: 100px;
+}
+
+.single-product-title-wrapper div > * {
+  vertical-align: bottom;
 }
 
 .single-product-add-to-cart .quantity{
@@ -495,6 +526,12 @@ ul.products li.product img{
     display: inline-flex;
   }
 
+
+/* - - gallery - - */
+
+.flex-control-nav{
+  float: left;
+}
 
 /*- - - - - -  footer - - - - - -*/
 
