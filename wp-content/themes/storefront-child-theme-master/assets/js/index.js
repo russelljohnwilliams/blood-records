@@ -1,6 +1,7 @@
 window.onload = function(){
   displayDateAndPrice();
-  remove('price');
+  var price = jQuery('.page-slug-current-campaigns').find('.price').remove()
+  // remove(price);
   remove('woocommerce-loop-product__title');
   p()
 }

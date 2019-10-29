@@ -78,3 +78,974 @@ Stack trace:
 
 2019-10-28T19:23:30+00:00 CRITICAL syntax error, unexpected ''/../storefront-child-theme-ma' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 85
 
+2019-10-28T20:01:09+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:01:19+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:01:41+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:01:46+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:01:58+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:02:12+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:02:47+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:03:05+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:03:42+00:00 CRITICAL syntax error, unexpected 'get_field' (T_STRING), expecting ',' or ';' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 97
+
+2019-10-28T20:14:29+00:00 CRITICAL syntax error, unexpected '<' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 110
+
+2019-10-28T20:29:23+00:00 CRITICAL Uncaught Error: Call to undefined function add_filte() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php:87
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-settings.php(499): include()
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-config.php(90): require_once('/Users/electric...')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-load.php(37): require_once('/Users/electric...')
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-admin/admin-ajax.php(22): require_once('/Users/electric...')
+#4 {main}
+  thrown in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 87
+
+2019-10-28T21:39:49+00:00 CRITICAL syntax error, unexpected end of file in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/inc/campaign-page.php on line 14
+
+2019-10-28T22:26:24+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:28:04+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:28:22+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:28:29+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:29:47+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:30:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:59:37+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T22:59:44+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:00:13+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:00:54+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:03:08+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:04:59+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:05:18+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:07:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:07:37+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:07:44+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:08:10+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:08:25+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:08:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:09:23+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:10:17+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:10:57+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:12:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:12:43+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:12:58+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:13:24+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:13:58+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:15:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:16:55+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:17:14+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:17:40+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:18:12+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:18:33+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:21:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:22:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:22:59+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:23:23+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:24:17+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:25:34+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:25:59+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:26:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:26:31+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:27:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:27:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:28:27+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:30:25+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:30:39+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:30:53+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:31:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:32:34+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:32:42+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:34:16+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:34:50+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:35:15+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:35:24+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:35:58+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:36:14+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:36:25+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:36:35+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:37:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:39:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:40:20+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:41:49+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:41:54+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:42:10+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:42:50+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:44:41+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:44:53+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:45:23+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:45:50+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:45:54+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:46:26+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:47:36+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:48:55+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:49:48+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:51:17+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:51:50+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:52:11+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:52:15+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:52:41+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:53:32+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:53:53+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:54:44+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:55:00+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:55:26+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:55:37+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:55:59+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:56:08+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:56:24+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:57:14+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:57:51+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:58:50+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:58:53+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
+2019-10-28T23:59:35+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_groupbuy::get_available_variations() in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1624
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): woocommerce_variable_add_to_cart('')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/templates/content-single-product.php(60): do_action('woocommerce_sin...')
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template.php(724): require('/Users/electric...')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
+#6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
+
