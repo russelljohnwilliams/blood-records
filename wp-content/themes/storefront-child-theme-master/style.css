@@ -58,12 +58,12 @@ Images License: GNU General Public License v2 or later
 
  /*- - - - - -  header - - - - - -*/
 
-#masthead{
+ #masthead{
   width: 100vw;
   position: fixed;
 }
 
- .site-header, .site-branding-and-nav-wrapper, .site-branding-and-search-wrapper, .storefront-primary-navigation, .main-navigation{
+.site-header, .site-branding-and-nav-wrapper, .site-branding-and-search-wrapper, .storefront-primary-navigation, .main-navigation{
   height: 55px;
 }
 
@@ -126,7 +126,7 @@ Images License: GNU General Public License v2 or later
 }
 
 
- .col-full {
+.col-full {
  max-width: 100vw;
  padding: 0;
  box-sizing: content-box;
@@ -435,12 +435,12 @@ hr{
 
 .left-side{
   float: left;
-  padding: 40px
+  padding: 60px
 }
 
 .right-side{
   float: right;
-  padding: 40px;
+  padding: 60px;
 }
 
 .middle-section .left-side{
@@ -474,22 +474,22 @@ hr{
   max-height: 100vh;
   overflow: hidden;
   margin-bottom: 40px;
-}*/
+  }*/
 
-.single-product-main-image img{
-  min-width: 100vw;
-  min-height: 130vh;
-  object-fit: cover;
-}
+  .single-product-main-image img{
+    min-width: 100vw;
+    min-height: 130vh;
+    object-fit: cover;
+  }
 
-.single-product-title-wrapper{
- position: absolute;
- height: 130vh;
- width: 50%;
- top: -0;
-}
+  .single-product-title-wrapper{
+   position: absolute;
+   height: 130vh;
+   width: 50%;
+   top: -0;
+ }
 
-.single-product-title-wrapper div{
+ .single-product-title-wrapper div{
   float: left;
   clear: both;
   text-align: left;
@@ -522,16 +522,60 @@ hr{
   width: 50px;
 }
 
-  .single-product-add-to-cart .single_add_to_cart_button{
-    display: inline-flex;
-  }
+.single-product-add-to-cart .single_add_to_cart_button{
+  float: right;
+  width: 70%;
+  margin-right: 30px;
+}
 
 
 /* - - gallery - - */
 
 .flex-control-nav{
-  float: left;
+ position: relative;
+
+ float: left;
+
+ width: 120px;
+
+ height: 400px;
 }
+
+.flex-viewport{
+  overflow: hidden;
+
+  position: relative;
+
+  height: auto;
+
+  width: 80%;
+
+  float: right;
+}
+
+.storefront-full-width-content.single-product div.product .woocommerce-product-gallery{
+  width: 95%;
+  float: right;
+  margin-right: 0;
+}
+
+.storefront-full-width-content.single-product {
+  width: 100%;
+  float: left;
+  margin-right: 10%;
+}
+
+.storefront-full-width-content.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li{
+  width: 120px;
+}
+
+.woocommerce-product-gallery__image a img{
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+
 
 /*- - - - - -  footer - - - - - -*/
 
