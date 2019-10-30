@@ -28,12 +28,14 @@ function bbloomer_display_acf_field_under_images() {
         <?php wc_get_template( 'single-product/product-image.php' ); ?>
       </div>
       <div class="right-side">
-        <div class= "single-product-details product-introduction">
-          <h3><?php echo get_field('artist'); ?>: <?php echo get_field('title'); ?></h3>
-          <?php wc_get_template( 'single-product/price.php' );?>
-          <?php echo get_field('product_info'); ?>
+        <div class="product-intro-wrapper">
+          <div class="single-product-details product-introduction">
+            <h3><?php echo get_field('artist'); ?>: <?php echo get_field('title'); ?></h3>
+            <?php wc_get_template( 'single-product/price.php' );?>
+            <?php echo get_field('product_info'); ?>
+          </div>
+          <div class="single-product-add-to-cart"><?php wc_get_template( 'single-product/add-to-cart/variation-add-to-cart-button.php' ); ?>
         </div>
-        <div class="single-product-add-to-cart"><?php wc_get_template( 'single-product/add-to-cart/variation-add-to-cart-button.php' ); ?>
       </div>
     </div>  
   </div><!-- middle-section -->
@@ -58,6 +60,7 @@ function bbloomer_display_acf_field_under_images() {
     </div>
   </div>
 </div><!-- lower-third -->
+</div>
 </div><!-- single-product-details-wrapper end -->
 <?php
 }

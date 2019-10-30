@@ -1,0 +1,62 @@
+2019-10-30T20:19:13+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 99
+
+2019-10-30T20:19:15+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 99
+
+2019-10-30T20:19:53+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 99
+
+2019-10-30T20:20:29+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 99
+
+2019-10-30T20:20:36+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 99
+
+2019-10-30T20:20:48+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 31
+
+2019-10-30T20:21:14+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 31
+
+2019-10-30T20:21:26+00:00 CRITICAL Cannot redeclare get_template_part() (previously declared in /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/general-template.php:135) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 33
+
+2019-10-30T21:30:21+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/index.php on line 110
+
+2019-10-30T21:30:32+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/index.php on line 110
+
+2019-10-30T21:30:44+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/index.php on line 110
+
+2019-10-30T21:31:12+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/index.php on line 96
+
+2019-10-30T21:42:20+00:00 CRITICAL syntax error, unexpected ':' in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront/page.php on line 27
+
+2019-10-30T21:55:29+00:00 CRITICAL Uncaught Exception: Section with slug `general` already exists in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php:112
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/includes/class-settings.php(190): underDEV\Utils\Settings->add_section('General', 'general')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): LRM_Settings->register_settings('get_home_page')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/page.php(26): do_action('init', 'get_home_page')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template-loader.php( in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php on line 112
+
+2019-10-30T21:56:40+00:00 CRITICAL Uncaught Exception: Section with slug `general` already exists in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php:112
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/includes/class-settings.php(190): underDEV\Utils\Settings->add_section('General', 'general')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): LRM_Settings->register_settings('get_home_page')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/page.php(26): do_action('init', 'get_home_page')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template-loader.php( in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php on line 112
+
+2019-10-30T21:58:10+00:00 CRITICAL Uncaught Exception: Section with slug `general` already exists in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php:112
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/includes/class-settings.php(190): underDEV\Utils\Settings->add_section('General', 'general')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): LRM_Settings->register_settings('get_home_page')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/page.php(26): do_action('init', 'get_home_page')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template-loader.php( in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php on line 112
+
+2019-10-30T21:58:58+00:00 CRITICAL Uncaught Exception: Section with slug `general` already exists in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php:112
+Stack trace:
+#0 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/includes/class-settings.php(190): underDEV\Utils\Settings->add_section('General', 'general')
+#1 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(286): LRM_Settings->register_settings('get_home_page')
+#2 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/page.php(27): do_action('init', 'get_home_page')
+#5 /Users/electriceskimo/Desktop/sites/blood_test/wp-includes/template-loader.php( in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/ajax-login-and-registration-modal-popup/vendor/underdev/settings/src/Settings.php on line 112
+

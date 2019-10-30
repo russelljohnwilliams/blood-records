@@ -258,3 +258,7 @@ Stack trace:
 #5 /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/electric...', false)
 #6 /Users/electriceskimo in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/plugins/woocommerce/includes/wc-template-functions.php on line 1624
 
+2019-10-29T21:39:25+00:00 CRITICAL syntax error, unexpected 'remove_action' (T_STRING) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 113
+
+2019-10-29T21:39:47+00:00 CRITICAL syntax error, unexpected 'remove_action' (T_STRING) in /Users/electriceskimo/Desktop/sites/blood_test/wp-content/themes/storefront-child-theme-master/functions.php on line 113
+

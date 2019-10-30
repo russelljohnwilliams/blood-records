@@ -1,9 +1,21 @@
 window.onload = function(){
-  displayDateAndPrice();
+  // displayDateAndPrice();
   var price = jQuery('.page-slug-current-campaigns').find('.price').remove()
   // remove(price);
   remove('woocommerce-loop-product__title');
   p()
+  groupbuyContent()
+}
+
+function groupbuyContent(){
+  var contentToClone = jQuery('.groupbuy-ajax-change')
+  var cloneTo = jQuery('.single-product').find('.single-product-metrics')
+  contentToClone.clone().appendTo(cloneTo)
+  contentToClone.remove()
+
+
+  jQuery("#main").clone().removeAttr('id').attr('id', "new-main").appendTo(newPosts)
+
 }
 
 function remove(object){

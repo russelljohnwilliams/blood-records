@@ -263,7 +263,7 @@ ul.products li.product img{
   text-transform: lowercase;
 }
 
-.groupbuy-time{
+.page-slug-current-campaigns .groupbuy-time, .groupbuy-end{
 
   display: none;
 }
@@ -425,7 +425,9 @@ hr{
   font-size: 1.1em;
 }
 
-
+.tracklist{
+  border-top: solid 1px white;
+}
 
 .center-text{
   width: 100%;
@@ -435,12 +437,21 @@ hr{
 
 .left-side{
   float: left;
-  padding: 60px
+  padding: 60px;
+  padding-right: 0;
 }
 
 .right-side{
   float: right;
-  padding: 60px;
+  /*padding: 60px;*/
+}
+
+.single-product-metrics, .tracklist, .product-intro-wrapper{
+  padding: 30px 60px 30px 40px;
+}
+
+.middle-section .product-intro-wrapper{
+  padding-top: 60px;
 }
 
 .middle-section .left-side{
@@ -533,30 +544,24 @@ hr{
 
 .flex-control-nav{
  position: relative;
-
  float: left;
-
  width: 120px;
-
  height: 400px;
 }
 
 .flex-viewport{
   overflow: hidden;
-
   position: relative;
-
+  min-height: 750px;
   height: auto;
-
   width: 80%;
-
   float: right;
 }
 
 .storefront-full-width-content.single-product div.product .woocommerce-product-gallery{
   width: 95%;
   float: right;
-  margin-right: 0;
+  margin: 0;
 }
 
 .storefront-full-width-content.single-product {
@@ -570,9 +575,22 @@ hr{
 }
 
 .woocommerce-product-gallery__image a img{
-  width: 80%;
+  width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+
+
+
+
+/*- - - - - -  home - - - - - -*/
+
+
+.home-page-left-side{
+  height: 50vh;
+  width: 50vw;
+  border: solid 2px yellow;
 }
 
 
@@ -619,6 +637,11 @@ hr{
  text-align: right;
 } 
 
+.site-footer .col-full{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .footer-widgets{
  float: right;
