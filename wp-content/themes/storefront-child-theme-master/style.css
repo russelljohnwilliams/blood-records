@@ -227,7 +227,7 @@ Images License: GNU General Public License v2 or later
 
 .loop-product-details{
   float: left;
-  background-color: yellow;
+  /*background-color: rgb(240, 2445, 50);*/
   clear:both;
 
 }
@@ -267,7 +267,7 @@ ul.products li.product img{
   top: -99px;
   height: auto;
   font-size: 2em;
-  background: rgb(240, 2445, 50);
+  /*background: rgb(240, 2445, 50);*/
   padding: 0 5px;
   text-transform: lowercase;
 }
@@ -281,7 +281,7 @@ ul.products li.product img{
 .loop-product-details{
   text-align: left;
   font-size: 5em;
-  background-color: rgb(240, 2445, 50);
+  /*background-color: rgb(240, 2445, 50);*/
   color: black;
   text-transform: uppercase;
   position: relative;
@@ -319,7 +319,7 @@ ul.products li.product img{
 
   .columns-3 .product p, .columns-3 .product .amount, .columns-3 .get-price-and-date{
     font-size: 0.9em;
-    background-color: rgb(240, 2445, 50);
+    /*background-color: rgb(240, 2445, 50);*/
     color: black;
     text-transform: uppercase;
     clear:both;
@@ -608,12 +608,14 @@ hr{
 
 .home-details-wrapper{
   color: white;
-  font-family: helvetica;
+  font-family: helvetica; 
 }
 
 .first-section-wrapper{
   /*margin:  0 100px;*/
   width: 100%;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 
@@ -655,29 +657,129 @@ hr{
   left: 80%;
 }
 
+.second-section-wrapper{
+  padding: 0 80px 15vh 80px;
+}
+
 .how-it-works-col{
+  display: inline-table;
+  width: 24%;
+  /*width: calc(70% / 3);*/
+  height: 40vh;
+  padding: 0 25px;
+  min-height: 100%;
+}
+
+.how-first-col{
+  top: 60px;
+  position: relative;
+}
+
+.how-it-works-col h3{
+  font-size: 1.3em;
+
+}
+
+.how-first-col h2{
+  font-size: 2.5em;
+}
+
+
+.how-it-works-col p{
+  text-align: justify;
+}
+
+.third-section-wrapper{
+  min-height: 100vh;
+  background: rgb(240, 2445, 50);
+  padding: 0 110px;
+  overflow: auto;
+}
+
+.third-section-header h3{
+  color: black;
+  font-size: 1.6em;
+}
+
+.third-section-header{
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.third-section-wrapper .columns-3 .product{
+  background: #2B2B2B;
+  color: white;
+}
+
+.fourth-section-wrapper{
+  min-height: 100vh;
+  height: auto;
+  overflow: auto; 
+  /*padding: 110px 110px 0 110px;*/
+}
+
+.fourth-section-wrapper .home-page-left-side{
+  width: 56%;
+  padding: 15vh 0 5vh 100px;
+  overflow: hidden;
+}
+
+.fourth-section-wrapper .home-page-right-side{
+  width: 39%;
+  padding: 25vh 12vw 5vh 0;
+}
+
+.fourth-section-wrapper .about-us-image{
+  float: right;
+  width: 67%;
+}
+
+.fourth-section-wrapper .about_us_sidebar_text{
+  width: 15%;
   display: inline-block;
-  width: 24vw;
-  height: 50vh;
+  top: 40%;
+  position: relative;
+}
+
+.about-us-sign-up-button-wrapper{
+  margin-top: 50px;
+}
+
+.about-us-text-wrapper{
+  height: 100%;
+  vertical-align: middle;
+}
+
+.fifth-section-wrapper{
+  height: 120vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.footer-image{
+/*height: 80vh;*/
+/*overflow: hidden;*/
 }
 
 .sign-up-button{
- background-color: yellow;
+ background-color: rgb(240, 2445, 50);
  color: black;
  text-align: center;
- padding: 10px 150px;
+ padding: 20px 150px;
  transition: 0.6s;
 
 } 
-
-
 
 .sign-up-button:hover{
   background-color: #FFDB58;
   /*transition: 0.6s;*/
 }
 
-
+.sign-up-button-wrapper{
+  width: 100%;
+  text-align: center;
+}
 
 /*- - - - - -  footer - - - - - -*/
 
