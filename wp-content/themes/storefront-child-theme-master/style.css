@@ -52,6 +52,15 @@ Images License: GNU General Public License v2 or later
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'helveticaregular';
+    src: url('fonts/helvetica2/helvetica-webfont.woff2') format('woff2'),
+    url('fonts/helvetica2/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
   body{
    background-color: #2B2B2B;
  }
@@ -60,7 +69,7 @@ Images License: GNU General Public License v2 or later
 
  #masthead{
   width: 100vw;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 .site-header, .site-branding-and-nav-wrapper, .site-branding-and-search-wrapper, .storefront-primary-navigation, .main-navigation{
@@ -383,7 +392,7 @@ hr{
 }
 
 .single-product-details-wrapper{
-  font-family: Helvetica;
+  font-family: Helvetica condensed;
   color: white;
   font-size: 1em;
 }
@@ -580,17 +589,92 @@ hr{
   object-fit: cover;
 }
 
-
-
-
-
 /*- - - - - -  home - - - - - -*/
+
+.home-details-wrapper h1, .home-details-wrapper h2, .home-details-wrapper h3, .home-details-wrapper h4, .home-details-wrapper h5{
+  color: white;
+  font-family:'Renogare Regular';
+  line-height: 1em;
+}
+
+.home-details-wrapper h1{
+  font-size: 2.5em;
+}
+
+.home-details-wrapper p{
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.home-details-wrapper{
+  color: white;
+  font-family: helvetica;
+}
+
+.first-section-wrapper{
+  /*margin:  0 100px;*/
+  width: 100%;
+}
 
 
 .home-page-left-side{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  /*padding: 110px;*/
+}
+
+
+.home-page-right-side{
+  width: 50%;
+  float: right;
+  height: 100vh;
+  /*padding: 100px;*/
+}
+
+.first-section-wrapper .home-page-left-side{
+  width: 40%;
+  padding: 130px 0 0 110px;
+}
+
+.first-section-wrapper .home-page-right-side{
+  width: 59%;
+  padding: 0 50px;
+}
+
+.first-section-wrapper .intro-image{
+  width: 75%;
+  height: auto;
+}
+
+.rotate{
+  transform: rotate(90deg);
+  width: 400px;
+  position: absolute;
+  top: 295px;
+  left: 80%;
+}
+
+.how-it-works-col{
+  display: inline-block;
+  width: 24vw;
   height: 50vh;
-  width: 50vw;
-  border: solid 2px yellow;
+}
+
+.sign-up-button{
+ background-color: yellow;
+ color: black;
+ text-align: center;
+ padding: 10px 150px;
+ transition: 0.6s;
+
+} 
+
+
+
+.sign-up-button:hover{
+  background-color: #FFDB58;
+  /*transition: 0.6s;*/
 }
 
 
